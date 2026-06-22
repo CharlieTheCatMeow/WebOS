@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index_style.css">
+    </head>
+
+    <body>
+        <div class="desktop">
+            <div class="top_bar" id="top_bar">
+                <div class="menu_buttons">
+                    <h2 class="top_bar_item">MeowOS!</h2>
+                    <h2 id="openWelcomeScreenWindow" class="top_bar_item" style="cursor: pointer">Welcome window</h2>
+                    <h2 id="openStopwatchWindow" class="top_bar_item" style="cursor: pointer">Stopwatch</h2>
+                </div>
+                <h2 class="top_bar_item" id="clockTime"></h2>
+            </div>
+            <div class="app_icons">
+                <div class="app_icon" data-window="welcomeScreen">
+                    <img src="Images/CharlieCatMeowPFPSquare.png" class="icon_image" alt="no image D:">
+                </div>
+                <div class="app_icon" data-window="stopwatch"></div>
+                <div class="app_icon"></div>
+                <div class="app_icon"></div>
+            </div>
+            <div class="windows">
+               <div id="welcomeScreen" class="window">
+                    <div id="welcomeScreenHeader" class="window_header">
+                        <div class="header_buttons">
+                            <div id="closeWelcomeScreenWindow" class="close_button"></div>
+                        </div>
+                        <h2 class="header_title">Welcome Screen</h2>
+                    </div>
+                    <div class="window_content">
+                        <p>This is a windowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</p>
+                        <p>This is a windowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</p>
+                        <p>This is a windowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</p>
+                        <p>This is a windowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</p>
+                        <p>This is a windowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</p>
+                    </div>
+                </div>
+                <div id="stopwatch" class="window">
+                    <div id="stopwatchHeader" class="window_header">
+                        <div class="header_buttons">
+                            <div id="closeStopwatchWindow" class="close_button"></div>
+                        </div>
+                        <h2 class="header_title">Stopwatch</h2>
+                    </div>
+                    <div class="window_content">
+                        <div>
+                            <p>e</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
