@@ -1,0 +1,120 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+    font-family: "Courier New", monospace;
+}
+
+.stopwatch_time {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5vh;
+
+    height: 20vh;
+
+    font-size: 5vh;
+}
+
+.stopwatch_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+
+    padding-bottom: 3vh;
+}
+
+.stopwatch_start_stop_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    height: 8vh;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.3);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.95);
+
+
+    transition: ease 0.1s;
+}
+
+.start_stop_icon {
+    scale: 3;
+}
+
+.stopwatch_start_stop_button:hover {
+    scale: 1.1;
+}
+
+.stopwatch_buttons_left_side {
+    flex: 1;
+    display: flex;
+
+    padding-right: 2.5vh;
+}
+
+.stopwatch_reset_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    height: 5vh;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.3);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.95);
+
+    transition: ease 0.1s;
+}
+
+.reset_icon {
+    scale: 1.6;
+}
+
+.stopwatch_reset_button:hover {
+    scale: 1.1;
+}
+
+.select_button {
+    animation: selectButton 0.15s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes selectButton {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.stopwatch_buttons_right_side {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    padding-left: 2.5vh;
+}

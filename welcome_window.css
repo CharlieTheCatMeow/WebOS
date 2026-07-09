@@ -1,0 +1,92 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+    font-family: "Courier New", monospace;
+}
+
+.welcome_window_sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 6vh;
+    height: 100%;
+    border-bottom-right-radius: 2vh;
+
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.welcome_window_page_selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1vh;
+
+    width: 4vh;
+    aspect-ratio: 1 / 1;
+    border-radius: 30%;
+
+    background-color: coral;
+    cursor: pointer;
+
+    transition: ease 0.1s;
+}
+
+.welcome_window_page_selector:hover {
+    scale: 1.1;
+}
+
+.page_selected {
+    scale: 1.1;
+}
+
+.select_page {
+    animation: selectPage 0.15s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes selectPage {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.welcome_window_content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    padding: 1vh;
+}
+
+.welcome_window_page_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 4vh;
+
+    border-bottom: 2px solid white;
+}
+
+
+.welcome_window_title {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/Xuan/Documents/Programming/Html/WebOS" value="3F02ON8ZeFVa3GIttNUbY3yCJgz" />
+    </persistenceIdMap>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="30" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/notes.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="LLMProjectSettings">
+    <option name="turned_on" value="false" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.2754762789691525" />
+      <entry key="MS500" value="1.7727105496479871" />
+      <entry key="S2" value="1.9375710964571131" />
+      <entry key="S5" value="1.9745481713088937" />
+      <entry key="S10" value="1.9929595472169233" />
+      <entry key="S30" value="3.468348497219707" />
+      <entry key="S60" value="9.274063400119628" />
+      <entry key="M2" value="20.92162375977136" />
+      <entry key="M5" value="47.633545014610476" />
+      <entry key="M10" value="83.56615232292846" />
+      <entry key="M15" value="113.63520137345192" />
+      <entry key="M30" value="198.75632258574356" />
+      <entry key="H1" value="346.68211501672573" />
+      <entry key="H2" value="521.3472023364252" />
+      <entry key="H4" value="665.0407197680933" />
+      <entry key="D1" value="831.9006152613258" />
+      <entry key="W1" value="866.1146504862544" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="1.9292084682367444E-163" />
+      <entry key="S10" value="6.664402735079083E-82" />
+      <entry key="S30" value="3.17543694165378E-27" />
+      <entry key="S60" value="1.9143968421183447E-13" />
+      <entry key="M2" value="1.7769317317125047E-6" />
+      <entry key="M5" value="0.03868909861152505" />
+      <entry key="M10" value="1.497702786695276" />
+      <entry key="M15" value="5.916733372100514" />
+      <entry key="M30" value="30.42314193195852" />
+      <entry key="H1" value="85.10250485767253" />
+      <entry key="H2" value="154.17605924688783" />
+      <entry key="H4" value="212.30360577508017" />
+      <entry key="D1" value="280.52810340202336" />
+      <entry key="W1" value="294.5809491040195" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.2455128432002667" />
+      <entry key="MS500" value="1.7632228010949016" />
+      <entry key="S2" value="1.9349086359746033" />
+      <entry key="S5" value="1.973457098155398" />
+      <entry key="S10" value="1.9924032949974526" />
+      <entry key="S30" value="3.4672020935808616" />
+      <entry key="S60" value="9.271105944338002" />
+      <entry key="M2" value="20.917508000983492" />
+      <entry key="M5" value="47.66850763412439" />
+      <entry key="M10" value="85.05622824908457" />
+      <entry key="M15" value="119.53617244659732" />
+      <entry key="M30" value="229.14298853367814" />
+      <entry key="H1" value="431.73541629275695" />
+      <entry key="H2" value="675.4793263078005" />
+      <entry key="H4" value="877.3142474297989" />
+      <entry key="D1" value="1112.4221200296506" />
+      <entry key="W1" value="1160.694610267832" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="3F02ON8ZeFVa3GIttNUbY3yCJgz" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_id" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="BACKGROUND" />
+        <option name="worktreeMode" value="WORKSPACE" />
+      </template>
+    </option>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/Xuan/Documents/Programming/Html/WebOS",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.keymap.KeymapConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Xuan\Documents\Programming\Python Projects\WebOS\Images" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PY-261.26222.68" />
+        <option value="bundled-python-sdk-50341a9f1f9c-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.26222.68" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="" />
+      <created>1781197632522</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1781197632522</updated>
+      <workItem from="1781704417458" duration="156000" />
+      <workItem from="1781704593998" duration="39000" />
+      <workItem from="1781707575502" duration="825000" />
+      <workItem from="1781708592360" duration="952000" />
+      <workItem from="1781947950088" duration="3952000" />
+      <workItem from="1781961107727" duration="2897000" />
+      <workItem from="1782034704599" duration="3483000" />
+      <workItem from="1782052861811" duration="48000" />
+      <workItem from="1782129772434" duration="1437000" />
+      <workItem from="1782134752441" duration="859000" />
+      <workItem from="1782137225517" duration="904000" />
+      <workItem from="1782226622225" duration="2474000" />
+      <workItem from="1782302005411" duration="655000" />
+      <workItem from="1782472838947" duration="2806000" />
+      <workItem from="1782477924764" duration="1479000" />
+      <workItem from="1782629488675" duration="2345000" />
+      <workItem from="1782741352548" duration="1658000" />
+      <workItem from="1782828647758" duration="1382000" />
+      <workItem from="1782896627885" duration="1714000" />
+      <workItem from="1782990068240" duration="1656000" />
+      <workItem from="1782991937751" duration="2105000" />
+      <workItem from="1782996865243" duration="2402000" />
+      <workItem from="1783000348212" duration="127000" />
+      <workItem from="1783017906114" duration="1676000" />
+      <workItem from="1783076289964" duration="1097000" />
+      <workItem from="1783077605691" duration="823000" />
+      <workItem from="1783079618350" duration="2335000" />
+      <workItem from="1783093788023" duration="29000" />
+      <workItem from="1783156229819" duration="2250000" />
+      <workItem from="1783184276954" duration="56000" />
+      <workItem from="1783242375118" duration="584000" />
+      <workItem from="1783330479160" duration="519000" />
+      <workItem from="1783421403073" duration="4150000" />
+      <workItem from="1783425606385" duration="752000" />
+      <workItem from="1783444367829" duration="5623000" />
+      <workItem from="1783502009342" duration="6688000" />
+      <workItem from="1783508787124" duration="397000" />
+      <workItem from="1783518784526" duration="1000" />
+      <workItem from="1783518879669" duration="137000" />
+      <workItem from="1783519036669" duration="6556000" />
+      <workItem from="1783529857749" duration="1133000" />
+      <workItem from="1783531213425" duration="1785000" />
+      <workItem from="1783533021281" duration="773000" />
+      <workItem from="1783533826672" duration="304000" />
+      <workItem from="1783534149765" duration="79000" />
+      <workItem from="1783586868782" duration="6008000" />
+      <workItem from="1783592957649" duration="890000" />
+      <workItem from="1783612718924" duration="894000" />
+      <workItem from="1783621474625" duration="5390000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

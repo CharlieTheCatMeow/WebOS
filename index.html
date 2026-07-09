@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="index_style.css">
+        <link rel="stylesheet" href="notes.css">
+        <link rel="stylesheet" href="welcome_window.css">
+        <link rel="stylesheet" href="stopwatch.css">
+        <link rel="stylesheet" href="todo_list.css">
+        <link rel="stylesheet" href="terminal.css">
+        <link rel="stylesheet" href="start_menu.css">
+        <link rel="stylesheet" href="calculator.css">
+        <link rel="stylesheet" href="music_player.css">
+    </head>
+    <body>
+        <div id="startMenu" class="start_menu">
+            <div class="start_menu_top">
+                <div class="start_menu_title no_select">MeowOS!</div>
+            </div>
+            <div class="start_menu_bottom">
+                <div id="enterDesktopButton" class="enter_desktop_button no_select">Begin!</div>
+            </div>
+        </div>
+        <div class="desktop">
+            <div class="top_bar" id="top_bar">
+                <div class="menu_buttons">
+                    <h2 id="topBarStartMenuButton" class="top_bar_item no_select" style="cursor: pointer;">MeowOS!</h2>
+                </div>
+                <h2 class="top_bar_item no_select" id="clockTime"></h2>
+            </div>
+            <div class="app_icons">
+                <div class="app_icon no_select" data-window="welcomeScreen">Intro</div>
+                <div class="app_icon no_select" data-window="stopwatch">Timer</div>
+                <div class="app_icon no_select" data-window="notes">Notes</div>
+                <div class="app_icon no_select" data-window="todoList">To-Do</div>
+                <div class="app_icon no_select" data-window="terminal">CMD</div>
+                <div class="app_icon no_select" data-window="calculator">Calc</div>
+                <div class="app_icon no_select" data-window="musicPlayer">Music</div>
+            </div>
+            <div class="windows">
+                <div id="welcomeScreen" class="window" style="width: 40vh; display: none">
+                    <div id="welcomeScreenHeader" class="window_header">
+                        <div class="header_buttons">
+                            <div id="closeWelcomeScreenWindow" class="close_button no_select"></div>
+                        </div>
+                        <h2 class="header_title no_select">Welcome Screen</h2>
+                    </div>
+                    <div class="window_content" style="display: flex; flex-direction: row; height: 30vh;">
+                        <div class="welcome_window_sidebar">
+                            <div class="welcome_window_page_selector" id="welcomeWindowPageSelector1"></div>
+                            <div class="welcome_window_page_selector" id="welcomeWindowPageSelector2"></div>
+                            <div class="welcome_window_page_selector" id="welcomeWindowPageSelector3"></div>
+                        </div>
+                        <div class="welcome_window_content" id="welcomeWindowContent"></div>
+                    </div>
+                </div>
+                <div id="stopwatch" class="window" style="width: 45vh; display: none">
+                    <div id="stopwatchHeader" class="window_header">
+                        <div class="header_buttons">
+                            <div id="closeStopwatchWindow" class="close_button no_select"></div>
+                        </div>
+                        <h2 class="header_title no_select">Stopwatch</h2>
+                    </div>
+                    <div class="window_content" style="display: flex; flex-direction: column">
+                        <div class="stopwatch_time" id="stopwatchTime">00:00:00:00</div>
+                        <div class="stopwatch_buttons">
+                            <div class="stopwatch_buttons_left_side"></div>
+                            <div class="stopwatch_start_stop_button" id="stopwatchStartStopButton">
+                                <i class="material-icons start_stop_icon no_select">play_arrow</i>
+                            </div>
+                            <div class="stopwatch_buttons_right_side">
+                                <div class="stopwatch_reset_button" id="stopwatchResetButton">
+                                    <i class="material-icons reset_icon no_select">replay</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="notes" class="window" style="width: 55vh; display: none">
+                    <div id="notesHeader" class="window_header">
+                        <div class="header_buttons">
+                            <div id="closeNotesWindow" class="close_button no_select"></div>
+                        </div>
+                        <h2 class="header_title no_select" id="notesHeaderTitle">Notes</h2>
+                    </div>
+                    <div class="window_content" style="display: flex; flex-direction: row">
+                        <div class="notes_sidebar" style="padding: 0">
+                            <div class="notes_sidebar_pages" id="notesSidebarPages"></div>
+                            <div>
+                                <div class="notes_sidebar_add_page no_select" id="notesSidebarAddPage">+</div>
+                                <div class="notes_sidebar_reset no_select" id="notesSidebarReset">x</div>
+                            </div>
+                        </div>
+                        <div class="notes_content" id="notesContent"></div>
+                    </div>
+                </div>
+                <div id="todoList" class="window todo_list_window" style="width: 60vh; display: none">
+                    <div id="todoHeader" class="window_header">
+                        <div class="header_buttons">
+                            <div id="closeTodoWindow" class="close_button no_select"></div>
+                        </div>
+                        <h2 class="header_title no_select">To-Do List</h2>
+                    </div>
+                    <div class="window_content" style="display: flex; flex-direction: column">
+                        <div class="todo_top_bar">
+                            <label>
+                                <input class="todo_top_bar_add_name" type="text" id="todoTopBarAddName">
+                            </label>
+                            <div class="todo_top_bar_add_button" id="todoTopbarAddButton"></div>
+                        </div>
+                        <div class="todo_content" id="todoContent"></div>
+                    </div>
+                </div>
+                <div id="terminal" class="window terminal_window" style="width: 50vh; display: none">
+                    <div id="terminalHeader" class="window_header">
+                        <div class="header_buttons">
+                            <div id="closeTerminalWindow" class="close_button no_select"></div>
+                        </div>
+                        <h2 class="header_title no_select">Terminal</h2>
+                    </div>
+                    <div id="terminalContent" class="window_content terminal_window_content" style="display: flex; flex-direction: column; justify-content: flex-start"></div>
+                </div>
+                <div id="calculator" class="window" style="width: 34vh; display: none">
+                    <div id="calculatorHeader" class="window_header">
+                        <div class="header_buttons">
+                            <div id="closeCalculatorWindow" class="close_button no_select"></div>
+                        </div>
+                        <h2 class="header_title no_select">Calculator</h2>
+                    </div>
+                    <div class="calculator_content">
+                        <div id="calculatorDisplay" class="calculator_display"></div>
+                        <div class="calculator_buttons">
+                            <div class="calculator_buttons_left">
+                                <div class="calculator_button_row">
+                                    <div id="calculatorButtonAdd" class="calculator_button no_select">+</div>
+                                    <div id="calculatorButtonSubtract" class="calculator_button no_select">−</div>
+                                    <div id="calculatorButtonMultiply" class="calculator_button no_select">×</div>
+                                </div>
+                                <div class="calculator_button_row">
+                                    <div id="calculatorButton7" class="calculator_button no_select">7</div>
+                                    <div id="calculatorButton8" class="calculator_button no_select">8</div>
+                                    <div id="calculatorButton9" class="calculator_button no_select">9</div>
+                                </div>
+                                <div class="calculator_button_row">
+                                    <div id="calculatorButton4" class="calculator_button no_select">4</div>
+                                    <div id="calculatorButton5" class="calculator_button no_select">5</div>
+                                    <div id="calculatorButton6" class="calculator_button no_select">6</div>
+                                </div>
+                                <div class="calculator_button_row">
+                                    <div id="calculatorButton1" class="calculator_button no_select">1</div>
+                                    <div id="calculatorButton2" class="calculator_button no_select">2</div>
+                                    <div id="calculatorButton3" class="calculator_button no_select">3</div>
+                                </div>
+                                <div class="calculator_button_row">
+                                    <div id="calculatorButton0" class="calculator_button no_select">0</div>
+                                    <div id="calculatorButtonDecimal" class="calculator_button no_select">.</div>
+                                    <div id="calculatorButtonDelete" class="calculator_button no_select">C</div>
+                                </div>
+                            </div>
+                            <div class="calculator_buttons_right">
+                                <div id="calculatorButtonDivide" class="calculator_button no_select">÷</div>
+                                <div id="calculatorButtonEquals" class="calculator_button_calculate no_select">=</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="musicPlayer" class="window" style="width: 25vh; display: none">
+                    <div id="musicPlayerHeader" class="window_header">
+                        <div class="header_buttons">
+                            <div id="closeMusicPlayerWindow" class="close_button no_select"></div>
+                        </div>
+                        <h2 class="header_title no_select">Music Player</h2>
+                    </div>
+                    <div class="music_player_content">
+                        <img id="musicPlayerImage" class="music_player_image" src="" alt="No song played">
+                        <div id="musicPlayerSongTitle" class="music_player_song_title no_select"></div>
+                        <div class="music_player_progress_bar">
+                            <div id="musicPlayerProgress" class="music_player_progress"></div>
+                        </div>
+                        <div class="music_player_controls">
+                            <div id="musicPlayerPreviousButton" class="music_player_previous_button no_select">
+                                <i class="material-icons music_player_previous_button_icon no_select">skip_previous</i>
+                            </div>
+                            <div id="musicPlayerPlayPauseButton" class="music_player_play_pause_button no_select">
+                                <i class="material-icons music_player_play_pause_button_icon no_select">pause</i>
+                            </div>
+                            <div id="musicPlayerNextButton" class="music_player_next_button no_select">
+                                <i class="material-icons music_player_next_button_icon no_select">skip_next</i>
+                            </div>
+                        </div>
+                        <div class="music_player_playlist" id="musicPlayerPlaylist"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script src="welcome_window.js"></script>
+        <script src="notes.js"></script>
+        <script src="stopwatch.js"></script>
+        <script src="todo_list.js"></script>
+        <script src="terminal.js"></script>
+        <script src="start_menu.js"></script>
+        <script src="calculator.js"></script>
+        <script src="music_player.js"></script>
+    </body>
+</html>
