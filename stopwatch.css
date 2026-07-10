@@ -16,11 +16,11 @@ body,html {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 5vh;
+    padding-bottom: 5vmin;
 
-    height: 20vh;
+    height: 20vmin;
 
-    font-size: 5vh;
+    font-size: 5vmin;
 }
 
 .stopwatch_buttons {
@@ -31,7 +31,7 @@ body,html {
 
     flex: 1;
 
-    padding-bottom: 3vh;
+    padding-bottom: 3vmin;
 }
 
 .stopwatch_start_stop_button {
@@ -40,7 +40,7 @@ body,html {
     align-items: center;
     cursor: pointer;
 
-    height: 8vh;
+    height: 8vmin;
     aspect-ratio: 1 / 1;
 
     border-radius: 50%;
@@ -65,7 +65,7 @@ body,html {
     flex: 1;
     display: flex;
 
-    padding-right: 2.5vh;
+    padding-right: 2.5vmin;
 }
 
 .stopwatch_reset_button {
@@ -74,7 +74,7 @@ body,html {
     align-items: center;
     cursor: pointer;
 
-    height: 5vh;
+    height: 5vmin;
     aspect-ratio: 1 / 1;
 
     border-radius: 50%;
@@ -116,5 +116,5 @@ body,html {
     flex-direction: row;
     justify-content: flex-start;
 
-    padding-left: 2.5vh;
+    padding-left: 2.5vmin;
 }

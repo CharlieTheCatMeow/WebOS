@@ -22,4 +22,4 @@ Yes all very exciting I know.
 ![Image](Assets/Screenshot%202026-07-09%20180107.png)
 
 Credits to Louis Coyle for the Background image (very pretty).
-Credits to Daisuke Hasegawa, Coda and Yugo Kanno for temporary music files I guess?
+Credits to Daisuke Hasegawa, Coda and Yugo Kanno for the music

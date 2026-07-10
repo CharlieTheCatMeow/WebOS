@@ -18,7 +18,7 @@ body,html {
     justify-content: flex-start;
     align-items: center;
 
-    padding: 0.5vh 1vh;
+    padding: 0.5vmin 1vmin;
 }
 
 .music_player_image {
@@ -26,20 +26,20 @@ body,html {
     justify-content: center;
     align-items: center;
 
-    margin: 0.5vh 0;
+    margin: 0.5vmin 0;
 
-    width: 23vh;
+    width: 23vmin;
     aspect-ratio: 1 / 1;
-    border-radius: 3vh;
+    border-radius: 3vmin;
 
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
     will-change: transform;
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
 
     color: #ffffff;
-    font-size: 3vh;
+    font-size: 3vmin;
 
     transition: ease 0.1s;
 }
@@ -53,21 +53,21 @@ body,html {
     justify-content: flex-start;
     align-items: center;
 
-    margin: 0.5vh 0;
-    padding: 0.5vh;
+    margin: 0.5vmin 0;
+    padding: 0.5vmin;
 
-    width: 23vh;
-    height: 3vh;
-    border-radius: 1vh;
+    width: 23vmin;
+    height: 3vmin;
+    border-radius: 1vmin;
 
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
     will-change: transform;
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
 
     color: #ffffff;
-    font-size: 2vh;
+    font-size: 2vmin;
     transition: ease 0.1s;
 }
 
@@ -76,17 +76,17 @@ body,html {
 }
 
 .music_player_progress_bar {
-    margin: 0.5vh 0;
+    margin: 0.5vmin 0;
 
-    width: 23vh;
-    height: 1vh;
-    border-radius: 0.5vh;
+    width: 23vmin;
+    height: 1vmin;
+    border-radius: 0.5vmin;
 
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 160, 122, 0.75);
     backdrop-filter: blur(15px);
     will-change: transform;
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
     transition: ease 0.1s;
 }
 
@@ -98,11 +98,11 @@ body,html {
     height: 100%;
     width: 0;
 
-    border-radius: 0.5vh;
-    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0.5vmin;
+    background: linear-gradient(135deg, coral, #ff4500);
     backdrop-filter: blur(15px) saturate(2000%);
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
 
     transition: width 0.2s linear;
 }
@@ -113,17 +113,17 @@ body,html {
     justify-content: center;
     align-items: center;
 
-    margin: 0.5vh 0;
+    margin: 0.5vmin 0;
 
-    width: 23vh;
-    height: 5vh;
-    border-radius: 1vh;
+    width: 23vmin;
+    height: 5vmin;
+    border-radius: 1vmin;
 
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
     will-change: transform;
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
     transition: ease 0.1s;
 }
 
@@ -137,8 +137,8 @@ body,html {
     align-items: center;
     cursor: pointer;
 
-    margin: 0 0.5vh;
-    width: 3vh;
+    margin: 0 0.5vmin;
+    width: 3vmin;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
 
@@ -146,7 +146,7 @@ body,html {
     backdrop-filter: blur(15px);
     will-change: transform;
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
     transition: ease 0.1s;
 }
 
@@ -164,8 +164,8 @@ body,html {
     align-items: center;
     cursor: pointer;
 
-    margin: 0 0.5vh;
-    width: 4vh;
+    margin: 0 0.5vmin;
+    width: 4vmin;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
 
@@ -173,7 +173,7 @@ body,html {
     backdrop-filter: blur(15px);
     will-change: transform;
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
     transition: ease 0.1s;
 }
 
@@ -192,8 +192,8 @@ body,html {
     align-items: center;
     cursor: pointer;
 
-    margin: 0 0.5vh;
-    width: 3vh;
+    margin: 0 0.5vmin;
+    width: 3vmin;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
 
@@ -201,7 +201,7 @@ body,html {
     backdrop-filter: blur(15px);
     will-change: transform;
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
     transition: ease 0.1s;
 }
 
@@ -221,16 +221,16 @@ body,html {
     overflow-x: hidden;
     overflow-y: auto;
 
-    margin: 0.5vh 0;
-    width: 23vh;
-    height: 20vh;
-    border-radius: 1vh;
+    margin: 0.5vmin 0;
+    width: 23vmin;
+    height: 20vmin;
+    border-radius: 1vmin;
 
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
     will-change: transform;
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
     transition: ease 0.1s;
 }
 
@@ -244,16 +244,16 @@ body,html {
     justify-content: space-between;
     align-items: center;
 
-    padding: 0.5vh;
+    padding: 0.5vmin;
 
-    height: 5vh;
+    height: 5vmin;
     width: 100%;
 
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
     will-change: transform;
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
     transition: ease 0.1s;
 }
 
@@ -272,6 +272,8 @@ body,html {
 
     color: #ffffff;
     font-weight: 400;
+    text-wrap: nowrap;
+    overflow-x: auto;
 }
 
 .song_image {
@@ -280,13 +282,13 @@ body,html {
     align-items: center;
     overflow: hidden;
 
-    margin-right: 0.5vh;
+    margin-right: 0.5vmin;
 
     height: 80%;
     aspect-ratio: 1 / 1;
-    border-radius: 0.5vh;
+    border-radius: 0.5vmin;
 
-    box-shadow: 0 1vh 3vh rgba(255, 255, 255, 0.4);
+    box-shadow: 0 1vmin 3vmin rgba(255, 255, 255, 0.4);
 }
 
 .song_image_src {
@@ -318,7 +320,7 @@ body,html {
     backdrop-filter: blur(15px);
     will-change: transform;
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 1vh 3vh rgba(255, 255, 255, 0.4);
+    box-shadow: 0 1vmin 3vmin rgba(255, 255, 255, 0.4);
 }
 
 .song_play_button_icon {

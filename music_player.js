@@ -8,7 +8,8 @@ const musicPlayerPlaylist = document.querySelector("#musicPlayerPlaylist");
 
 const playlist = [
     {title: "Bloody Stream", audioSrc: "Audio/Bloody_Stream.mp3", imgSrc: "Images/Bloody_Stream.jpg"},
-    {title: "Canzoni Preferite", audioSrc: "Audio/Canzoni_Preferite.mp3", imgSrc: "Images/Canzoni_Preferite.jpg"}
+    {title: "Canzoni Preferite", audioSrc: "Audio/Canzoni_Preferite.mp3", imgSrc: "Images/Canzoni_Preferite.jpg"},
+    {title: "Hungarian Dance no.5", audioSrc: "Audio/Hungarian_Dance.mp3", imgSrc: "Images/Hungarian_Dance.jpg"}
 ]
 
 let currentSongIndex = null;
@@ -34,6 +35,7 @@ function loadSongs() {
         const songPlayButton = songElement.querySelector(`#songPlayButton${index}`);
         songPlayButton.addEventListener("click", function () {
             playSong(index);
+            musicPlayerPlayPauseButton.innerHTML = `<i class="material-icons music_player_play_pause_button_icon no_select">pause</i>`;
             songPlayButton.classList.add("music_player_button_press");
             setTimeout(function () {
                 songPlayButton.classList.remove("music_player_button_press");

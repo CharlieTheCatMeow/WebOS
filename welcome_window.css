@@ -18,9 +18,9 @@ body,html {
     justify-content: flex-start;
     align-items: center;
 
-    width: 6vh;
+    width: 6vmin;
     height: 100%;
-    border-bottom-right-radius: 2vh;
+    border-bottom-right-radius: 2vmin;
 
     background-color: rgba(0, 0, 0, 0.3);
 }
@@ -30,9 +30,9 @@ body,html {
     justify-content: center;
     align-items: center;
 
-    margin: 1vh;
+    margin: 1vmin;
 
-    width: 4vh;
+    width: 4vmin;
     aspect-ratio: 1 / 1;
     border-radius: 30%;
 
@@ -71,7 +71,7 @@ body,html {
     flex-direction: column;
     flex: 1;
 
-    padding: 1vh;
+    padding: 1vmin;
 }
 
 .welcome_window_page_header {
@@ -79,7 +79,7 @@ body,html {
     flex-direction: row;
     justify-content: space-between;
 
-    height: 4vh;
+    height: 4vmin;
 
     border-bottom: 2px solid white;
 }

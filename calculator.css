@@ -18,7 +18,7 @@ body,html {
     justify-content: flex-start;
     align-items: center;
 
-    padding: 1vh;
+    padding: 1vmin;
 }
 
 .calculator_display {
@@ -27,12 +27,12 @@ body,html {
     justify-content: flex-start;
     align-items: center;
 
-    margin-bottom: 1vh;
-    padding: 1vh;
+    margin-bottom: 1vmin;
+    padding: 1vmin;
 
     height: 6rem;
-    width: 31vh;
-    border-radius: 2vh;
+    width: 31vmin;
+    border-radius: 2vmin;
 
     font-size: 3rem;
     font-weight: 700;
@@ -79,17 +79,17 @@ body,html {
     align-items: center;
     cursor: pointer;
 
-    margin: 0.5vh;
+    margin: 0.5vmin;
 
-    width: 7vh;
+    width: 7vmin;
     aspect-ratio: 1 / 1;
-    border-radius: 2vh;
+    border-radius: 2vmin;
 
     background: rgba(0, 0, 0, 0.3);
     border: 0.0625rem solid rgba(255, 255, 255, 0.7);
     color: rgba(255, 255, 255, 0.95);
 
-    font-size: 5.5vh;
+    font-size: 5.5vmin;
     font-weight: 600;
 
     transition: ease 0.1s;
@@ -97,7 +97,7 @@ body,html {
 
 .calculator_button:hover {
     transform: scale(1.15);
-    box-shadow: 0 1vh 2vh rgba(255, 255, 255, 0.15);
+    box-shadow: 0 1vmin 2vmin rgba(255, 255, 255, 0.15);
 }
 
 .calculator_button_calculate {
@@ -106,17 +106,17 @@ body,html {
     align-items: center;
     cursor: pointer;
 
-    margin: 0.5vh;
+    margin: 0.5vmin;
 
-    width: 7vh;
-    height: 31vh;
-    border-radius: 2vh;
+    width: 7vmin;
+    height: 31vmin;
+    border-radius: 2vmin;
 
     background: rgba(0, 0, 0, 0.3);
     border: 0.0625rem solid rgba(255, 255, 255, 0.7);
     color: rgba(255, 255, 255, 0.95);
 
-    font-size: 5.5vh;
+    font-size: 5.5vmin;
     font-weight: 600;
 
     transition: ease 0.1s;
@@ -124,7 +124,7 @@ body,html {
 
 .calculator_button_calculate:hover {
     transform: scale(1.05);
-    box-shadow: 0 1vh 2vh rgba(255, 255, 255, 0.15);
+    box-shadow: 0 1vmin 2vmin rgba(255, 255, 255, 0.15);
 }
 
 .calculator_select_button {

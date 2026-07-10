@@ -19,8 +19,8 @@ body,html {
     align-items: center;
     overflow: hidden;
 
-    width: 6vh;
-    border-bottom-right-radius: 2vh;
+    width: 6vmin;
+    border-bottom-right-radius: 2vmin;
 
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -32,17 +32,18 @@ body,html {
 
     cursor: pointer;
 
-    width: 4vh;
+    width: 4vmin;
     aspect-ratio: 1 / 1;
 
     border-radius: 30%;
-    margin: 1vh 2vh;
+    margin: 1vmin 2vmin;
 
-    background-color: coral;
+    background: linear-gradient(135deg, coral, #ff4500);
+    box-shadow: 0 0.3vmin 0.6vmin rgba(0, 0, 0, 0.2);
 
     color: white;
     font-weight: bold;
-    font-size: 2vh;
+    font-size: 2vmin;
 
     transition: ease 0.1s;
 }
@@ -53,7 +54,7 @@ body,html {
 
 .notes_selector:hover {
     scale: 1.1;
-    box-shadow: 0 1vh 2vh rgba(255, 255, 255, 0.15);
+    box-shadow: 0 1vmin 2vmin rgba(255, 255, 255, 0.15);
 }
 
 .notes_sidebar_pages {
@@ -63,7 +64,7 @@ body,html {
     overflow-y: auto;
     overflow-x: hidden;
 
-    max-height: 60vh;
+    max-height: 60vmin;
 }
 
 .notes_sidebar_add_page {
@@ -73,24 +74,25 @@ body,html {
 
     cursor: pointer;
 
-    width: 4vh;
+    width: 4vmin;
     aspect-ratio: 1 / 1;
 
     border-radius: 30%;
-    margin: 1vh 2vh;
+    margin: 1vmin 2vmin;
 
-    background-color: green;
+    background: linear-gradient(135deg, #7fff00, #2e8b57);
+    box-shadow: 0 0.3vmin 0.6vmin rgba(0, 0, 0, 0.2);
 
     color: white;
     font-weight: bolder;
-    font-size: 3vh;
+    font-size: 3vmin;
 
     transition: ease 0.1s;
 }
 
 .notes_sidebar_add_page:hover {
     scale: 1.1;
-    box-shadow: 0 1vh 2vh rgba(255, 255, 255, 0.15);
+    box-shadow: 0 1vmin 2vmin rgba(255, 255, 255, 0.15);
 }
 
 .select_notes_button {
@@ -116,23 +118,24 @@ body,html {
 
     cursor: pointer;
 
-    height: 3vh;
+    height: 3vmin;
     width: 100%;
 
-    background-color: #ff5f56;
+    background: linear-gradient(135deg, #ff5f56, #b22222);
+    box-shadow: 0 0.3vmin 0.6vmin rgba(0, 0, 0, 0.2);
     border: 0.0625rem solid #e0443e;
 
     color: white;
     font-weight: bolder;
-    font-size: 1.5vh;
+    font-size: 1.5vmin;
 
     transition: ease 0.1s;
 }
 
 .notes_sidebar_reset:hover {
     transform: scale(1.05);
-    background-color: #ff3b30;
-    box-shadow: 0 0 0.5vh rgba(255, 59, 48, 0.6);
+    background: linear-gradient(135deg, #ff3b30, #b22222);
+    box-shadow: 0 0 0.5vmin rgba(255, 59, 48, 0.6);
 }
 
 .notes_content {
@@ -148,9 +151,9 @@ body,html {
     overflow-x: hidden;
     overflow-y: auto;
 
-    max-height: 80vh;
+    max-height: 80vmin;
 
-    padding: 1vh;
+    padding: 1vmin;
 }
 
 .notes_page_header {
@@ -158,7 +161,7 @@ body,html {
     flex-direction: row;
     justify-content: space-between;
 
-    height: 4vh;
+    height: 4vmin;
 
     border-bottom: 2px solid white;
 }

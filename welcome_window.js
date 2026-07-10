@@ -24,9 +24,12 @@ const welcome_content = [
                     <h1 class="welcome_window_title">Apps and Features</h1>
                 </div>
                 <div class="welcome_window_content">
-                    <p>-Notes App</p>
-                    <p>-Stopwatch App</p>
-                    <p>-To-Do List App</p>
+                    <p>-Notes</p>
+                    <p>-Stopwatch</p>
+                    <p>-To-Do List</p>
+                    <p>-Terminal</p>
+                    <p>-Calculator</p>
+                    <p>-Music Player</p>
                 </div>
             </div>
         `
@@ -39,6 +42,8 @@ const welcome_content = [
                 </div>
                 <div class="welcome_window_content">
                     <p>Background: 25th hour by Louis Coyle</p>
+                    <p>Music: Daisuke Hasegawa, Coda and Yugo Kanno</p>
+                    <p>Thank you for using MeowOS!</p>
                 </div>
             </div>
         `

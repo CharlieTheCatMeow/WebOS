@@ -17,9 +17,9 @@ body,html {
     flex-direction: column;
 
     width: 100%;
-    max-height: 50vh;
+    max-height: 50vmin;
     overflow: auto;
-    padding: 1vh;
+    padding: 1vmin;
 }
 
 .terminal_input_line {

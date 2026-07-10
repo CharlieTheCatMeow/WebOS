@@ -108,13 +108,26 @@ function dragElement(element) {
 
         let topBarHeight = window.innerHeight * 0.05;
         let windowNextPositionY = element.offsetTop - currentY;
+        let windowNextPositionX = element.offsetLeft - currentX;
 
-        if (windowNextPositionY > topBarHeight) {
-            element.style.top = windowNextPositionY + "px";
-        } else {
-            element.style.top = topBarHeight + "px";
+        const rect = element.getBoundingClientRect();
+        let maxLeft = window.innerWidth - rect.width;
+        let maxTop = window.innerHeight - rect.height;
+
+        if (windowNextPositionY < topBarHeight) {
+            windowNextPositionY = topBarHeight;
+        } else if (windowNextPositionY > maxTop) {
+            windowNextPositionY = Math.max(maxTop, topBarHeight);
         }
-        element.style.left = (element.offsetLeft - currentX) + "px";
+
+        if (windowNextPositionX < 0) {
+            windowNextPositionX = 0;
+        } else if (windowNextPositionX > maxLeft) {
+            windowNextPositionX = Math.max(maxLeft, 0);
+        }
+
+        element.style.top = windowNextPositionY + "px";
+        element.style.left = windowNextPositionX + "px";
     }
     function stopDragging() {
         element.classList.remove("window_dragging");
@@ -122,6 +135,37 @@ function dragElement(element) {
         document.onmousemove = null;
     }
 }
+
+//keep windows inside the viewport, called on open and on resize
+function clampWindowToViewport(element) {
+    if (!element.dataset.positioned) return;
+
+    let topBarHeight = window.innerHeight * 0.05;
+    const rect = element.getBoundingClientRect();
+
+    let maxLeft = window.innerWidth - rect.width;
+    let maxTop = window.innerHeight - rect.height;
+
+    let newLeft = Math.min(Math.max(element.offsetLeft, 0), Math.max(maxLeft, 0));
+    let newTop = Math.min(Math.max(element.offsetTop, topBarHeight), Math.max(maxTop, topBarHeight));
+
+    element.style.left = newLeft + "px";
+    element.style.top = newTop + "px";
+}
+
+function clampAllOpenWindows() {
+    document.querySelectorAll(".window").forEach(function (win) {
+        if (win.style.display === "flex") {
+            clampWindowToViewport(win);
+        }
+    });
+}
+
+let resizeDebounce;
+window.addEventListener("resize", function () {
+    clearTimeout(resizeDebounce);
+    resizeDebounce = setTimeout(clampAllOpenWindows, 50);
+});
 
 //open and close windows
 function closeWindow(element) {
@@ -149,6 +193,7 @@ function openWindow(element) {
     element.style.display = "flex";
     void element.offsetWidth;
     element.classList.remove("window_closed");
+    clampWindowToViewport(element);
     biggestIndex++;
     element.style.zIndex = biggestIndex;
     topBar.style.zIndex = biggestIndex + 1;
