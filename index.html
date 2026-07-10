@@ -66,7 +66,7 @@
             <div class="top_bar" id="top_bar">
                 <div class="menu_buttons">
                     <h2 id="topBarStartMenuButton" class="top_bar_item no_select" style="cursor: pointer;">MeowOS!</h2>
-                    <h2 class="top_bar_item no_select">Try double-clicking the icons!</h2>
+                    <h2 id="topBarDoubleClickingTip" class="top_bar_item no_select" style="cursor: pointer;">Try double-clicking the icons!</h2>
                 </div>
                 <h2 class="top_bar_item no_select" id="clockTime"></h2>
             </div>
@@ -80,6 +80,14 @@
                 <div class="app_icon no_select" data-window="musicPlayer">Music</div>
             </div>
             <div class="windows">
+                <div id="doubleClickTipEasterEgg" class="window" style="width: 40vh; display: none">
+                    <div class="window_header">
+                        <div class="header_buttons">
+                            <div id="closeDoubleClickTipEasterEgg" class="close_button no_select"></div>
+                        </div>
+                    </div>
+                    <div class="window_content double_clicking_tip_window_content">Good job!</div> 
+                </div>
                 <div id="welcomeScreen" class="window" style="width: 40vh; display: none">
                     <div id="welcomeScreenHeader" class="window_header">
                         <div class="header_buttons">

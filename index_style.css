@@ -74,10 +74,42 @@ body,html {
 }
 
 .top_bar_item:hover {
-    transform: scale(1.1);
+    transform: scale(1.05, 1.1);
     will-change: transform;
     background-color: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 255, 255, 0.3);
+}
+
+.top_bar_double_clicking_tip_selected {
+    transform: scale(1.1);
+}
+
+.top_bar_double_clicking_tip_animation {
+    animation: topBarDoubleClickingTipAnimation 0.15s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes topBarDoubleClickingTipAnimation {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.double_clicking_tip_window_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 40vh;
+
+    color: white;
+    font-size: 5vh;
+    font-weight: 1000;
 }
 
 .menu_buttons {
@@ -167,7 +199,7 @@ body,html {
     animation: iconPop 0.35s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-.selected {
+.icon_selected {
     width: 10vh;
     margin: 0;
 }

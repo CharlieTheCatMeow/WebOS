@@ -33,9 +33,15 @@ const musicPlayer = document.querySelector("#musicPlayer");
 const musicPlayerOpen = document.querySelector("#openMusicPlayerWindow");
 const musicPlayerClose = document.querySelector("#closeMusicPlayerWindow");
 
-//top bar variable
+//double clicking easter egg
+const doubleClickingTip = document.querySelector("#doubleClickTipEasterEgg");
+const doubleClickingTipOpen = document.querySelector("#openDoubleClickTipEasterEgg");
+const doubleClickingTipClose = document.querySelector("#closeDoubleClickTipEasterEgg");
+
+//top bar variables
 const topBar = document.querySelector("#top_bar");
 const timeText = document.querySelector("#clockTime");
+const topBarDoubleClickingTip = document.querySelector("#topBarDoubleClickingTip");
 
 let selectedIcon = undefined;
 const icons = document.querySelectorAll(".app_icon");
@@ -45,10 +51,28 @@ let biggestIndex = 1;
 //clock
 function updateTime() {
     const now = new Date()
-    const formattedTime = now.toLocaleDateString('en-US', {weekday: 'short'}) + ' ' + now.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit', hour12: false});
-    timeText.innerHTML = formattedTime;
+    timeText.innerHTML = now.toLocaleDateString('en-US', {weekday: 'short'}) + ' ' + now.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit', hour12: false});
 }
 setInterval(updateTime, 1000);
+
+topBarDoubleClickingTip.addEventListener("click", function () {
+    if (topBarDoubleClickingTip.classList.contains("top_bar_double_clicking_tip_selected")) {
+        topBarDoubleClickingTip.classList.remove("top_bar_double_clicking_tip_selected");
+        openWindow(doubleClickingTip);
+        topBarDoubleClickingTip.classList.add("top_bar_double_clicking_tip_animation");
+        setTimeout(function () {
+           closeWindow(doubleClickingTip);
+        }, 1000);
+        setTimeout(function () {
+            topBarDoubleClickingTip.classList.remove("top_bar_double_clicking_tip_animation");
+        }, 400);
+    } else {
+        topBarDoubleClickingTip.classList.add("top_bar_double_clicking_tip_selected");
+        setTimeout(function () {
+            topBarDoubleClickingTip.classList.remove("top_bar_double_clicking_tip_selected");
+        }, 400);
+    }
+});
 
 //dragging windows
 function dragElement(element) {
@@ -139,7 +163,7 @@ function selectIcon(element) {
     if (selectedIcon && selectedIcon !== element) {
         deselectIcon(selectedIcon);
     }
-    element.classList.add("selected");
+    element.classList.add("icon_selected");
     selectedIcon = element;
 
     setTimeout(function () {
@@ -149,11 +173,11 @@ function selectIcon(element) {
     }, 300);
 }
 function deselectIcon(element) {
-    element.classList.remove("selected");
+    element.classList.remove("icon_selected");
     selectedIcon = undefined;
 }
 function iconTap(element) {
-    if (element.classList.contains("selected")) {
+    if (element.classList.contains("icon_selected")) {
         deselectIcon(element);
 
         element.classList.add("icon_pop");
@@ -217,3 +241,4 @@ initializeWindow(todoList, todoListOpen, todoListClose);
 initializeWindow(terminal, terminalOpen, terminalClose);
 initializeWindow(calculator, calculatorOpen, calculatorClose);
 initializeWindow(musicPlayer, musicPlayerOpen, musicPlayerClose);
+initializeWindow(doubleClickingTip, doubleClickingTipOpen, doubleClickingTipClose);
