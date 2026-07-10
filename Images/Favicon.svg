@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100px" height="100px">
+  <path
+    class="cat-loader"
+    d="M 33.6 90
+       A 40 40 0 0 1 22 47
+       L 12 12
+       L 37.6 26.7
+       A 40 40 0 0 1 82.4 26.7
+       L 108 12
+       L 98 47
+       A 40 40 0 0 1 86.4 90"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
