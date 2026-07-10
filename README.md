@@ -1,5 +1,7 @@
 # MeowOS!
 
+A web based operating system! You can do stuff with it, using the apps listed below!
+
 ## Apps:
 - Intro
 - Notes
@@ -7,10 +9,11 @@
 - To-Do List
 - Terminal
 - Calculator
-- WIP Music player
+- Music Player
 
 ## Features
 - Clock
+- Loading Screen
 - Start Menu
 - Interactive elements
 
