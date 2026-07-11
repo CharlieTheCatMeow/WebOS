@@ -49,6 +49,10 @@ const welcome_content = [
                     <p>-Terminal</p>
                     <p>-Calculator</p>
                     <p>-Music Player</p>
+                    <p>-Gallery</p>
+                    <p>-Dark and Light Mode</p>
+                    <p>-Interative elements</p>
+                    <p>-Loading Screen</p>
                 </div>
             </div>
         `

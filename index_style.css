@@ -20,6 +20,10 @@ body,html {
     font-family: 'Outfit', sans-serif;
 }
 
+body, div, h1, h2, p, span, a, input {
+    transition: color 0.3s ease, background-color 0.3s ease, background 0.3s ease;
+}
+
 [contenteditable="true"]:focus {
     outline: none;
 }
@@ -41,6 +45,10 @@ body,html {
     background-size: cover;
 }
 
+.desktop_dark_mode {
+    background-image: url("Images/Nature_Night.png") !important;
+}
+
 .top_bar {
     display: flex;
     justify-content: space-between;
@@ -56,6 +64,10 @@ body,html {
     color: white;
 
     box-sizing: border-box;
+}
+
+.top_bar_dark_mode {
+    background: linear-gradient(90deg, #231932, #0d091e) !important;
 }
 
 .top_bar_item {
@@ -241,6 +253,13 @@ body,html {
     animation: zoomIn 0.2s ease forwards;
 }
 
+.window_dark_mode {
+    backdrop-filter: blur(1.25rem) saturate(100%) !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 0.8vmin 3.2vmin 0 rgba(0, 0, 0, 0.3) !important;
+}
+
 .window.window_closed {
     animation: zoomIn 0.2s ease reverse forwards;
     pointer-events: none;
@@ -287,8 +306,12 @@ body,html {
     box-shadow: 0 0.1vmin 0.5vmin rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.2s ease;
 
-    color: #ffffff;
+    color: #f9f9fb;
     text-wrap: nowrap;
+}
+
+.window_header_dark_mode {
+    background: linear-gradient(135deg, #2b1b3d, #42273b) !important;
 }
 
 .window_dragging,

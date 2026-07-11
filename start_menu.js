@@ -57,21 +57,23 @@ function enterStartMenu() {
 }
 
 window.addEventListener("load", function () {
-    pageLoaded = true;
-    clearInterval(loadingInterval);
-    loadingScreenProgressBar.style.transition = "stroke-dashoffset 0.3s ease-out";
-    loadingText.classList.add("no_animation")
-    loadingText.innerHTML = "<span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span><span>&nbsp;</span><span>f</span><span>i</span><span>n</span><span>i</span><span>s</span><span>h</span><span>e</span><span>d</span><span>!</span>";
+    setTimeout(function () {
+        pageLoaded = true;
+        clearInterval(loadingInterval);
+        loadingScreenProgressBar.style.transition = "stroke-dashoffset 0.3s ease-out";
+        loadingText.classList.add("no_animation")
+        loadingText.innerHTML = "<span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span><span>&nbsp;</span><span>f</span><span>i</span><span>n</span><span>i</span><span>s</span><span>h</span><span>e</span><span>d</span><span>!</span>";
 
-    setTimeout(function () {
-        setCatStroke(100);
-    }, 10);
-    setTimeout(function () {
-        loadingScreen.classList.add("loading_screen_hidden");
         setTimeout(function () {
-            loadingScreen.style.display = "none";
-        }, 400);
-    }, 400);
+            setCatStroke(100);
+        }, 10);
+        setTimeout(function () {
+            loadingScreen.classList.add("loading_screen_hidden");
+            setTimeout(function () {
+                loadingScreen.style.display = "none";
+            }, 400);
+        }, 800);
+    }, 2000);
 });
 
 enterDesktopButton.addEventListener("click", function () {

@@ -47,25 +47,35 @@ const musicPlayerOpen = document.querySelector("#openMusicPlayerWindow");
 const musicPlayerClose = document.querySelector("#closeMusicPlayerWindow");
 const musicPlayerMaximizeButton = document.querySelector("#musicPlayerMaximizeButton");
 
-//gallery variables
+//Gallery variables
 const gallery = document.querySelector("#gallery");
 const galleryContent = document.querySelector("#galleryContent");
 const galleryOpen = document.querySelector("#openGalleryWindow");
 const galleryClose = document.querySelector("#closeGalleryWindow");
 const galleryMaximizeButton = document.querySelector("#galleryMaximizeButton");
 
-//search menu
+//Settings variables
+const settings = document.querySelector("#settings");
+const settingsContent = document.querySelector("#settingsContent");
+const settingsOpen = document.querySelector("#openSettingsWindow");
+const settingsClose = document.querySelector("#closeSettingsWindow");
+const settingsMaximizeButton = document.querySelector("#settingsMaximizeButton");
+
+//Search menu
 const searchMenu = document.querySelector("#searchMenu");
 
-//double-clicking easter-egg
+//Double-clicking easter-egg
 const doubleClickingTip = document.querySelector("#doubleClickTipEasterEgg");
 const doubleClickingTipOpen = document.querySelector("#openDoubleClickTipEasterEgg");
 const doubleClickingTipClose = document.querySelector("#closeDoubleClickTipEasterEgg");
 
-//top bar variables
+//Top bar variables
 const topBar = document.querySelector("#topBar");
 const timeText = document.querySelector("#clockTime");
 const topBarDoubleClickingTip = document.querySelector("#topBarDoubleClickingTip");
+
+//desktop
+const desktop = document.querySelector("#desktop");
 
 let selectedIcon = undefined;
 const icons = document.querySelectorAll(".app_icon");
@@ -309,6 +319,34 @@ function handleWindowTap(element) {
     deselectIcon(selectedIcon);
 }
 
+function switchToDarkMode() {
+    const allWindows = document.querySelectorAll(".window");
+    allWindows.forEach(function (win) {
+        let winHeader = document.querySelector("#" + win.id + "Header");
+        if (winHeader) {
+            winHeader.classList.add("window_header_dark_mode");
+        }
+        win.classList.add("window_dark_mode");
+    });
+    topBar.classList.add("top_bar_dark_mode");
+    desktop.classList.add("desktop_dark_mode")
+    searchMenu.classList.add("search_menu_dark_mode");
+}
+
+function switchToLightMode() {
+    const allWindows = document.querySelectorAll(".window");
+    allWindows.forEach(function (win) {
+        let winHeader = document.querySelector("#" + win.id + "Header");
+        if (winHeader) {
+            winHeader.classList.remove("window_header_dark_mode");
+        }
+        win.classList.remove("window_dark_mode");
+    });
+    topBar.classList.remove("top_bar_dark_mode");
+    desktop.classList.remove("desktop_dark_mode");
+    searchMenu.classList.remove("search_menu_dark_mode");
+}
+
 //icons
 icons.forEach(function (icon) {
     icon.addEventListener("click", function () {
@@ -368,3 +406,4 @@ initializeWindow(musicPlayer, musicPlayerContent, musicPlayerOpen, musicPlayerCl
 initializeWindow(doubleClickingTip, null, doubleClickingTipOpen, doubleClickingTipClose);
 initializeWindow(gallery, galleryContent, galleryOpen, galleryClose, galleryMaximizeButton);
 initializeWindow(searchMenu, null, null, null, null);
+initializeWindow(settings, settingsContent, settingsOpen, settingsClose, settingsMaximizeButton);

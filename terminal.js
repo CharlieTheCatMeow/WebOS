@@ -46,6 +46,11 @@ function runCommand(command) {
             <p>    "notes": opens notes</p>
             <p>    "stopwatch": opens stopwatch</p>
             <p>    "todo": opens to-do list</p>
+            <p>    "calculator": opens calculator</p>
+            <p>    "music": opens music player</p>
+            <p>    "gallery": opens gallery</p>
+            <p>    "dark": activates dark mode</p>
+            <p>    "light": activates light mode</p>
         `;
     } else if(command === "welcome") {
         openWindow(welcomeScreen);
@@ -59,6 +64,23 @@ function runCommand(command) {
     } else if(command === "todo") {
         openWindow(todoList);
         output = `<p>  to-do List opened!</p>`
+    } else if(command === "calculator") {
+        openWindow(calculator);
+        output = `<p>  Calculator opened!</p>`
+    } else if(command === "music") {
+        openWindow(musicPlayer);
+        output = `<p>  Music Player opened!</p>`
+    } else if(command === "gallery") {
+        openWindow(gallery);
+        output = `<p>  Gallery opened!</p>`
+    } else if(command === "dark") {
+        switchToDarkMode();
+        output = `<p>  Dark mode activated!</p>`
+    } else if(command === "light") {
+        switchToLightMode();
+        output = `<p>  Light mode activated!</p>`
+    } else {
+        output = `<p>  Command not found. <br>For a list of available commands type "help"</p>`
     }
 
     document.querySelector("#terminalInputLine").remove();

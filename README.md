@@ -1,25 +1,34 @@
 # MeowOS!
 
 A web based operating system! You can do stuff with it, using the apps listed below!
+(Please double click the icons in quick succession)
 
 ## Apps:
 - Intro
 - Notes
 - Stopwatch
 - To-Do List
-- Terminal
 - Calculator
 - Music Player
+- Gallery
+- Setting
+- Terminal
 
 ## Features
 - Clock
 - Loading Screen
 - Start Menu
+- Search Menu (top left, click the Logo)
 - Interactive elements
 
 Yes all very exciting I know.
 
-![Image](Assets/Screenshot%202026-07-09%20180107.png)
+## Screenshots:
 
-Credits to Louis Coyle for the Background image (very pretty).
+![Loading Screen](Assets/Screenshot_loading_screen.png)
+![Loading Screen](Assets/Screenshot_light_mode.png)
+![Loading Screen](Assets/Screenshot_dark_mode.png)
+
+
+Credits to Louis Coyle for the Background image (very pretty). <br>
 Credits to Daisuke Hasegawa, Coda and Yugo Kanno for the music
