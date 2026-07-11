@@ -61,6 +61,13 @@ const settingsOpen = document.querySelector("#openSettingsWindow");
 const settingsClose = document.querySelector("#closeSettingsWindow");
 const settingsMaximizeButton = document.querySelector("#settingsMaximizeButton");
 
+//Browser variables
+const browser = document.querySelector("#browser");
+const browserContent = document.querySelector("#browserContent");
+const browserOpen = document.querySelector("#openBrowserWindow");
+const browserClose = document.querySelector("#closeBrowserWindow");
+const browserMaximizeButton = document.querySelector("#browserMaximizeButton");
+
 //Search menu
 const searchMenu = document.querySelector("#searchMenu");
 
@@ -340,6 +347,10 @@ function initializeWindow(element, elementContent, elementOpen, elementClose, el
                 element.classList.remove("window_maximized");
                 element.classList.remove("no_dragging");
                 elementContent.classList.remove("window_maximized");
+                if (element.id === "browser") {
+                    const browserWebContent = document.querySelector("#browserWebContent");
+                    browserWebContent.classList.remove("window_maximized");
+                }
 
                 const restoredTop = element.preMaximizeTop !== undefined ? element.preMaximizeTop : (window.innerHeight - element.offsetHeight) / 2;
                 const restoredLeft = element.preMaximizeLeft !== undefined ? element.preMaximizeLeft : (window.innerWidth - element.offsetWidth) / 2;
@@ -354,6 +365,10 @@ function initializeWindow(element, elementContent, elementOpen, elementClose, el
                 element.classList.add("window_maximized");
                 element.classList.add("no_dragging");
                 elementContent.classList.add("window_maximized");
+                if (element.id === "browser") {
+                    const browserWebContent = document.querySelector("#browserWebContent");
+                    browserWebContent.classList.add("window_maximized");
+                }
             }
             updateTopBarVisibility();
         });
@@ -371,5 +386,6 @@ initializeWindow(musicPlayer, musicPlayerContent, musicPlayerOpen, musicPlayerCl
 initializeWindow(gallery, galleryContent, galleryOpen, galleryClose, galleryMaximizeButton);
 initializeWindow(searchMenu, null, null, null, null);
 initializeWindow(settings, settingsContent, settingsOpen, settingsClose, settingsMaximizeButton);
+initializeWindow(browser, browserContent, browserOpen, browserClose, browserMaximizeButton);
 
 checkLightDarkMode();

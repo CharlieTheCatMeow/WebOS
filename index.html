@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="gallery.css">
         <link rel="stylesheet" href="search_menu.css">
         <link rel="stylesheet" href="settings.css">
+        <link rel="stylesheet" href="browser.css">
 
         <title>MeowOS!</title>
         <link rel="icon" type="image/x-icon" href="Images/Favicon.svg">
@@ -99,6 +100,9 @@
                 </div>
                 <div class="app_icon no_select" data-window="gallery">
                     <img class="app_icon_svg" src="Images/gallery.svg" alt="Gallery">
+                </div>
+                <div class="app_icon no_select" data-window="browser">
+                    <img class="app_icon_svg" src="Images/browser.svg" alt="Browser">
                 </div>
                 <div class="app_icon no_select" data-window="settings">
                     <img class="app_icon_svg" src="Images/settings.svg" alt="Settings">
@@ -301,6 +305,24 @@
                         </div>
                     </div>
                 </div>
+                <div id="browser" class="window" style="width: 60vmin; display: none; overflow: hidden">
+                    <div id="browserHeader" class="window_header">
+                        <div class="header_buttons">
+                            <div id="closeBrowserWindow" class="close_button no_select"></div>
+                            <div id="browserMaximizeButton" class="maximize_button no_select"></div>
+                        </div>
+                        <h2 class="header_title no_select">Browser</h2>
+                    </div>
+                    <div id="browserContent" class="browser_content">
+                        <div class="browser_top_bar">
+                            <div class="browser_url_bar">URL bar locked, the cat ate it D:</div>
+                            <div id="browserHomeButton" class="browser_home_button">
+                                <img class="browser_home_button_icon" src="Images/home.svg" alt="Home">
+                            </div>
+                        </div>
+                        <div id="browserWebContent" class="browser_web_content"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="script.js"></script>
@@ -315,5 +337,6 @@
         <script src="gallery.js"></script>
         <script src="search_menu.js"></script>
         <script src="settings.js"></script>
+        <script src="browser.js"></script>
     </body>
 </html>
