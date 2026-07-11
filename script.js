@@ -167,7 +167,6 @@ function dragElement(element) {
 
 }
 
-//keep windows inside the viewport, called on open and on resize
 function clampWindowToViewport(element) {
     if (!element.dataset.positioned) return;
 
@@ -202,12 +201,17 @@ window.addEventListener("resize", function () {
     resizeDebounce = setTimeout(clampAllOpenWindows, 50);
 });
 
+function updateTopBarVisibility() {
+    const anyMaximizedAndOpen = Array.from(document.querySelectorAll(".window.window_maximized")).some(win => win.style.display !== "none");
+    topBar.style.display = anyMaximizedAndOpen ? "none" : "flex";
+}
+
 //open and close windows
 function closeWindow(element) {
     element.classList.add("window_closed");
-    topBar.style.display = "flex";
     setTimeout(function () {
         element.style.display = "none";
+        updateTopBarVisibility();
 
         if (element.id === "terminal" && typeof terminalOpenClose === "function") {
             terminalOpenClose();
@@ -215,9 +219,6 @@ function closeWindow(element) {
     }, 200);
 }
 function openWindow(element) {
-    if (element.classList.contains("window_maximized")) {
-        topBar.style.display = "none";
-    }
     if (!element.dataset.positioned) {
         element.style.display = "flex";
         void element.offsetWidth;
@@ -253,6 +254,7 @@ function openWindow(element) {
     if (element.id === "terminal" && typeof terminalOpenClose === "function") {
         terminalOpenClose();
     }
+    updateTopBarVisibility();
 }
 
 //selecting icons
@@ -336,11 +338,6 @@ function initializeWindow(element, elementContent, elementOpen, elementClose, el
                 element.classList.remove("no_dragging");
                 elementContent.classList.remove("window_maximized");
 
-                const anyOtherMaximized = Array.from(document.querySelectorAll(".window_maximized")).some(win => win !== element);
-                if (!anyOtherMaximized) {
-                    topBar.style.display = "flex";
-                }
-
                 const restoredTop = element.preMaximizeTop !== undefined ? element.preMaximizeTop : (window.innerHeight - element.offsetHeight) / 2;
                 const restoredLeft = element.preMaximizeLeft !== undefined ? element.preMaximizeLeft : (window.innerWidth - element.offsetWidth) / 2;
 
@@ -354,8 +351,8 @@ function initializeWindow(element, elementContent, elementOpen, elementClose, el
                 element.classList.add("window_maximized");
                 element.classList.add("no_dragging");
                 elementContent.classList.add("window_maximized");
-                topBar.style.display = "none";
             }
+            updateTopBarVisibility();
         });
     }
     addWindowTapHandling(element);

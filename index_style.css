@@ -48,6 +48,7 @@ body,html {
 
     height: 5vmin;
     padding: 0 0.2vmin;
+    border-radius: 0 0.5vmin 0.5vmin;
 
     background: linear-gradient(90deg, rgba(255, 127, 80, 0.85), rgba(255, 160, 122, 0.75));
     backdrop-filter: blur(1.5vmin);
@@ -84,6 +85,12 @@ body,html {
     will-change: transform;
     background-color: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 255, 255, 0.3);
+}
+
+.top_bar_search_menu_icon {
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    filter: brightness(0) invert(1);
 }
 
 .top_bar_double_clicking_tip_selected {
