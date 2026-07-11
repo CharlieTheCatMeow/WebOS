@@ -32,6 +32,10 @@ apps = [{name: "Introduction",
          content: `<div id="searchMenuGallery" class="search_menu_app_icon no_select" data-window="gallery">
                         <img class="app_icon_svg" src="Images/gallery.svg" alt="Gallery">
                     </div>`},
+        {name: "Settings",
+         content: `<div id="searchMenuSettings" class="search_menu_app_icon no_select" data-window="settings">
+                        <img class="app_icon_svg" src="Images/settings.svg" alt="Settings">
+                    </div>`},
         {name: "Terminal",
          content: `<div id="searchMenuTerminal" class="search_menu_app_icon no_select" data-window="terminal">
                         <img class="app_icon_svg" src="Images/terminal.svg" alt="CMD">
