@@ -331,6 +331,7 @@ function switchToDarkMode() {
     topBar.classList.add("top_bar_dark_mode");
     desktop.classList.add("desktop_dark_mode")
     searchMenu.classList.add("search_menu_dark_mode");
+    localStorage.setItem("Mode", "dark");
 }
 
 function switchToLightMode() {
@@ -345,6 +346,15 @@ function switchToLightMode() {
     topBar.classList.remove("top_bar_dark_mode");
     desktop.classList.remove("desktop_dark_mode");
     searchMenu.classList.remove("search_menu_dark_mode");
+    localStorage.setItem("Mode", "light");
+}
+
+function checkLightDarkMode() {
+    if (localStorage.getItem("Mode") === "dark") {
+        switchToDarkMode();
+    } else if (localStorage.getItem("Mode") === "light") {
+        switchToLightMode();
+    }
 }
 
 //icons
@@ -407,3 +417,5 @@ initializeWindow(doubleClickingTip, null, doubleClickingTipOpen, doubleClickingT
 initializeWindow(gallery, galleryContent, galleryOpen, galleryClose, galleryMaximizeButton);
 initializeWindow(searchMenu, null, null, null, null);
 initializeWindow(settings, settingsContent, settingsOpen, settingsClose, settingsMaximizeButton);
+
+checkLightDarkMode();
