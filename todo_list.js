@@ -2,14 +2,14 @@ const todoTopBarAddName = document.querySelector("#todoTopBarAddName");
 const todoTopBarAddButton = document.querySelector("#todoTopbarAddButton");
 const todoContent = document.querySelector("#todoContent");
 
-let todoListContent = JSON.parse(localStorage.getItem("todoListContent")) || []
+let todoListItems = JSON.parse(localStorage.getItem("todoListItems")) || []
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 function renderTodoContent() {
     todoContent.innerHTML = "";
 
-    const sortedList = [...todoListContent].sort((a, b) => a.completed - b.completed);
+    const sortedList = [...todoListItems].sort((a, b) => a.completed - b.completed);
 
     sortedList.forEach(function (task) {
         let newContent = document.createElement("div");
@@ -35,20 +35,20 @@ function renderTodoContent() {
             renderTodoContent();
         });
         todoListDeleteButton.addEventListener("click", function () {
-            todoListContent = todoListContent.filter(t => t.id !== task.id);
+            todoListItems = todoListItems.filter(t => t.id !== task.id);
             renderTodoContent();
         });
         todoListCompleteButton.style.backgroundColor = task.completed ? "green" : "rgba(0, 0, 0, 0.2)";
     })
 
-    localStorage.setItem("todoListContent", JSON.stringify(todoListContent));
+    localStorage.setItem("todoListItems", JSON.stringify(todoListItems));
 }
 
 todoTopBarAddButton.addEventListener("click", async function (){
     const taskText = todoTopBarAddName.value;
 
     if (taskText.trim() !== "") {
-        todoListContent.push({
+        todoListItems.push({
             id: Date.now(),
             name: taskText,
             completed: false
