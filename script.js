@@ -64,15 +64,9 @@ const settingsMaximizeButton = document.querySelector("#settingsMaximizeButton")
 //Search menu
 const searchMenu = document.querySelector("#searchMenu");
 
-//Double-clicking easter-egg
-const doubleClickingTip = document.querySelector("#doubleClickTipEasterEgg");
-const doubleClickingTipOpen = document.querySelector("#openDoubleClickTipEasterEgg");
-const doubleClickingTipClose = document.querySelector("#closeDoubleClickTipEasterEgg");
-
 //Top bar variables
 const topBar = document.querySelector("#topBar");
 const timeText = document.querySelector("#clockTime");
-const topBarDoubleClickingTip = document.querySelector("#topBarDoubleClickingTip");
 
 //desktop
 const desktop = document.querySelector("#desktop");
@@ -88,25 +82,6 @@ function updateTime() {
     timeText.innerHTML = now.toLocaleDateString('en-US', {weekday: 'short'}) + ' ' + now.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit', hour12: false});
 }
 setInterval(updateTime, 1000);
-
-topBarDoubleClickingTip.addEventListener("click", function () {
-    if (topBarDoubleClickingTip.classList.contains("top_bar_double_clicking_tip_selected")) {
-        topBarDoubleClickingTip.classList.remove("top_bar_double_clicking_tip_selected");
-        openWindow(doubleClickingTip);
-        topBarDoubleClickingTip.classList.add("top_bar_double_clicking_tip_animation");
-        setTimeout(function () {
-           closeWindow(doubleClickingTip);
-        }, 1000);
-        setTimeout(function () {
-            topBarDoubleClickingTip.classList.remove("top_bar_double_clicking_tip_animation");
-        }, 400);
-    } else {
-        topBarDoubleClickingTip.classList.add("top_bar_double_clicking_tip_selected");
-        setTimeout(function () {
-            topBarDoubleClickingTip.classList.remove("top_bar_double_clicking_tip_selected");
-        }, 400);
-    }
-});
 
 //dragging windows
 function dragElement(element) {
@@ -267,42 +242,22 @@ function openWindow(element) {
     updateTopBarVisibility();
 }
 
-//selecting icons
-function selectIcon(element) {
-    if (selectedIcon && selectedIcon !== element) {
-        deselectIcon(selectedIcon);
-    }
-    element.classList.add("icon_selected");
-    selectedIcon = element;
-
-    setTimeout(function () {
-        if (selectedIcon == element) {
-            deselectIcon(element);
-        }
-    }, 300);
-}
 function deselectIcon(element) {
     if (!element) return;
     element.classList.remove("icon_selected");
     selectedIcon = undefined;
 }
 function iconTap(element) {
-    if (element.classList.contains("icon_selected")) {
-        deselectIcon(element);
+    element.classList.add("icon_pop");
+    setTimeout(function () {
+        element.classList.remove("icon_pop");
+    }, 400);
 
-        element.classList.add("icon_pop");
-        setTimeout(function () {
-            element.classList.remove("icon_pop");
-        }, 400);
+    const targetWindowID = element.getAttribute("data-window");
+    const targetWindow = document.getElementById(targetWindowID);
 
-        let targetWindowID = element.getAttribute("data-window");
-        let targetWindow = document.getElementById(targetWindowID);
-
-        if (targetWindow) {
-            openWindow(targetWindow);
-        }
-    } else {
-        selectIcon(element);
+    if (targetWindow) {
+        openWindow(targetWindow);
     }
 }
 
@@ -413,7 +368,6 @@ initializeWindow(todoList, todoListContent, todoListOpen, todoListClose, todoLis
 initializeWindow(terminal, terminalContent, terminalOpen, terminalClose, terminalMaximizeButton);
 initializeWindow(calculator, calculatorContent, calculatorOpen, calculatorClose, calculatorMaximizeButton);
 initializeWindow(musicPlayer, musicPlayerContent, musicPlayerOpen, musicPlayerClose, musicPlayerMaximizeButton);
-initializeWindow(doubleClickingTip, null, doubleClickingTipOpen, doubleClickingTipClose);
 initializeWindow(gallery, galleryContent, galleryOpen, galleryClose, galleryMaximizeButton);
 initializeWindow(searchMenu, null, null, null, null);
 initializeWindow(settings, settingsContent, settingsOpen, settingsClose, settingsMaximizeButton);

@@ -1,7 +1,6 @@
 # MeowOS!
 
 A web based operating system! You can do stuff with it, using the apps listed below!
-(Please double click the icons in quick succession)
 
 ## Apps:
 - Intro
