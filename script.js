@@ -1,45 +1,69 @@
 //Welcome Screen variables
 const welcomeScreen = document.querySelector("#welcomeScreen");
+const welcomeScreenContent = document.querySelector("#welcomeScreenContent");
 const welcomeScreenClose = document.querySelector("#closeWelcomeScreenWindow");
 const welcomeScreenOpen = document.querySelector("#openWelcomeScreenWindow");
+const welcomeScreenMaximizeButton = document.querySelector("#welcomeScreenMaximizeButton");
 
 //Stopwatch variables
 const stopwatch = document.querySelector("#stopwatch");
+const stopwatchContent = document.querySelector("#stopwatchContent");
 const stopwatchClose = document.querySelector("#closeStopwatchWindow");
 const stopwatchOpen = document.querySelector("#openStopwatchWindow");
+const stopwatchMaximizeButton = document.querySelector("#stopwatchMaximizeButton");
 
 //Notes variables
 const notes = document.querySelector("#notes");
+const notesContent = document.querySelector("#notesContent");
 const notesClose = document.querySelector("#closeNotesWindow");
 const notesOpen = document.querySelector("#openNotesWindow");
+const notesMaximizeButton = document.querySelector("#notesMaximizeButton");
 
 //To-Do List variables
 const todoList = document.querySelector("#todoList");
+const todoListContent = document.querySelector("#todoListContent");
 const todoListClose = document.querySelector("#closeTodoWindow");
 const todoListOpen = document.querySelector("#openTodoWindow");
+const todoListMaximizeButton = document.querySelector("#todoListMaximizeButton");
 
 //Terminal variables
 const terminal = document.querySelector("#terminal");
+const terminalContent = document.querySelector("#terminalContent");
 const terminalOpen = document.querySelector("#openTerminalWindow");
 const terminalClose = document.querySelector("#closeTerminalWindow");
+const terminalMaximizeButton = document.querySelector("#terminalMaximizeButton");
 
 //Calculator variables
 const calculator = document.querySelector("#calculator");
+const calculatorContent = document.querySelector("#calculatorContent");
 const calculatorOpen = document.querySelector("#openCalculatorWindow");
 const calculatorClose = document.querySelector("#closeCalculatorWindow");
+const calculatorMaximizeButton = document.querySelector("#calculatorMaximizeButton");
 
 //Music player variables
 const musicPlayer = document.querySelector("#musicPlayer");
+const musicPlayerContent = document.querySelector("#musicPlayerContent");
 const musicPlayerOpen = document.querySelector("#openMusicPlayerWindow");
 const musicPlayerClose = document.querySelector("#closeMusicPlayerWindow");
+const musicPlayerMaximizeButton = document.querySelector("#musicPlayerMaximizeButton");
 
-//double clicking easter egg
+//gallery variables
+const gallery = document.querySelector("#gallery");
+const galleryContent = document.querySelector("#galleryContent");
+const galleryOpen = document.querySelector("#openGalleryWindow");
+const galleryClose = document.querySelector("#closeGalleryWindow");
+const galleryMaximizeButton = document.querySelector("#galleryMaximizeButton");
+
+//search menu
+const searchMenu = document.querySelector("#searchMenu");
+
+//double-clicking easter-egg
 const doubleClickingTip = document.querySelector("#doubleClickTipEasterEgg");
 const doubleClickingTipOpen = document.querySelector("#openDoubleClickTipEasterEgg");
 const doubleClickingTipClose = document.querySelector("#closeDoubleClickTipEasterEgg");
 
 //top bar variables
-const topBar = document.querySelector("#top_bar");
+const topBar = document.querySelector("#topBar");
 const timeText = document.querySelector("#clockTime");
 const topBarDoubleClickingTip = document.querySelector("#topBarDoubleClickingTip");
 
@@ -87,10 +111,15 @@ function dragElement(element) {
     }
 
     function startDragging(e) {
+         if (element.classList.contains("no_dragging")) return;
         if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA" || e.target.closest(".notes_sidebar")) {
             return;
         }
+        if (e.target.closest(".close_button") || e.target.closest(".maximize_button") || e.target.closest(".header_buttons")) {
+            return;
+        }
         e.preventDefault();
+
         element.classList.add("window_dragging");
         initialX = e.clientX;
         initialY = e.clientY;
@@ -129,25 +158,31 @@ function dragElement(element) {
         element.style.top = windowNextPositionY + "px";
         element.style.left = windowNextPositionX + "px";
     }
+
     function stopDragging() {
         element.classList.remove("window_dragging");
         document.onmouseup = null;
         document.onmousemove = null;
     }
+
 }
 
 //keep windows inside the viewport, called on open and on resize
 function clampWindowToViewport(element) {
     if (!element.dataset.positioned) return;
 
-    let topBarHeight = window.innerHeight * 0.05;
-    const rect = element.getBoundingClientRect();
+    const topBarHeight = window.innerHeight * 0.05;
+    const width = element.offsetWidth;
+    const height = element.offsetHeight;
 
-    let maxLeft = window.innerWidth - rect.width;
-    let maxTop = window.innerHeight - rect.height;
+    const maxLeft = window.innerWidth - width;
+    const maxTop = window.innerHeight - height;
 
-    let newLeft = Math.min(Math.max(element.offsetLeft, 0), Math.max(maxLeft, 0));
-    let newTop = Math.min(Math.max(element.offsetTop, topBarHeight), Math.max(maxTop, topBarHeight));
+    const currentLeft = parseFloat(element.style.left) || 0;
+    const currentTop = parseFloat(element.style.top) || 0;
+
+    const newLeft = Math.min(Math.max(currentLeft, 0), Math.max(maxLeft, 0));
+    const newTop = Math.min(Math.max(currentTop, topBarHeight), Math.max(maxTop, topBarHeight));
 
     element.style.left = newLeft + "px";
     element.style.top = newTop + "px";
@@ -170,6 +205,7 @@ window.addEventListener("resize", function () {
 //open and close windows
 function closeWindow(element) {
     element.classList.add("window_closed");
+    topBar.style.display = "flex";
     setTimeout(function () {
         element.style.display = "none";
 
@@ -179,21 +215,37 @@ function closeWindow(element) {
     }, 200);
 }
 function openWindow(element) {
+    if (element.classList.contains("window_maximized")) {
+        topBar.style.display = "none";
+    }
     if (!element.dataset.positioned) {
         element.style.display = "flex";
         void element.offsetWidth;
         const width = element.offsetWidth;
         const height = element.offsetHeight;
-        element.style.top = ((window.innerHeight - height) / 2) + "px";
-        element.style.left = ((window.innerWidth - width) / 2) + "px";
-        element.style.transform = "none";
+
+        const topBarHeight = window.innerHeight * 0.05;
+        const maxLeft = window.innerWidth - width;
+        const maxTop = window.innerHeight - height;
+
+        let initialLeft = (window.innerWidth - width) / 2;
+        let initialTop = (window.innerHeight - height) / 2;
+
+        initialLeft = Math.min(Math.max(initialLeft, 0), Math.max(maxLeft, 0));
+        initialTop = Math.min(Math.max(initialTop, topBarHeight), Math.max(maxTop, topBarHeight));
+
+        if (!element.classList.contains("search_menu")) {
+            element.style.top = initialTop + "px";
+            element.style.left = initialLeft + "px";
+        }
         element.dataset.positioned = "true";
+    } else {
+        clampWindowToViewport(element);
     }
     element.classList.add("window_closed")
     element.style.display = "flex";
     void element.offsetWidth;
     element.classList.remove("window_closed");
-    clampWindowToViewport(element);
     biggestIndex++;
     element.style.zIndex = biggestIndex;
     topBar.style.zIndex = biggestIndex + 1;
@@ -218,6 +270,7 @@ function selectIcon(element) {
     }, 300);
 }
 function deselectIcon(element) {
+    if (!element) return;
     element.classList.remove("icon_selected");
     selectedIcon = undefined;
 }
@@ -262,7 +315,7 @@ icons.forEach(function (icon) {
 });
 
 
-function initializeWindow(element, elementOpen, elementClose) {
+function initializeWindow(element, elementContent, elementOpen, elementClose, elementMaximize) {
     if (!element) return;
     dragElement(element);
     closeWindow(element);
@@ -276,14 +329,45 @@ function initializeWindow(element, elementOpen, elementClose) {
             openWindow(element);
         })
     }
+    if (elementMaximize) {
+        elementMaximize.addEventListener("click", function () {
+            if (element.classList.contains("window_maximized")) {
+                element.classList.remove("window_maximized");
+                element.classList.remove("no_dragging");
+                elementContent.classList.remove("window_maximized");
+
+                const anyOtherMaximized = Array.from(document.querySelectorAll(".window_maximized")).some(win => win !== element);
+                if (!anyOtherMaximized) {
+                    topBar.style.display = "flex";
+                }
+
+                const restoredTop = element.preMaximizeTop !== undefined ? element.preMaximizeTop : (window.innerHeight - element.offsetHeight) / 2;
+                const restoredLeft = element.preMaximizeLeft !== undefined ? element.preMaximizeLeft : (window.innerWidth - element.offsetWidth) / 2;
+
+                element.style.top = restoredTop + "px";
+                element.style.left = restoredLeft + "px";
+            } else {
+                const rect = element.getBoundingClientRect();
+                element.preMaximizeTop = rect.top;
+                element.preMaximizeLeft = rect.left;
+
+                element.classList.add("window_maximized");
+                element.classList.add("no_dragging");
+                elementContent.classList.add("window_maximized");
+                topBar.style.display = "none";
+            }
+        });
+    }
     addWindowTapHandling(element);
 }
 
-initializeWindow(welcomeScreen, welcomeScreenOpen, welcomeScreenClose);
-initializeWindow(stopwatch, stopwatchOpen, stopwatchClose);
-initializeWindow(notes, notesOpen, notesClose);
-initializeWindow(todoList, todoListOpen, todoListClose);
-initializeWindow(terminal, terminalOpen, terminalClose);
-initializeWindow(calculator, calculatorOpen, calculatorClose);
-initializeWindow(musicPlayer, musicPlayerOpen, musicPlayerClose);
-initializeWindow(doubleClickingTip, doubleClickingTipOpen, doubleClickingTipClose);
+initializeWindow(welcomeScreen, welcomeScreenContent, welcomeScreenOpen, welcomeScreenClose, welcomeScreenMaximizeButton);
+initializeWindow(stopwatch, stopwatchContent, stopwatchOpen, stopwatchClose, stopwatchMaximizeButton);
+initializeWindow(notes, notesContent, notesOpen, notesClose, notesMaximizeButton);
+initializeWindow(todoList, todoListContent, todoListOpen, todoListClose, todoListMaximizeButton);
+initializeWindow(terminal, terminalContent, terminalOpen, terminalClose, terminalMaximizeButton);
+initializeWindow(calculator, calculatorContent, calculatorOpen, calculatorClose, calculatorMaximizeButton);
+initializeWindow(musicPlayer, musicPlayerContent, musicPlayerOpen, musicPlayerClose, musicPlayerMaximizeButton);
+initializeWindow(doubleClickingTip, null, doubleClickingTipOpen, doubleClickingTipClose);
+initializeWindow(gallery, galleryContent, galleryOpen, galleryClose, galleryMaximizeButton);
+initializeWindow(searchMenu, null, null, null, null);

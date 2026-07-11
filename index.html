@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="start_menu.css">
         <link rel="stylesheet" href="calculator.css">
         <link rel="stylesheet" href="music_player.css">
+        <link rel="stylesheet" href="gallery.css">
+        <link rel="stylesheet" href="search_menu.css">
 
         <title>MeowOS!</title>
         <link rel="icon" type="image/x-icon" href="Images/Favicon.svg">
@@ -66,9 +68,9 @@
             </div>
         </div>
         <div class="desktop">
-            <div class="top_bar" id="top_bar">
+            <div class="top_bar" id="topBar">
                 <div class="menu_buttons">
-                    <h2 id="topBarStartMenuButton" class="top_bar_item no_select" style="cursor: pointer;">MeowOS!</h2>
+                    <h2 id="topBarSearchMenuButton" class="top_bar_item no_select" style="cursor: pointer;">MeowOS!</h2>
                     <h2 id="topBarDoubleClickingTip" class="top_bar_item no_select" style="cursor: pointer;">Try double-clicking the icons!</h2>
                 </div>
                 <h2 class="top_bar_item no_select" id="clockTime"></h2>
@@ -95,8 +97,20 @@
                 <div class="app_icon no_select" data-window="terminal">
                     <img class="app_icon_svg" src="Images/terminal.svg" alt="CMD">
                 </div>
+                <div class="app_icon no_select" data-window="gallery">
+                    <img class="app_icon_svg" src="Images/gallery.svg" alt="Gallery">
+                </div>
             </div>
             <div class="windows">
+                <div id="searchMenu" class="window search_menu no_dragging" style="display: none">
+                    <div id="searchMenuSearchBar" class="search_menu_search_bar">
+                        <label for="searchMenuInput"></label><input type="text" id="searchMenuInput" class="search_menu_input" placeholder="Search...">
+                    </div>
+                    <div id="searchMenuResults" class="search_menu_results"></div>
+                    <div id="searchMenuControls" class="search_menu_controls">
+                        <div id="searchMenuPowerButton" class="search_menu_power_button"></div>
+                    </div>
+                </div>
                 <div id="doubleClickTipEasterEgg" class="window" style="width: 40vmin; display: none">
                     <div class="window_header">
                         <div class="header_buttons">
@@ -105,14 +119,15 @@
                     </div>
                     <div class="window_content double_clicking_tip_window_content">Good job!</div> 
                 </div>
-                <div id="welcomeScreen" class="window" style="width: 40vmin; display: none">
+                <div id="welcomeScreen" class="window" style="width: 50vmin; display: none">
                     <div id="welcomeScreenHeader" class="window_header">
                         <div class="header_buttons">
                             <div id="closeWelcomeScreenWindow" class="close_button no_select"></div>
+                            <div id="welcomeScreenMaximizeButton" class="maximize_button no_select"></div>
                         </div>
-                        <h2 class="header_title no_select">Welcome Screen</h2>
+                        <h2 class="header_title no_select">Introduction</h2>
                     </div>
-                    <div class="window_content" style="display: flex; flex-direction: row; height: 30vmin;">
+                    <div id="welcomeScreenContent" class="window_content" style="display: flex; flex-direction: row; height: 65vmin;">
                         <div class="welcome_window_sidebar">
                             <div class="welcome_window_page_selector" id="welcomeWindowPageSelector1"></div>
                             <div class="welcome_window_page_selector" id="welcomeWindowPageSelector2"></div>
@@ -125,10 +140,11 @@
                     <div id="stopwatchHeader" class="window_header">
                         <div class="header_buttons">
                             <div id="closeStopwatchWindow" class="close_button no_select"></div>
+                            <div id="stopwatchMaximizeButton" class="maximize_button no_select"></div>
                         </div>
                         <h2 class="header_title no_select">Stopwatch</h2>
                     </div>
-                    <div class="window_content" style="display: flex; flex-direction: column">
+                    <div id="stopwatchContent" class="window_content" style="display: flex; flex-direction: column">
                         <div class="stopwatch_time" id="stopwatchTime">00:00:00:00</div>
                         <div class="stopwatch_buttons">
                             <div class="stopwatch_buttons_left_side"></div>
@@ -147,10 +163,11 @@
                     <div id="notesHeader" class="window_header">
                         <div class="header_buttons">
                             <div id="closeNotesWindow" class="close_button no_select"></div>
+                            <div id="notesMaximizeButton" class="maximize_button no_select"></div>
                         </div>
                         <h2 class="header_title no_select" id="notesHeaderTitle">Notes</h2>
                     </div>
-                    <div class="window_content" style="display: flex; flex-direction: row">
+                    <div id="notesContent" class="window_content" style="display: flex; flex-direction: row">
                         <div class="notes_sidebar" style="padding: 0">
                             <div class="notes_sidebar_pages" id="notesSidebarPages"></div>
                             <div>
@@ -158,17 +175,18 @@
                                 <div class="notes_sidebar_reset no_select" id="notesSidebarReset">x</div>
                             </div>
                         </div>
-                        <div class="notes_content" id="notesContent"></div>
+                        <div class="notes_content" id="notesPageContent"></div>
                     </div>
                 </div>
                 <div id="todoList" class="window todo_list_window" style="width: 60vmin; display: none">
                     <div id="todoHeader" class="window_header">
                         <div class="header_buttons">
                             <div id="closeTodoWindow" class="close_button no_select"></div>
+                            <div id="todoListMaximizeButton" class="maximize_button no_select"></div>
                         </div>
                         <h2 class="header_title no_select">To-Do List</h2>
                     </div>
-                    <div class="window_content" style="display: flex; flex-direction: column">
+                    <div id="todoListContent" class="window_content" style="display: flex; flex-direction: column">
                         <div class="todo_top_bar">
                             <label>
                                 <input class="todo_top_bar_add_name" type="text" id="todoTopBarAddName">
@@ -182,6 +200,7 @@
                     <div id="terminalHeader" class="window_header">
                         <div class="header_buttons">
                             <div id="closeTerminalWindow" class="close_button no_select"></div>
+                            <div id="terminalMaximizeButton" class="maximize_button no_select"></div>
                         </div>
                         <h2 class="header_title no_select">Terminal</h2>
                     </div>
@@ -194,7 +213,7 @@
                         </div>
                         <h2 class="header_title no_select">Calculator</h2>
                     </div>
-                    <div class="calculator_content">
+                    <div id="calculatorContent" class="calculator_content">
                         <div id="calculatorDisplay" class="calculator_display"></div>
                         <div class="calculator_buttons">
                             <div class="calculator_buttons_left">
@@ -238,7 +257,7 @@
                         </div>
                         <h2 class="header_title no_select">Music Player</h2>
                     </div>
-                    <div class="music_player_content">
+                    <div id="musicPlayerContent" class="music_player_content">
                         <img id="musicPlayerImage" class="music_player_image" src="" alt="No song played">
                         <div id="musicPlayerSongTitle" class="music_player_song_title no_select"></div>
                         <div class="music_player_progress_bar">
@@ -258,6 +277,16 @@
                         <div class="music_player_playlist" id="musicPlayerPlaylist"></div>
                     </div>
                 </div>
+                <div id="gallery" class="window" style="width: 60vmin; display: none">
+                    <div id="galleryHeader" class="window_header">
+                        <div class="header_buttons">
+                            <div id="closeGalleryWindow" class="close_button no_select"></div>
+                            <div id="galleryMaximizeButton" class="maximize_button no_select"></div>
+                        </div>
+                        <h2 class="header_title no_select">Gallery</h2>
+                    </div>
+                    <div id="galleryContent" class="gallery_content"></div>
+                </div>
             </div>
         </div>
         <script src="script.js"></script>
@@ -269,5 +298,7 @@
         <script src="start_menu.js"></script>
         <script src="calculator.js"></script>
         <script src="music_player.js"></script>
+        <script src="gallery.js"></script>
+        <script src="search_menu.js"></script>
     </body>
 </html>

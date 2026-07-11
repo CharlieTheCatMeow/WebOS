@@ -19,8 +19,8 @@ body,html {
     align-items: center;
     overflow: hidden;
 
+    height: 100%;
     width: 6vmin;
-    border-bottom-right-radius: 2vmin;
 
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -118,8 +118,11 @@ body,html {
 
     cursor: pointer;
 
-    height: 3vmin;
-    width: 100%;
+    width: 4vmin;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 30%;
+    margin: 1vmin 2vmin;
 
     background: linear-gradient(135deg, #ff5f56, #b22222);
     box-shadow: 0 0.3vmin 0.6vmin rgba(0, 0, 0, 0.2);

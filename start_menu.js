@@ -1,6 +1,5 @@
 const startMenu = document.querySelector("#startMenu");
 const enterDesktopButton = document.querySelector("#enterDesktopButton");
-const topbarStartMenuButton = document.querySelector("#topBarStartMenuButton")
 
 const loadingScreen = document.querySelector("#loadingScreen");
 const loadingScreenProgressBar = document.querySelector("#loadingProgress");
@@ -77,8 +76,4 @@ window.addEventListener("load", function () {
 
 enterDesktopButton.addEventListener("click", function () {
     enterDesktop();
-});
-
-topbarStartMenuButton.addEventListener("click", function () {
-   enterStartMenu()
 });

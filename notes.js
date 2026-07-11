@@ -24,7 +24,7 @@ function setNotesContent(index) {
     const MAX_TITLE_LENGTH = 18;
     const MAX_DATE_LENGTH = 10;
 
-    const notesContent = document.querySelector("#notesContent");
+    const notesContent = document.querySelector("#notesPageContent");
     notesContent.innerHTML = content[index].content;
 
     let pageWrite = notesContent.querySelector(".notes_page_content p");
@@ -151,4 +151,8 @@ newPageButton.addEventListener("click", function () {
 
 notesResetButton.addEventListener("click", function () {
     resetNotes();
+    notesResetButton.classList.add("select_notes_button");
+    setTimeout(function () {
+        notesResetButton.classList.remove("select_notes_button");
+    }, 150);
 });

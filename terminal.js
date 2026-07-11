@@ -1,17 +1,16 @@
-const terminalWindow = document.querySelector("#terminal")
-const terminalContent = document.querySelector("#terminalContent");
+const terminalWindow = document.querySelector("#terminal");
 
 
 function terminalOpenClose() {
-    if (terminal.style.display === "flex") {
+    if (terminalWindow.style.display === "flex") {
         terminalContent.innerHTML = `
-                <p>Welcome to MeowOS!</p>
-                <p>Loading terminal...></p>
+                <p>MeowOS Terminal [Version 1.0.0]</p>
+                <p>Initializing shell environment...</p>
         `;
         setTimeout(function () {
             terminalContent.innerHTML = terminalContent.innerHTML + `
-                <p>Terminal loaded!</p>
-                <p>For a list of commands, type 'help'</p>
+                <p>Shell ready.</p>
+                <p>Type 'help' to list available commands.</p>
             `;
 
             addInputLine();
@@ -48,26 +47,18 @@ function runCommand(command) {
             <p>    "stopwatch": opens stopwatch</p>
             <p>    "todo": opens to-do list</p>
         `;
-    } else if (command === "welcome") {
+    } else if(command === "welcome") {
         openWindow(welcomeScreen);
         output = `<p>  Intro opened!</p>`
-    } else if (command === "notes") {
+    } else if(command === "notes") {
         openWindow(notes);
         output = `<p>  Notes opened!</p>`
-    } else if (command === "stopwatch") {
+    } else if(command === "stopwatch") {
         openWindow(stopwatch);
         output = `<p>  Stopwatch opened!</p>`
-    } else if (command === "todo") {
+    } else if(command === "todo") {
         openWindow(todoList);
         output = `<p>  to-do List opened!</p>`
-    } else if (command === "calculator" || command === "calc") {
-        openWindow(calculator);
-        output = `<p>  Calculator opened!</p>`
-    } else if (command === "music" || command === "music player") {
-        openWindow(musicPlayer);
-        output = `<p>  Music Player opened!</p>`
-    } else {
-        output = `<p>  Command not found. Type 'help' for a list of commands.</p>`
     }
 
     document.querySelector("#terminalInputLine").remove();

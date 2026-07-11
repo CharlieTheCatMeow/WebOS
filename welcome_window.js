@@ -11,8 +11,27 @@ const welcome_content = [
                     <h1 class="welcome_window_title">Welcome to MeowOS!</h1>
                 </div>
                 <div class="welcome_window_content">
-                    <p>Hi! This is my webOS project!</p>
-                    <p> I hope it works well!</p>
+                    <div class="welcome_window_profile">
+                        <div class="welcome_window_profile_info">
+                            <img src="Images/CharlieCatMeowPFPSquare.png" alt="Profile Picture" class="welcome_window_profile_picture">
+                            <h2 class="welcome_window_profile_name">CharlieCatMeow</h2>
+                        </div>
+                        <div class="welcome_window_profile_connections">
+                            <a href="https://www.github.com/CharlieTheCatMeow" target="_blank" class="welcome_window_profile_connection_link">
+                                <div class="welcome_window_profile_connection">
+                                    <img src="Images/github_logo.svg" alt="Github Logo" class="welcome_window_profile_connection_logo">
+                                </div>
+                            </a>
+                            <a href="https://hackclub.enterprise.slack.com/team/U0B9S51GFK3" target="_blank" class="welcome_window_profile_connection_link">
+                                <div class="welcome_window_profile_connection">
+                                    <img src="Images/slack_logo.svg" alt="Slack Logo" class="welcome_window_profile_connection_logo">
+                                </div>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>A bit about me:</h2>
+                    <p>I am a student at a school (shocker :O) <br> I sometimes code for fun and try new things out. <br> This is a website :3 <br> Enjoy!</p>
                 </div>
             </div>
         `
