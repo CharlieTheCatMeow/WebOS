@@ -78,6 +78,9 @@ const filesMaximizeButton = document.querySelector("#filesMaximizeButton");
 //Search menu
 const searchMenu = document.querySelector("#searchMenu");
 
+//Control widget
+const controlWidget = document.querySelector("#controlWidget");
+
 //Top bar variables
 const topBar = document.querySelector("#topBar");
 const timeText = document.querySelector("#clockTime");
@@ -168,6 +171,7 @@ function dragElement(element) {
 
 function clampWindowToViewport(element) {
     if (!element.dataset.positioned) return;
+    if (element.id === "controlWidget") return;
 
     const topBarHeight = window.innerHeight * 0.05;
     const width = element.offsetWidth;
@@ -234,13 +238,17 @@ function openWindow(element) {
         initialLeft = Math.min(Math.max(initialLeft, 0), Math.max(maxLeft, 0));
         initialTop = Math.min(Math.max(initialTop, topBarHeight), Math.max(maxTop, topBarHeight));
 
-        if (!element.classList.contains("search_menu")) {
+        if (!element.classList.contains("search_menu") && !element.classList.contains("control_widget")) {
             element.style.top = initialTop + "px";
             element.style.left = initialLeft + "px";
+        } else if (element.classList.contains("control_widget")) {
+            element.style.left = "auto";
         }
         element.dataset.positioned = "true";
     } else {
-        clampWindowToViewport(element);
+        if (element.id !== "controlWidget") {
+            clampWindowToViewport(element);
+        }
     }
     element.classList.add("window_closed")
     element.style.display = "flex";
@@ -300,6 +308,7 @@ function switchToDarkMode() {
     topBar.classList.add("top_bar_dark_mode");
     desktop.classList.add("desktop_dark_mode")
     searchMenu.classList.add("search_menu_dark_mode");
+
     localStorage.setItem("Mode", "dark");
 }
 
@@ -315,6 +324,9 @@ function switchToLightMode() {
     topBar.classList.remove("top_bar_dark_mode");
     desktop.classList.remove("desktop_dark_mode");
     searchMenu.classList.remove("search_menu_dark_mode");
+
+    controlWidget.classList.remove("control_widget_dark_mode");
+
     localStorage.setItem("Mode", "light");
 }
 
@@ -395,5 +407,6 @@ initializeWindow(searchMenu, null, null, null, null);
 initializeWindow(settings, settingsContent, settingsOpen, settingsClose, settingsMaximizeButton);
 initializeWindow(browser, browserContent, browserOpen, browserClose, browserMaximizeButton);
 initializeWindow(files, filesContent, filesOpen, filesClose, filesMaximizeButton);
+initializeWindow(controlWidget, null, null, null, null);
 
 checkLightDarkMode();

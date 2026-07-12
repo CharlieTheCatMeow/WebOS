@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="settings.css">
         <link rel="stylesheet" href="browser.css">
         <link rel="stylesheet" href="files.css">
+        <link rel="stylesheet" href="control_widget.css">
 
         <title>MeowOS!</title>
         <link rel="icon" type="image/x-icon" href="Images/Favicon.svg">
@@ -78,7 +79,13 @@
                         <img class="top_bar_search_menu_icon" src="Images/Favicon.svg" alt="MeowOS!">
                     </h2>
                 </div>
-                <h2 class="top_bar_item no_select" id="clockTime"></h2>
+                <div class="top_bar_item" style="cursor: pointer; padding: 0.5vmin" id="controlWidgetButton">
+                    <div class="top_bar_control_widget_icons_container no_select">
+                        <img class="top_bar_control_widget_icon" src="Images/battery.svg" alt="Battery">
+                        <img class="top_bar_control_widget_icon" src="Images/wifi.svg" alt="WiFi">
+                    </div>
+                    <h2 class="no_select" style="margin-right: 1vmin;" id="clockTime"></h2>
+                </div>
             </div>
             <div class="app_icons">
                 <div class="app_icon no_select" data-window="welcomeScreen">
@@ -357,6 +364,38 @@
                         </div>
                     </div>
                 </div>
+                <div id="controlWidget" class="window control_widget no_dragging" style="width: 20vmin; display: none; overflow: hidden;">
+                    <div class="control_widget_first_row_controls">
+                        <div id="wifiButton" class="control_widget_control_button">
+                            <img class="control_widget_control_button_icon" src="Images/wifi.svg" alt="WiFi">
+                        </div>
+                        <div id="bluetoothButton" class="control_widget_control_button">
+                            <img class="control_widget_control_button_icon" src="Images/bluetooth.svg" alt="Bluetooth">
+                        </div>
+                        <div id="airplaneModeButton" class="control_widget_control_button">
+                            <img class="control_widget_control_button_icon" src="Images/airplane_mode.svg" alt="Airplane Mode">
+                        </div>
+                    </div>
+                    <div class="control_widget_second_row_controls">
+                        <div class="control_widget_slider_control">
+                            <img class="control_widget_control_slider_icon" src="Images/brightness.svg" alt="Brightness">
+                            <label for="brightnessSlider"></label><input type="range" id="brightnessSlider" class="control_widget_slider" min="0" max="100" value="100">
+                        </div>
+                        <div class="control_widget_slider_control">
+                            <img class="control_widget_control_slider_icon" src="Images/volume.svg" alt="Volume">
+                            <label for="volumeSlider"></label><input type="range" id="volumeSlider" class="control_widget_slider" min="0" max="100" value="100">
+                        </div>
+                    </div>
+                    <div class="control_widget_third_row">
+                        <img class="control_widget_third_row_icon" style="margin-right: 0.5vmin" src="Images/battery.svg" alt="Battery">
+                        <div class="control_widget_third_row_right_side">
+                            <p id="wifiStatus" class="control_widget_third_row_text">WiFi connected</p>
+                            <div id="controlWidgetSettings" class="control_widget_third_row_settings">
+                                <img class="control_widget_third_row_icon" src="Images/settings.svg" alt="Settings">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="script.js"></script>
@@ -373,5 +412,6 @@
         <script src="settings.js"></script>
         <script src="browser.js"></script>
         <script src="files.js"></script>
+        <script src="control_widget.js"></script>
     </body>
 </html>
