@@ -308,6 +308,13 @@ function switchToDarkMode() {
     topBar.classList.add("top_bar_dark_mode");
     desktop.classList.add("desktop_dark_mode")
     searchMenu.classList.add("search_menu_dark_mode");
+    controlWidget.classList.add("control_widget_dark_mode");
+    const controlWidgetSliders = document.getElementsByClassName("control_widget_slider");
+    if (controlWidgetSliders) {
+        for (let i = 0; i < controlWidgetSliders.length; i++) {
+            controlWidgetSliders[i].classList.add("control_widget_slider_dark_mode");
+        }
+    }
 
     localStorage.setItem("Mode", "dark");
 }
@@ -326,6 +333,12 @@ function switchToLightMode() {
     searchMenu.classList.remove("search_menu_dark_mode");
 
     controlWidget.classList.remove("control_widget_dark_mode");
+    const controlWidgetSliders = document.getElementsByClassName("control_widget_slider");
+    if (controlWidgetSliders) {
+        for (let i = 0; i < controlWidgetSliders.length; i++) {
+            controlWidgetSliders[i].classList.remove("control_widget_slider_dark_mode");
+        }
+    }
 
     localStorage.setItem("Mode", "light");
 }
