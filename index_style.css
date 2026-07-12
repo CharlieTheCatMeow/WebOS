@@ -217,7 +217,8 @@ body, div, h1, h2, p, span, a, input {
     left: 0;
 
     height: auto;
-    border-radius: 0.5vmin;
+    border-radius: 2vmin;
+    overflow: hidden;
 
     backdrop-filter: blur(1.25rem) saturate(180%);
     background-color: rgba(255, 255, 255, 0.08);
