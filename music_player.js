@@ -54,6 +54,7 @@ function playSong(index) {
 
     currentSongIndex = index;
     currentAudio = new Audio(song.audioSrc);
+    applyGlobalVolume(currentAudio);
     currentAudio.play();
     musicPlayerImage.src = song.imgSrc;
     musicPlayerTitle.innerText = song.title;

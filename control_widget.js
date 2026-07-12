@@ -5,6 +5,10 @@ const controlWidgetBluetoothButton = document.querySelector("#bluetoothButton");
 const controlWidgetAirplaneModeButton = document.querySelector("#airplaneModeButton");
 const controlWidgetSettingsButton = document.querySelector("#controlWidgetSettings");
 
+const brightnessSlider = document.querySelector("#brightnessSlider");
+const volumeSlider = document.querySelector("#volumeSlider");
+const volumeSliderIcon = document.querySelector("#volumeSliderIcon");
+
 const wifiStatus = document.querySelector("#wifiStatus");
 
 function toggleControlWidgetButton(button) {
@@ -22,6 +26,11 @@ function toggleControlWidgetButton(button) {
     setTimeout(function () {
         button.classList.remove("control_widget_control_button_pressed_animation");
     }, 150);
+}
+
+function applyGlobalVolume(newMediaElement) {
+    const savedVolume = localStorage.getItem('globalVolume');
+    newMediaElement.volume = savedVolume !== null ? parseFloat(savedVolume) : 0.5;
 }
 
 controlWidgetButton.addEventListener('click', function () {
@@ -63,5 +72,39 @@ controlWidgetSettingsButton.addEventListener('click', function () {
         controlWidgetSettingsButton.classList.remove("control_widget_control_button_pressed_animation");
     }, 150);
 });
+
+brightnessSlider.addEventListener('input', function () {
+    document.body.style.filter = `brightness(${brightnessSlider.value}%)`;
+});
+
+volumeSlider.addEventListener('input', function () {
+    if (Number(volumeSlider.value) === 0) {
+        volumeSliderIcon.src = "Images/mute.svg";
+    } else {
+        volumeSliderIcon.src = "Images/volume.svg";
+    }
+    const normalizedVolume = volumeSlider.value / 100;
+
+    const allMedia = document.querySelectorAll('audio, video, .site-media');
+    allMedia.forEach(function (media) {
+        media.volume = normalizedVolume;
+    });
+    if (typeof currentAudio !== 'undefined' && currentAudio) {
+        currentAudio.volume = normalizedVolume;
+    }
+    localStorage.setItem('globalVolume', normalizedVolume.toString());
+});
+
+(function initGlobalVolume() {
+    const savedVolume = localStorage.getItem('globalVolume');
+    const startingVolume = savedVolume !== null ? parseFloat(savedVolume) : 0.5;
+
+    volumeSlider.value = startingVolume * 100;
+    volumeSliderIcon.src = startingVolume === 0 ? "Images/volume_muted.svg" : "Images/volume.svg";
+    const allMedia = document.querySelectorAll('audio, video, .site-media');
+    allMedia.forEach(function (media) {
+        media.volume = startingVolume;
+    });
+})();
 
 toggleControlWidgetButton(controlWidgetWiFiButton);
