@@ -48,6 +48,12 @@ body,html {
     transform: scale(1.05);
 }
 
+.music_player_no_image {
+    padding: 6vmin;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
 .music_player_song_title {
     display: block;
     overflow: hidden;
@@ -142,8 +148,9 @@ body,html {
 
     margin: 0 0.5vmin;
     width: 3vmin;
-    aspect-ratio: 1 / 1;
+    height: 3vmin;
     border-radius: 50%;
+    flex-shrink: 0;
 
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(15px);
@@ -172,6 +179,7 @@ body,html {
     width: 4vmin;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
+    flex-shrink: 0;
 
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(15px);
@@ -199,8 +207,9 @@ body,html {
 
     margin: 0 0.5vmin;
     width: 3vmin;
-    aspect-ratio: 1 / 1;
+    height: 3vmin;
     border-radius: 50%;
+    flex-shrink: 0;
 
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(15px);
@@ -274,11 +283,19 @@ body,html {
 
     height: 100%;
     flex: 1;
+    min-width: 0;
+    overflow: hidden;
 
     color: #f9f9fb;
     font-weight: 400;
-    text-wrap: nowrap;
-    overflow-x: auto;
+}
+
+.song {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .song_image {
@@ -288,6 +305,7 @@ body,html {
     overflow: hidden;
 
     margin-right: 0.5vmin;
+    flex-shrink: 0;
 
     height: 80%;
     aspect-ratio: 1 / 1;
@@ -321,6 +339,7 @@ body,html {
     height: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
+    flex-shrink: 0;
 
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);

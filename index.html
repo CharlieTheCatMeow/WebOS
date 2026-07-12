@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -87,7 +87,7 @@
                     <h2 class="no_select" style="margin-right: 1vmin;" id="clockTime"></h2>
                 </div>
             </div>
-            <div class="app_icons">
+            <div id="appIcons" class="app_icons">
                 <div class="app_icon no_select" data-window="welcomeScreen">
                     <img class="app_icon_svg" src="Images/Favicon.svg" alt="Intro">
                 </div>
@@ -271,7 +271,7 @@
                         <h2 class="header_title no_select">Music Player</h2>
                     </div>
                     <div id="musicPlayerContent" class="music_player_content hide_scrollbar">
-                        <img id="musicPlayerImage" class="music_player_image" src="" alt="No song played">
+                        <img id="musicPlayerImage" class="music_player_image music_player_no_image" src="Images/no_music.svg" alt="No song played">
                         <div id="musicPlayerSongTitle" class="music_player_song_title no_select"></div>
                         <div class="music_player_progress_bar">
                             <div id="musicPlayerProgress" class="music_player_progress"></div>
@@ -287,7 +287,7 @@
                                 <i class="material-icons music_player_next_button_icon no_select">skip_next</i>
                             </div>
                         </div>
-                        <div class="music_player_playlist" id="musicPlayerPlaylist"></div>
+                        <div class="music_player_playlist hide_scrollbar" id="musicPlayerPlaylist"></div>
                     </div>
                 </div>
                 <div id="gallery" class="window" style="width: 60vmin; display: none">

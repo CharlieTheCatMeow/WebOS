@@ -19,12 +19,13 @@ function loadSongs() {
     playlist.forEach((song, index) => {
         const songElement = document.createElement("div");
         songElement.classList.add("song_element");
+        songElement.classList.add("hide_scrollbar");
         songElement.innerHTML = `
             <div class="song_info">
                 <div class="song_image">
                     <img class="song_image_src" src="${song.imgSrc}" alt="No image found">
                 </div>
-                <div class="song" data-index="${index}">${song.title}</div>
+                <div class="song hide_scrollbar" data-index="${index}">${song.title}</div>
             </div>
             <div class="song_play">
                 <div id="songPlayButton${index}" class="song_play_button">
@@ -57,6 +58,9 @@ function playSong(index) {
     applyGlobalVolume(currentAudio);
     currentAudio.play();
     musicPlayerImage.src = song.imgSrc;
+    if (musicPlayerImage.classList.contains("music_player_no_image")) {
+        musicPlayerImage.classList.remove("music_player_no_image");
+    }
     musicPlayerTitle.innerText = song.title;
 }
 
