@@ -10,7 +10,8 @@ A web based operating system! You can do stuff with it, using the apps listed be
 - Calculator
 - Music Player
 - Gallery
-- Setting
+- Files
+- Settings
 - Terminal
 
 ## Features
