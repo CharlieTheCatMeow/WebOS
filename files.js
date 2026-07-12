@@ -17,15 +17,17 @@ const fileSystem = JSON.parse(localStorage.getItem("fileSystem")) || {
             { id: "chicken-nuggets-id", type: "folder", name: "Chicken Nuggets", children: [] }
         ] },
         { id: "downloads-id", type: "folder", name: "Downloads", children: [
-            { id: "burgers-id", type: "folder", name: "Burgers", children: [] }
+            { id: "burgers-id", type: "folder", name: "Burgers", children: [
+                { id: "burger-file-id", type: "file", name: "Burger", content: "I like Burgers", children: [] }
+            ] }
         ] },
         { id: "documents-id", type: "folder", name: "Documents", children: [
             { id: "top-secret-files-id", type: "folder", name: "Top Secret", children: [
                 { id: "classified-id", type: "folder", name: "CLASSIFIED", children: [] }
             ] },
-            { id: "food-storage-id", type: "folder", name: "Food storage", children: [] },
-            { id: "welcome-file-id", type: "file", name: "Welcome", children: [] }
-        ] }
+            { id: "food-storage-id", type: "folder", name: "Food storage", children: [] }
+        ] },
+        { id: "welcome-file-id", type: "file", name: "Welcome", content: "Welcome! Feel free to explore :3", children: [] }
     ]
 }
 
