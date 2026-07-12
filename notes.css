@@ -41,7 +41,7 @@ body,html {
     background: linear-gradient(135deg, coral, #ff4500);
     box-shadow: 0 0.3vmin 0.6vmin rgba(0, 0, 0, 0.2);
 
-    color: white;
+    color: #f9f9fb;
     font-weight: bold;
     font-size: 2vmin;
 
@@ -83,7 +83,7 @@ body,html {
     background: linear-gradient(135deg, #7fff00, #2e8b57);
     box-shadow: 0 0.3vmin 0.6vmin rgba(0, 0, 0, 0.2);
 
-    color: white;
+    color: #f9f9fb;
     font-weight: bolder;
     font-size: 3vmin;
 
@@ -128,7 +128,7 @@ body,html {
     box-shadow: 0 0.3vmin 0.6vmin rgba(0, 0, 0, 0.2);
     border: 0.0625rem solid #e0443e;
 
-    color: white;
+    color: #f9f9fb;
     font-weight: bolder;
     font-size: 1.5vmin;
 
@@ -180,7 +180,7 @@ body,html {
 
     height: 4vmin;
 
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #f9f9fb;
 }
 
 .notes_title {

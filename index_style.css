@@ -405,7 +405,7 @@ body, div, h1, h2, p, span, a, input {
 
     max-width: 70%;
     font-size: 1.6vmin;
-    #f9f9fb-space: nowrap;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
