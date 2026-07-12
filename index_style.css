@@ -24,6 +24,16 @@ body, div, h1, h2, p, span, a, input {
     transition: color 0.3s ease, background-color 0.3s ease, background 0.3s ease;
 }
 
+.hide_scrollbar {
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.hide_scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
 [contenteditable="true"]:focus {
     outline: none;
 }

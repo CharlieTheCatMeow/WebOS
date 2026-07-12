@@ -127,7 +127,7 @@
                     <div id="searchMenuSearchBar" class="search_menu_search_bar">
                         <label for="searchMenuInput"></label><input type="text" id="searchMenuInput" class="search_menu_input" placeholder="Search...">
                     </div>
-                    <div id="searchMenuResults" class="search_menu_results"></div>
+                    <div id="searchMenuResults" class="search_menu_results hide_scrollbar"></div>
                     <div id="searchMenuPowerButton" class="search_menu_power_button">
                         <img class="search_menu_power_button_icon" src="Images/power.svg" alt="Power">
                     </div>
@@ -182,13 +182,13 @@
                     </div>
                     <div id="notesContent" class="window_content" style="display: flex; flex-direction: row">
                         <div class="notes_sidebar" style="padding: 0">
-                            <div class="notes_sidebar_pages" id="notesSidebarPages"></div>
+                            <div class="notes_sidebar_pages hide_scrollbar" id="notesSidebarPages"></div>
                             <div>
                                 <div class="notes_sidebar_add_page no_select" id="notesSidebarAddPage">+</div>
                                 <div class="notes_sidebar_reset no_select" id="notesSidebarReset">x</div>
                             </div>
                         </div>
-                        <div class="notes_content" id="notesPageContent"></div>
+                        <div class="notes_content hide_scrollbar" id="notesPageContent"></div>
                     </div>
                 </div>
                 <div id="todoList" class="window todo_list_window" style="width: 60vmin; display: none">
@@ -206,7 +206,7 @@
                             </label>
                             <div class="todo_top_bar_add_button" id="todoTopbarAddButton"></div>
                         </div>
-                        <div class="todo_content" id="todoContent"></div>
+                        <div class="todo_content hide_scrollbar" id="todoContent"></div>
                     </div>
                 </div>
                 <div id="terminal" class="window terminal_window" style="width: 50vmin; display: none">
@@ -217,7 +217,7 @@
                         </div>
                         <h2 class="header_title no_select">Terminal</h2>
                     </div>
-                    <div id="terminalContent" class="window_content terminal_window_content" style="display: flex; flex-direction: column; justify-content: flex-start"></div>
+                    <div id="terminalContent" class="window_content terminal_window_content hide_scrollbar" style="display: flex; flex-direction: column; justify-content: flex-start"></div>
                 </div>
                 <div id="calculator" class="window" style="width: 34vmin; display: none">
                     <div id="calculatorHeader" class="window_header">
@@ -226,7 +226,7 @@
                         </div>
                         <h2 class="header_title no_select">Calculator</h2>
                     </div>
-                    <div id="calculatorContent" class="calculator_content">
+                    <div id="calculatorContent" class="calculator_content hide_scrollbar">
                         <div id="calculatorDisplay" class="calculator_display"></div>
                         <div class="calculator_buttons">
                             <div class="calculator_buttons_left">
@@ -270,7 +270,7 @@
                         </div>
                         <h2 class="header_title no_select">Music Player</h2>
                     </div>
-                    <div id="musicPlayerContent" class="music_player_content">
+                    <div id="musicPlayerContent" class="music_player_content hide_scrollbar">
                         <img id="musicPlayerImage" class="music_player_image" src="" alt="No song played">
                         <div id="musicPlayerSongTitle" class="music_player_song_title no_select"></div>
                         <div class="music_player_progress_bar">
@@ -298,7 +298,7 @@
                         </div>
                         <h2 class="header_title no_select">Gallery</h2>
                     </div>
-                    <div id="galleryContent" class="gallery_content"></div>
+                    <div id="galleryContent" class="gallery_content hide_scrollbar"></div>
                 </div>
                 <div id="settings" class="window" style="width: 50vmin; display: none">
                     <div id="settingsHeader" class="window_header">
@@ -308,7 +308,7 @@
                         </div>
                         <h2 class="header_title no_select">Settings</h2>
                     </div>
-                    <div id="settingsContent" class="settings_content">
+                    <div id="settingsContent" class="settings_content hide_scrollbar">
                         <div class="settings_section">
                             <h2 class="settings_section_title">General</h2>
                             <div class="settings_general_table">
@@ -391,9 +391,9 @@
                         <div class="files_main_content">
                             <div class="files_content_sidebar">
                                 <div class="files_content_sidebar_title">Contents</div>
-                                <div id="filesSidebarList" class="files_content_sidebar_list"></div>
+                                <div id="filesSidebarList" class="files_content_sidebar_list hide_scrollbar"></div>
                             </div>
-                            <div id="filesContentMain" class="files_content_main"></div>
+                            <div id="filesContentMain" class="files_content_main hide_scrollbar"></div>
                         </div>
                     </div>
                 </div>
