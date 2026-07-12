@@ -17,9 +17,20 @@ body,html {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    overflow-y: auto;
 
+    padding: 2vmin;
     width: 50vmin;
-    height: auto;
+    height: 50vmin;
+}
+
+.settings_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
 }
 
 .settings_section_title {
@@ -41,7 +52,7 @@ body,html {
     align-items: center;
 
     margin: 5%;
-    padding: 10%;
+    padding: 0.5vmin;
     width: 90%;
     height: 7vmin;
     border-radius: 1.5vmin;
@@ -59,7 +70,7 @@ body,html {
     cursor: pointer;
 
     margin: 0.5vmin;
-    height: 5vmin;
+    height: 60%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
 
@@ -95,4 +106,35 @@ body,html {
     100% {
         transform: scale(1.1);
     }
+}
+
+.factory_reset_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    margin: 5%;
+    padding: 0.5vmin;
+    width: 90%;
+    height: 7vmin;
+    border-radius: 1.5vmin;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
+
+    transition: ease 0.1s;
+}
+
+.factory_reset_button:hover {
+    transform: scale(1.05);
+}
+
+.factory_reset_button_icon {
+    height: 5vmin;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    filter: brightness(0) invert(1);
 }

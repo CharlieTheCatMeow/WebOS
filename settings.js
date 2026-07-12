@@ -1,6 +1,8 @@
 const darkModeButton = document.querySelector("#darkModeButton");
 const lightModeButton = document.querySelector("#lightModeButton");
 
+const factoryResetButton = document.querySelector("#factoryResetButton");
+
 darkModeButton.addEventListener("click", function() {
     switchToDarkMode();
     darkModeButton.classList.add("switch_dark_light_mode_button_clicking_animation");
@@ -15,4 +17,9 @@ lightModeButton.addEventListener("click", function() {
     setTimeout(function() {
         lightModeButton.classList.remove("switch_dark_light_mode_button_clicking_animation");
     }, 150);
+});
+
+factoryResetButton.addEventListener("click", function() {
+    localStorage.clear();
+    location.reload();
 });
