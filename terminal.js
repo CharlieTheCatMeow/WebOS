@@ -49,6 +49,10 @@ function runCommand(command) {
             <p>    "calculator": opens calculator</p>
             <p>    "music": opens music player</p>
             <p>    "gallery": opens gallery</p>
+            <p>    "browser": opens browser</p>
+            <p>    "files": opens files</p>
+            <p>    "search": opens search</p>
+            <p>    "control": opens control center</p>
             <p>    "dark": activates dark mode</p>
             <p>    "light": activates light mode</p>
         `;
@@ -73,6 +77,18 @@ function runCommand(command) {
     } else if(command === "gallery") {
         openWindow(gallery);
         output = `<p>  Gallery opened!</p>`
+    } else if(command === "browser") {
+        openWindow(browser);
+        output = `<p>  Browser opened!</p>`
+    } else if(command === "files") {
+        openWindow(files);
+        output = `<p>  Files opened!</p>`
+    } else if(command === "search") {
+        openWindow(searchMenu);
+        output = `<p>  Search opened!</p>`
+    } else if(command === "control") {
+        openWindow(controlWidget);
+        output = `<p>  Control Center opened!</p>`
     } else if(command === "dark") {
         switchToDarkMode();
         output = `<p>  Dark mode activated!</p>`
