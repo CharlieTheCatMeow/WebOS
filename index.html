@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="search_menu.css">
         <link rel="stylesheet" href="settings.css">
         <link rel="stylesheet" href="browser.css">
+        <link rel="stylesheet" href="files.css">
 
         <title>MeowOS!</title>
         <link rel="icon" type="image/x-icon" href="Images/Favicon.svg">
@@ -103,6 +104,9 @@
                 </div>
                 <div class="app_icon no_select" data-window="browser">
                     <img class="app_icon_svg" src="Images/browser.svg" alt="Browser">
+                </div>
+                <div class="app_icon no_select" data-window="files">
+                    <img class="app_icon_svg" src="Images/folder.svg" alt="Files">
                 </div>
                 <div class="app_icon no_select" data-window="settings">
                     <img class="app_icon_svg" src="Images/settings.svg" alt="Settings">
@@ -323,6 +327,36 @@
                         <div id="browserWebContent" class="browser_web_content"></div>
                     </div>
                 </div>
+                <div id="files" class="window" style="width: 60vmin; display: none; overflow: hidden">
+                    <div id="filesHeader" class="window_header">
+                        <div class="header_buttons">
+                            <div id="closeFilesWindow" class="close_button no_select"></div>
+                            <div id="filesMaximizeButton" class="maximize_button no_select"></div>
+                        </div>
+                        <h2 class="header_title no_select">Files</h2>
+                    </div>
+                    <div id="filesContent" class="files_content">
+                        <div class="files_top_bar">
+                            <div id="filesReturnToParentDirectoryButton" class="files_return_to_parent_directory_button no_select">
+                                <img class="files_header_icon" src="Images/arrow_up.svg" alt="Return">
+                            </div>
+                            <div id="filesCurrentDirectory" class="files_current_directory"></div>
+                            <div id="filesAddFolderButton" class="files_add_button no_select">
+                                <img class="files_header_icon" src="Images/add_folder.svg" alt="Add Folder">
+                            </div>
+                            <div id="filesAddFileButton" class="files_add_button no_select">
+                                <img class="files_header_icon" src="Images/add_file.svg" alt="Add File">
+                            </div>
+                        </div>
+                        <div class="files_main_content">
+                            <div class="files_content_sidebar">
+                                <div class="files_content_sidebar_title">Contents</div>
+                                <div id="filesSidebarList" class="files_content_sidebar_list"></div>
+                            </div>
+                            <div id="filesContentMain" class="files_content_main"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="script.js"></script>
@@ -338,5 +372,6 @@
         <script src="search_menu.js"></script>
         <script src="settings.js"></script>
         <script src="browser.js"></script>
+        <script src="files.js"></script>
     </body>
 </html>

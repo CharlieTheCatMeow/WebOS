@@ -32,6 +32,12 @@ function openBrowserWeather() {
     browserWebContent.innerHTML = `<iframe src="https://www.accuweather.com/" width="100%" height="100%"></iframe>`;
 }
 
-browserHomeButton.addEventListener("click", openBrowserHomePage);
+browserHomeButton.addEventListener("click", function () {
+    openBrowserHomePage();
+    browserHomeButton.classList.add("browser_homepage_selector_animation");
+    setTimeout(function () {
+        browserHomeButton.classList.remove("browser_homepage_selector_animation");
+    }, 150);
+});
 
 openBrowserHomePage();

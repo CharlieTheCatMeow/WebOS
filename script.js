@@ -68,6 +68,13 @@ const browserOpen = document.querySelector("#openBrowserWindow");
 const browserClose = document.querySelector("#closeBrowserWindow");
 const browserMaximizeButton = document.querySelector("#browserMaximizeButton");
 
+//Files variables
+const files = document.querySelector("#files");
+const filesContent = document.querySelector("#filesContent");
+const filesOpen = document.querySelector("#openFilesWindow");
+const filesClose = document.querySelector("#closeFilesWindow");
+const filesMaximizeButton = document.querySelector("#filesMaximizeButton");
+
 //Search menu
 const searchMenu = document.querySelector("#searchMenu");
 
@@ -387,5 +394,6 @@ initializeWindow(gallery, galleryContent, galleryOpen, galleryClose, galleryMaxi
 initializeWindow(searchMenu, null, null, null, null);
 initializeWindow(settings, settingsContent, settingsOpen, settingsClose, settingsMaximizeButton);
 initializeWindow(browser, browserContent, browserOpen, browserClose, browserMaximizeButton);
+initializeWindow(files, filesContent, filesOpen, filesClose, filesMaximizeButton);
 
 checkLightDarkMode();

@@ -113,10 +113,27 @@ body,html {
     color: rgba(255, 255, 255, 0.95);
 
     transition: ease 0.1s;
+    will-change: transform;
 }
 
 .browser_homepage_selector:hover {
     transform: scale(1.2);
+}
+
+.browser_homepage_selector_animation {
+    animation: browserHomeButtonAnimation 0.15s ease-in-out forwards;
+}
+
+@keyframes browserHomeButtonAnimation {
+    0% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1.2);
+    }
 }
 
 .browser_homepage_icon {

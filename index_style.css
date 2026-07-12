@@ -61,7 +61,7 @@ body, div, h1, h2, p, span, a, input {
     background: linear-gradient(90deg, rgba(255, 127, 80, 0.85), rgba(255, 160, 122, 0.75));
     backdrop-filter: blur(1.5vmin);
     border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.18);
-    color: white;
+    color: #f9f9fb;
 
     box-sizing: border-box;
 }
@@ -83,7 +83,7 @@ body, div, h1, h2, p, span, a, input {
 
     background-color: rgba(0, 0, 0, 0.2);
     border: 0.0625rem solid rgba(255, 255, 255, 0.1);
-    color: white;
+    color: #f9f9fb;
 
     font-size: 1.3vmin;
     font-weight: 500;
@@ -308,7 +308,7 @@ body, div, h1, h2, p, span, a, input {
     border-bottom-left-radius: 0.5vmin;
     border-bottom-right-radius: 0.5vmin;
 
-    color: white;
+    color: #f9f9fb;
 }
 
 .close_button {
@@ -405,7 +405,7 @@ body, div, h1, h2, p, span, a, input {
 
     max-width: 70%;
     font-size: 1.6vmin;
-    white-space: nowrap;
+    #f9f9fb-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
