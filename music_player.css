@@ -49,16 +49,17 @@ body,html {
 }
 
 .music_player_song_title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    display: block;
+    overflow: hidden;
 
     margin: 0.5vmin 0;
-    padding: 0.5vmin;
+    padding: 0.5vmin 1vmin;
 
     width: 23vmin;
     height: 3vmin;
+    line-height: 2vmin;
     border-radius: 1vmin;
+    box-sizing: border-box;
 
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
@@ -68,6 +69,8 @@ body,html {
 
     color: #f9f9fb;
     font-size: 2vmin;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     transition: ease 0.1s;
 }
 
@@ -163,6 +166,7 @@ body,html {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    overflow: hidden;
 
     margin: 0 0.5vmin;
     width: 4vmin;
@@ -183,7 +187,8 @@ body,html {
 
 .music_player_play_pause_button_icon {
     color: #f9f9fb;
-    scale: 1.4;
+    font-size: 2.2vmin;
+    line-height: 1;
 }
 
 .music_player_next_button {
@@ -311,6 +316,7 @@ body,html {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    overflow: hidden;
 
     height: 100%;
     aspect-ratio: 1 / 1;
@@ -325,7 +331,8 @@ body,html {
 
 .song_play_button_icon {
     color: #f9f9fb;
-    scale: 1.1;
+    font-size: 1.8vmin;
+    line-height: 1;
 }
 
 .music_player_button_press {

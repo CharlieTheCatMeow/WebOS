@@ -166,16 +166,18 @@ body,html {
 }
 
 .setting_general_table_entry_item {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    display: block;
+    overflow: hidden;
 
     padding: 0.5vmin;
     width: 50%;
     height: 100%;
+    line-height: 2vmin;
+    box-sizing: border-box;
 
     color: #f9f9fb;
     font-size: 2vmin;
     font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

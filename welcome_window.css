@@ -80,16 +80,21 @@ body,html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
-    height: 4vmin;
+    min-height: 4vmin;
 
     border-bottom: 2px solid #f9f9fb;
 }
 
 .welcome_window_title {
     max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    line-height: 1.2;
     white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .welcome_window_profile {

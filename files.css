@@ -71,21 +71,26 @@ body,html {
 }
 
 .files_current_directory {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    display: block;
+    overflow: hidden;
 
     margin: 0 0.375vmin;
     padding: 1vmin;
     height: 3.5vmin;
+    line-height: 1.5vmin;
+    box-sizing: border-box;
     flex: 1;
+    min-width: 0;
     border-radius: 1vmin;
 
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.4vmin;
 }
 
 .files_add_button {
@@ -182,6 +187,7 @@ body,html {
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
+    overflow: hidden;
 
     margin: 0.5vmin 0;
     padding: 0.375vmin;
@@ -204,9 +210,10 @@ body,html {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 
     margin-right: 0.5vmin;
-    height: 100%;
+    height: 2.5vmin;
     aspect-ratio: 1 / 1;
     border-radius: 1vmin;
 }
@@ -219,12 +226,16 @@ body,html {
 }
 
 .files_sidebar_content_directory_name {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    height: 100%;
+    display: block;
+    min-width: 0;
     flex: 1;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    line-height: 1.4vmin;
+    font-size: 1.4vmin;
 }
 
 .files_content_main {
@@ -286,15 +297,15 @@ body,html {
 }
 
 .file_item_name {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    display: block;
 
     flex: 1;
+    min-width: 0;
     margin-left: 1vmin;
     overflow: hidden;
 
     font-size: 1.4vmin;
+    line-height: 6.5vmin;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
@@ -393,6 +404,8 @@ body,html {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+    min-width: 0;
 
     padding: 1vmin;
     width: 100%;
@@ -405,6 +418,8 @@ body,html {
 
     font-size: 3vmin;
     font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .text_file_header_controls {

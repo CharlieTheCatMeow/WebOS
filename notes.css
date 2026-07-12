@@ -177,20 +177,29 @@ body,html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
-    height: 4vmin;
+    min-height: 4vmin;
 
     border-bottom: 2px solid #f9f9fb;
 }
 
 .notes_title {
     max-width: 70%;
+    min-width: 0;
+    margin: 0;
+    line-height: 1.2;
     white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .notes_date {
     max-width: 30%;
+    min-width: 0;
+    margin: 0;
+    line-height: 1.2;
     white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
