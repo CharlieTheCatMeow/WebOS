@@ -198,6 +198,10 @@ body,html {
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 0.8vmin 3.2vmin 0 rgba(0, 0, 0, 0.3);
 
+    color: #f9f9fb;
+    font-size: 2vmin;
+    font-weight: 500;
+
     transition: ease 0.1s;
     will-change: transform;
 }

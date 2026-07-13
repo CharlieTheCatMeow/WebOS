@@ -1,0 +1,63 @@
+.clock_widget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 50vmin;
+    left: 2vmin;
+}
+
+.clock_face {
+    position: relative;
+
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 30%;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
+}
+
+.clock_center_dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2vmin;
+    height: 2vmin;
+    background-color: #f9f9fb;
+    border-radius: 50%;
+}
+
+.clock_hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    transform: translateX(-50%);
+
+    backdrop-filter: blur(1.25rem) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0.8vmin 3.2vmin 0 rgba(0, 0, 0, 0.3);
+}
+
+.hour_hand {
+    width: 1vmin;
+    height: 4vmin;
+    border-radius: 0.5vmin;
+}
+
+.minute_hand {
+    width: 1vmin;
+    height: 6vmin;
+    border-radius: 0.5vmin;
+}
+
+.second_hand {
+    width: 0.75vmin;
+    height: 7vmin;
+    border-radius: 0.375vmin;
+}

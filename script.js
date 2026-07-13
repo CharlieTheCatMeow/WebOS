@@ -94,6 +94,9 @@ const cat = document.querySelector("#catWidget");
 //calendar
 const calendar = document.querySelector("#calendarWidget");
 
+//clock widget
+const clockWidget = document.querySelector("#clockWidget");
+
 let selectedIcon = undefined;
 const icons = document.querySelectorAll(".app_icon");
 
@@ -270,6 +273,15 @@ function openWindow(element) {
     updateTopBarVisibility();
 }
 
+function setInitialPosition(element) {
+    if (!element) return;
+    if (element.style.top && element.style.left) return;
+
+    const rect = element.getBoundingClientRect();
+    element.style.top = rect.top + "px";
+    element.style.left = rect.left + "px";
+}
+
 function deselectIcon(element) {
     if (!element) return;
     element.classList.remove("icon_selected");
@@ -430,5 +442,12 @@ initializeWindow(controlWidget, null, null, null, null);
 
 dragElement(cat);
 dragElement(calendar);
+dragElement(clockWidget);
+[cat, calendar, clockWidget].forEach(function (widget) {
+    if (widget) {
+        setInitialPosition(widget);
+        widget.dataset.positioned = "true";
+    }
+});
 
 checkLightDarkMode();

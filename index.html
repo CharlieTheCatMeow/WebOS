@@ -347,8 +347,9 @@
                         <div class="settings_section">
                             <h2 class="settings_section_title">Widgets</h2>
                             <div class="dark_light_mode_controls">
-                                <div id="catWidgetToggle" class="widget_toggle no_select"></div>
-                                <div id="calendarWidgetToggle" class="widget_toggle no_select"></div>
+                                <div id="catWidgetToggle" class="widget_toggle no_select">1</div>
+                                <div id="calendarWidgetToggle" class="widget_toggle no_select">2</div>
+                                <div id="clockWidgetToggle" class="widget_toggle no_select">3</div>
                             </div>
                         </div>
                         <div class="settings_section">
@@ -468,9 +469,10 @@
                 </div>
                 <div id="clockWidget" class="window clock_widget" style="width: 20vmin; height: 20vmin; display: flex">
                     <div class="clock_face">
-                        <div class="clock_hand hour"></div>
-                        <div class="clock_hand minute"></div>
-                        <div class="clock_hand second"></div>
+                        <div id="clockHourHand" class="clock_hand hour_hand"></div>
+                        <div id="clockMinuteHand" class="clock_hand minute_hand"></div>
+                        <div id="clockSecondHand" class="clock_hand second_hand"></div>
+                        <div class="clock_center_dot"></div>
                     </div>
                 </div>
             </div>
