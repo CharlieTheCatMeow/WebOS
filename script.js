@@ -315,91 +315,12 @@ function handleWindowTap(element) {
 }
 
 function switchToDarkMode() {
-    const allWindows = document.querySelectorAll(".window");
-    allWindows.forEach(function (win) {
-        let winHeader = document.querySelector("#" + win.id + "Header");
-        if (winHeader) {
-            winHeader.classList.add("window_header_dark_mode");
-        }
-        win.classList.add("window_dark_mode");
-    });
-    topBar.classList.add("top_bar_dark_mode");
-    desktop.classList.add("desktop_dark_mode")
-    searchMenu.classList.add("search_menu_dark_mode");
-    controlWidget.classList.add("control_widget_dark_mode");
-    const controlWidgetSliders = document.getElementsByClassName("control_widget_slider");
-    if (controlWidgetSliders) {
-        for (let i = 0; i < controlWidgetSliders.length; i++) {
-            controlWidgetSliders[i].classList.add("control_widget_slider_dark_mode");
-        }
-    }
-    musicPlayerProgress.classList.add("music_player_progress_dark_mode");
-    const musicPlayerProgressBar = document.getElementsByClassName("music_player_progress_bar");
-    if (musicPlayerProgressBar) {
-        musicPlayerProgressBar[0].classList.add("music_player_progress_bar_dark_mode");
-    }
-    const notesSelectors = document.getElementsByClassName("notes_selector");
-    if (notesSelectors) {
-        for (let i = 0; i < notesSelectors.length; i++) {
-            notesSelectors[i].classList.add("notes_selector_dark_mode");
-        }
-    }
-    const todoListTasks = document.getElementsByClassName("todo_list_task");
-    if (todoListTasks) {
-        for (let i = 0; i < todoListTasks.length; i++) {
-            todoListTasks[i].classList.add("todo_list_task_dark_mode");
-        }
-    }
-    const todoListTopbar = document.getElementsByClassName("todo_top_bar");
-    if (todoListTopbar) {
-        todoListTopbar[0].classList.add("todo_top_bar_dark_mode");
-    }
-
+    desktop.classList.add("dark_mode");
     localStorage.setItem("Mode", "dark");
 }
 
 function switchToLightMode() {
-    const allWindows = document.querySelectorAll(".window");
-    allWindows.forEach(function (win) {
-        let winHeader = document.querySelector("#" + win.id + "Header");
-        if (winHeader) {
-            winHeader.classList.remove("window_header_dark_mode");
-        }
-        win.classList.remove("window_dark_mode");
-    });
-    topBar.classList.remove("top_bar_dark_mode");
-    desktop.classList.remove("desktop_dark_mode");
-    searchMenu.classList.remove("search_menu_dark_mode");
-
-    controlWidget.classList.remove("control_widget_dark_mode");
-    const controlWidgetSliders = document.getElementsByClassName("control_widget_slider");
-    if (controlWidgetSliders) {
-        for (let i = 0; i < controlWidgetSliders.length; i++) {
-            controlWidgetSliders[i].classList.remove("control_widget_slider_dark_mode");
-        }
-    }
-    musicPlayerProgress.classList.remove("music_player_progress_dark_mode");
-    const musicPlayerProgressBar = document.getElementsByClassName("music_player_progress_bar");
-    if (musicPlayerProgressBar) {
-        musicPlayerProgressBar[0].classList.remove("music_player_progress_bar_dark_mode");
-    }
-    const notesSelectors = document.getElementsByClassName("notes_selector");
-    if (notesSelectors) {
-        for (let i = 0; i < notesSelectors.length; i++) {
-            notesSelectors[i].classList.remove("notes_selector_dark_mode");
-        }
-    }
-    const todoListTasks = document.getElementsByClassName("todo_list_task");
-    if (todoListTasks) {
-        for (let i = 0; i < todoListTasks.length; i++) {
-            todoListTasks[i].classList.remove("todo_list_task_dark_mode");
-        }
-    }
-    const todoListTopbar = document.getElementsByClassName("todo_top_bar");
-    if (todoListTopbar) {
-        todoListTopbar[0].classList.remove("todo_top_bar_dark_mode");
-    }
-
+    desktop.classList.remove("dark_mode");
     localStorage.setItem("Mode", "light");
 }
 

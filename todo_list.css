@@ -46,12 +46,12 @@ body, html {
     background: rgba(255, 127, 80, 0.7);
 }
 
-.window_dark_mode .todo_content::-webkit-scrollbar-thumb {
+.dark_mode .todo_content::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.15);
 }
 
-.window_dark_mode .todo_content::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.3) !important;
+.dark_mode .todo_content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .todo_top_bar {
@@ -64,8 +64,8 @@ body, html {
     border-bottom: 0.0625rem solid rgba(255, 127, 80, 0.35);
 }
 
-.todo_top_bar_dark_mode {
-    border-bottom: 0.0625rem solid rgba(35, 25, 50, 0.15) !important;
+.dark_mode .todo_top_bar {
+    border-bottom: 0.0625rem solid rgba(35, 25, 50, 0.15);
 }
 
 .todo_top_bar label {
@@ -96,10 +96,10 @@ body, html {
     box-shadow: 0 0 0.8vmin rgba(255, 127, 80, 0.4);
 }
 
-.window_dark_mode .todo_top_bar_add_name:focus {
-    border-color: #231932 !important;
-    background: rgba(0, 0, 0, 0.6) !important;
-    box-shadow: 0 0 0.8vmin rgba(74, 65, 71, 0.6) !important;
+.dark_mode .todo_top_bar_add_name:focus {
+    border-color: #231932;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 0.8vmin rgba(74, 65, 71, 0.6);
 }
 
 .todo_top_bar_add_name::placeholder {
@@ -120,8 +120,8 @@ body, html {
     transition: all 0.2s ease-in-out;
 }
 
-.window_dark_mode .todo_top_bar_add_button {
-    background: linear-gradient(90deg, #231932, #0d091e) !important;
+.dark_mode .todo_top_bar_add_button {
+    background: linear-gradient(90deg, #231932, #0d091e);
 }
 
 .todo_top_bar_add_button::before {
@@ -137,9 +137,9 @@ body, html {
     filter: brightness(1.15);
 }
 
-.window_dark_mode .todo_top_bar_add_button:hover {
-    box-shadow: 0 0.5vmin 1vmin rgba(92, 44, 77, 0.4) !important;
-    filter: brightness(0.85) !important;
+.dark_mode .todo_top_bar_add_button:hover {
+    box-shadow: 0 0.5vmin 1vmin rgba(92, 44, 77, 0.4);
+    filter: brightness(0.85);
 }
 
 .todo_top_bar_add_button:active {
@@ -159,8 +159,8 @@ body, html {
     transition: all 0.2s ease;
 }
 
-.todo_list_task_dark_mode {
-    border-bottom: 0.0625rem solid rgba(35, 25, 50, 0.15) !important;
+.dark_mode .todo_list_task {
+    border-bottom: 0.0625rem solid rgba(35, 25, 50, 0.15);
 }
 
 .todo_list_task:hover {
@@ -210,9 +210,9 @@ body, html {
     background-color: rgba(56, 239, 125, 0.2);
 }
 
-.window_dark_mode .todo_list_item_complete:hover {
-    border-color: #2e7d32 !important;
-    background-color: rgba(46, 125, 50, 0.2) !important;
+.dark_mode .todo_list_item_complete:hover {
+    border-color: #2e7d32;
+    background-color: rgba(46, 125, 50, 0.2);
 }
 
 .todo_list_item_name {

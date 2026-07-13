@@ -31,8 +31,8 @@ body,html {
     box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
 }
 
-.search_menu_dark_mode {
-    background: linear-gradient(90deg, #231932, #0d091e) !important;
+.dark_mode .search_menu {
+    background: linear-gradient(90deg, #231932, #0d091e);
 }
 
 .search_menu_search_bar {

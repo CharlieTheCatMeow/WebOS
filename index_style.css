@@ -55,8 +55,8 @@ body, div, h1, h2, p, span, a, input {
     background-size: cover;
 }
 
-.desktop_dark_mode {
-    background-image: url("Images/Nature_Night.png") !important;
+.desktop.dark_mode {
+    background-image: url("Images/Nature_Night.png");
 }
 
 .top_bar {
@@ -76,8 +76,8 @@ body, div, h1, h2, p, span, a, input {
     box-sizing: border-box;
 }
 
-.top_bar_dark_mode {
-    background: linear-gradient(90deg, #231932, #0d091e) !important;
+.dark_mode .top_bar {
+    background: linear-gradient(90deg, #231932, #0d091e);
 }
 
 .top_bar_item {
@@ -232,11 +232,11 @@ body, div, h1, h2, p, span, a, input {
     animation: zoomIn 0.2s ease forwards;
 }
 
-.window_dark_mode {
-    backdrop-filter: blur(1.25rem) saturate(100%) !important;
-    background-color: rgba(0, 0, 0, 0.5) !important;
-    border: 0.0625rem solid rgba(255, 255, 255, 0.15) !important;
-    box-shadow: 0 0.8vmin 3.2vmin 0 rgba(0, 0, 0, 0.3) !important;
+.dark_mode .window {
+    backdrop-filter: blur(1.25rem) saturate(100%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0.8vmin 3.2vmin 0 rgba(0, 0, 0, 0.3);
 }
 
 .window.window_closed {
@@ -290,8 +290,8 @@ body, div, h1, h2, p, span, a, input {
     text-wrap: nowrap;
 }
 
-.window_header_dark_mode {
-    background: linear-gradient(135deg, #2b1b3d, #42273b) !important;
+.dark_mode .window_header {
+    background: linear-gradient(135deg, #2b1b3d, #42273b);
 }
 
 .window_dragging,

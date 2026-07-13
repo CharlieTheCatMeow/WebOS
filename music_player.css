@@ -99,8 +99,8 @@ body,html {
     transition: ease 0.1s;
 }
 
-.music_player_progress_bar_dark_mode {
-    background: linear-gradient(135deg, #443c4a, #4a4147) !important;
+.dark_mode .music_player_progress_bar {
+    background: linear-gradient(135deg, #443c4a, #4a4147);
 }
 
 .music_player_progress_bar:hover {
@@ -120,8 +120,8 @@ body,html {
     transition: width 0.2s linear;
 }
 
-.music_player_progress_dark_mode {
-    background: linear-gradient(135deg, #2b1b3d, #42273b) !important;
+.dark_mode .music_player_progress {
+    background: linear-gradient(135deg, #2b1b3d, #42273b);
 }
 
 .music_player_controls {

@@ -49,8 +49,8 @@ body,html {
     box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
 }
 
-.control_widget_dark_mode {
-    background: linear-gradient(90deg, #231932, #0d091e) !important;
+.dark_mode .control_widget {
+    background: linear-gradient(90deg, #231932, #0d091e);
 }
 
 .control_widget_first_row_controls {
@@ -177,7 +177,7 @@ body,html {
     accent-color: coral;
 }
 
-.control_widget_slider_dark_mode {
+.dark_mode .control_widget_slider {
     accent-color: #231932;
 }
 
@@ -226,8 +226,8 @@ body,html {
     background: linear-gradient(90deg, coral, #ff4500);
 }
 
-.control_widget_slider_dark_mode::-moz-range-progress {
-    background: linear-gradient(90deg, #231932, #0d091e) !important;
+.dark_mode .control_widget_slider::-moz-range-progress {
+    background: linear-gradient(90deg, #231932, #0d091e);
 }
 
 .control_widget_slider::-moz-range-thumb {
