@@ -194,13 +194,18 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+
     margin-right: 1.5vmin;
     width: 2.2vmin;
     height: 2.2vmin;
-    cursor: pointer;
+    border-radius: 50%;
+    flex-shrink: 0;
+
     background-color: rgba(255, 255, 255, 0.1);
     border: 0.0625rem solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
+
+
     transition: all 0.2s ease;
 }
 

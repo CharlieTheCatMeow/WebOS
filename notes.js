@@ -66,9 +66,6 @@ function addToSidebar(index) {
     let newDiv = document.createElement("div");
 
     newDiv.classList.add("notes_selector");
-    if (localStorage.getItem("Mode") === "dark") {
-        newDiv.classList.add("notes_selector_dark_mode");
-    }
     newDiv.innerText = index + 1;
 
     newDiv.addEventListener("click", function () {
@@ -136,13 +133,18 @@ function resetNotes() {
     for (let i = 0; i < content.length; i++) {
         addToSidebar(i);
     }
-
     setNotesContent(0);
 }
 
 for (let i = 0; i < content.length; i++) {
         addToSidebar(i);
     }
+
+setNotesContent(0);
+const firstSelector = document.querySelector("#notesSidebarPages .notes_selector");
+if (firstSelector) {
+    firstSelector.classList.add("notes_page_selected");
+}
 
 newPageButton.addEventListener("click", function () {
     createPage();

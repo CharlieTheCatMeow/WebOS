@@ -31,7 +31,7 @@ const welcome_content = [
                         </div>
                     </div>
                     <h2>A bit about me:</h2>
-                    <p>I am a student at a school (shocker :O) <br> I sometimes code for fun and try new things out. <br> This is a website :3 <br> Enjoy!</p>
+                    <p>I am a student at a school (shocker :O) <br> I sometimes code for fun and try new things out. <br> I decided to make a website this time :3 <br> Enjoy!</p>
                 </div>
             </div>
         `
