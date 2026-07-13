@@ -25,6 +25,8 @@ A web based operating system! You can do stuff with it, using the apps listed be
 
 Yes all very exciting I know.
 
+## This website is intended to be used in a 16:9 aspect ratio. Other aspect ratios may not be supported.
+
 ## Screenshots:
 
 ![Loading Screen](Assets/Screenshot_loading_screen.png)
