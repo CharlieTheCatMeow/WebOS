@@ -30,8 +30,8 @@ Yes all very exciting I know.
 ## Screenshots:
 
 ![Loading Screen](Assets/Screenshot_loading_screen.png)
-![Loading Screen](Assets/Screenshot_light_mode.png)
-![Loading Screen](Assets/Screenshot_dark_mode.png)
+![Loading Screen](Assets/screenshot_light_mode.png)
+![Loading Screen](Assets/screenshot_dark_mode.png)
 
 
 Credits to Louis Coyle for the Background image (very pretty). <br>
