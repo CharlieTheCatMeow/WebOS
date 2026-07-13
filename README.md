@@ -50,5 +50,6 @@ there were always 200 bugs accompaning it. >:(
 I started this project as a total beginner. I slowly learnt the basics following the provided guide. A couple hours later and here it is. <br>
 I learned how to use stylesheets and scripts to create a website. I learned Javascript and CSS as well as how websites are built. 
 
+## Credits
 Credits to Louis Coyle for the Background image (very pretty). <br>
 Credits to Daisuke Hasegawa, Coda and Yugo Kanno for the music
