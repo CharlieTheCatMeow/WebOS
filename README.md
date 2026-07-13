@@ -20,6 +20,7 @@ A web based operating system! You can do stuff with it, using the apps listed be
 - Start Menu
 - Search Menu (top left, click the Logo)
 - Control Center (top right, click the clock thingy)
+- Widgets (Toggles in settings)
 - Interactive elements
 
 Yes all very exciting I know.

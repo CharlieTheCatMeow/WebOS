@@ -41,20 +41,21 @@ function runCommand(command) {
     let output = "";
     if (command === "help") {
         output = `
-            <p>  Available commands: </p>
-            <p>    "welcome": opens intro window</p>
-            <p>    "notes": opens notes</p>
-            <p>    "stopwatch": opens stopwatch</p>
-            <p>    "todo": opens to-do list</p>
-            <p>    "calculator": opens calculator</p>
-            <p>    "music": opens music player</p>
-            <p>    "gallery": opens gallery</p>
-            <p>    "browser": opens browser</p>
-            <p>    "files": opens files</p>
-            <p>    "search": opens search</p>
-            <p>    "control": opens control center</p>
-            <p>    "dark": activates dark mode</p>
-            <p>    "light": activates light mode</p>
+            <p>Available commands: </p>
+            <p>"welcome": opens intro window</p>
+            <p>"notes": opens notes</p>
+            <p>"stopwatch": opens stopwatch</p>
+            <p>"todo": opens to-do list</p>
+            <p>"calculator": opens calculator</p>
+            <p>"music": opens music player</p>
+            <p>"gallery": opens gallery</p>
+            <p>"browser": opens browser</p>
+            <p>"files": opens files</p>
+            <p>"settings": opens settings</p>
+            <p>"search": opens search</p>
+            <p>"control": opens control center</p>
+            <p>"dark": activates dark mode</p>
+            <p>"light": activates light mode</p>
         `;
     } else if(command === "welcome") {
         openWindow(welcomeScreen);
@@ -86,6 +87,9 @@ function runCommand(command) {
     } else if(command === "search") {
         openWindow(searchMenu);
         output = `<p>  Search opened!</p>`
+    } else if(command === "settings") {
+        openWindow(settings);
+        output = `<p>  Settings opened!</p>`
     } else if(command === "control") {
         openWindow(controlWidget);
         output = `<p>  Control Center opened!</p>`
