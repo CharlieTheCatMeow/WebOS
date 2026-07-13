@@ -28,6 +28,7 @@ function renderCalendar(month, year) {
     for (let day = 1; day <= daysInMonth; day++) {
         const dayCell = document.createElement("div");
         dayCell.classList.add("calendar_day");
+        dayCell.classList.add("no_select");
         dayCell.innerText = day.toString();
 
         if (isCurrentMonth && day === today.getDate()) {
