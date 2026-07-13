@@ -49,6 +49,10 @@ body,html {
     transition: ease 0.1s;
 }
 
+.notes_selector_dark_mode {
+    background: linear-gradient(135deg, #591244, #100926) !important;
+}
+
 .notes_page_selected {
     scale: 1.1;
 }

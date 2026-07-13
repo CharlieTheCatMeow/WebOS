@@ -44,6 +44,10 @@ body,html {
     transition: ease 0.1s;
 }
 
+.window_dark_mode .welcome_window_page_selector {
+    background: linear-gradient(135deg, #591244, #100926) !important;
+}
+
 .welcome_window_page_selector:hover {
     scale: 1.1;
 }

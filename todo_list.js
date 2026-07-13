@@ -14,6 +14,9 @@ function renderTodoContent() {
     sortedList.forEach(function (task) {
         let newContent = document.createElement("div");
         newContent.classList.add("todo_list_task");
+        if (localStorage.getItem("Mode") === "dark") {
+            newContent.classList.add("todo_list_task_dark_mode");
+        }
 
         if (Date.now() - task.id < 300) {
             newContent.classList.add("task_animate_in");

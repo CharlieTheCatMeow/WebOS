@@ -333,6 +333,27 @@ function switchToDarkMode() {
             controlWidgetSliders[i].classList.add("control_widget_slider_dark_mode");
         }
     }
+    musicPlayerProgress.classList.add("music_player_progress_dark_mode");
+    const musicPlayerProgressBar = document.getElementsByClassName("music_player_progress_bar");
+    if (musicPlayerProgressBar) {
+        musicPlayerProgressBar[0].classList.add("music_player_progress_bar_dark_mode");
+    }
+    const notesSelectors = document.getElementsByClassName("notes_selector");
+    if (notesSelectors) {
+        for (let i = 0; i < notesSelectors.length; i++) {
+            notesSelectors[i].classList.add("notes_selector_dark_mode");
+        }
+    }
+    const todoListTasks = document.getElementsByClassName("todo_list_task");
+    if (todoListTasks) {
+        for (let i = 0; i < todoListTasks.length; i++) {
+            todoListTasks[i].classList.add("todo_list_task_dark_mode");
+        }
+    }
+    const todoListTopbar = document.getElementsByClassName("todo_top_bar");
+    if (todoListTopbar) {
+        todoListTopbar[0].classList.add("todo_top_bar_dark_mode");
+    }
 
     localStorage.setItem("Mode", "dark");
 }
@@ -356,6 +377,27 @@ function switchToLightMode() {
         for (let i = 0; i < controlWidgetSliders.length; i++) {
             controlWidgetSliders[i].classList.remove("control_widget_slider_dark_mode");
         }
+    }
+    musicPlayerProgress.classList.remove("music_player_progress_dark_mode");
+    const musicPlayerProgressBar = document.getElementsByClassName("music_player_progress_bar");
+    if (musicPlayerProgressBar) {
+        musicPlayerProgressBar[0].classList.remove("music_player_progress_bar_dark_mode");
+    }
+    const notesSelectors = document.getElementsByClassName("notes_selector");
+    if (notesSelectors) {
+        for (let i = 0; i < notesSelectors.length; i++) {
+            notesSelectors[i].classList.remove("notes_selector_dark_mode");
+        }
+    }
+    const todoListTasks = document.getElementsByClassName("todo_list_task");
+    if (todoListTasks) {
+        for (let i = 0; i < todoListTasks.length; i++) {
+            todoListTasks[i].classList.remove("todo_list_task_dark_mode");
+        }
+    }
+    const todoListTopbar = document.getElementsByClassName("todo_top_bar");
+    if (todoListTopbar) {
+        todoListTopbar[0].classList.remove("todo_top_bar_dark_mode");
     }
 
     localStorage.setItem("Mode", "light");
@@ -452,4 +494,6 @@ dragElement(clockWidget);
     }
 });
 
-checkLightDarkMode();
+setTimeout(function () {
+    checkLightDarkMode();
+}, 100);
