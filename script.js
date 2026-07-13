@@ -426,6 +426,7 @@ function initializeWindow(element, elementContent, elementOpen, elementClose, el
     addWindowTapHandling(element);
 }
 
+//Windows
 initializeWindow(welcomeScreen, welcomeScreenContent, welcomeScreenOpen, welcomeScreenClose, welcomeScreenMaximizeButton);
 initializeWindow(stopwatch, stopwatchContent, stopwatchOpen, stopwatchClose, stopwatchMaximizeButton);
 initializeWindow(notes, notesContent, notesOpen, notesClose, notesMaximizeButton);
@@ -440,6 +441,7 @@ initializeWindow(browser, browserContent, browserOpen, browserClose, browserMaxi
 initializeWindow(files, filesContent, filesOpen, filesClose, filesMaximizeButton);
 initializeWindow(controlWidget, null, null, null, null);
 
+//Widgets
 dragElement(cat);
 dragElement(calendar);
 dragElement(clockWidget);
