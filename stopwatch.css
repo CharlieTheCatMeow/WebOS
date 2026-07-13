@@ -18,9 +18,11 @@ body,html {
     align-items: flex-end;
     padding-bottom: 5vmin;
 
+    margin-top: 5vmin;
     height: 50%;
 
     font-size: 5vmin;
+    font-variant-numeric: tabular-nums;
 }
 
 .stopwatch_buttons {
