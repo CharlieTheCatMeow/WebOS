@@ -303,6 +303,10 @@ body, div, h1, h2, p, span, a, input {
     box-shadow: 0 0 2.5vmin rgba(255, 127, 80, 0.9), 0 0.8vmin 3.2vmin 0 rgba(0, 0, 0, 0.3);
 }
 
+.dark_mode .window.window_dragging {
+    box-shadow: 0 0 2.5vmin rgba(89, 18, 68, 0.9), 0 0.8vmin 3.2vmin 0 rgba(0, 0, 0, 0.3);
+}
+
 .header_buttons {
     display: flex;
     align-items: center;
