@@ -427,8 +427,8 @@ initializeWindow(settings, settingsContent, settingsOpen, settingsClose, setting
 initializeWindow(browser, browserContent, browserOpen, browserClose, browserMaximizeButton);
 initializeWindow(files, filesContent, filesOpen, filesClose, filesMaximizeButton);
 initializeWindow(controlWidget, null, null, null, null);
-initializeWindow(calendar, null, null, null, null);
 
 dragElement(cat);
+dragElement(calendar);
 
 checkLightDarkMode();

@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="control_widget.css">
         <link rel="stylesheet" href="cat_widget.css">
         <link rel="stylesheet" href="calendar_widget.css">
+        <link rel="stylesheet" href="clock_widget.css">
 
         <title>MeowOS!</title>
         <link rel="icon" type="image/x-icon" href="Images/Favicon.svg">
@@ -74,7 +75,6 @@
                 <div id="enterDesktopButton" class="enter_desktop_button no_select">Begin!</div>
             </div>
         </div>
-
         <div id="desktop" class="desktop">
             <div class="top_bar" id="topBar">
                 <div class="menu_buttons">
@@ -345,6 +345,13 @@
                             </div>
                         </div>
                         <div class="settings_section">
+                            <h2 class="settings_section_title">Widgets</h2>
+                            <div class="dark_light_mode_controls">
+                                <div id="catWidgetToggle" class="widget_toggle no_select"></div>
+                                <div id="calendarWidgetToggle" class="widget_toggle no_select"></div>
+                            </div>
+                        </div>
+                        <div class="settings_section">
                             <h2 class="settings_section_title">Factory Reset</h2>
                             <div id="factoryResetButton" class="factory_reset_button">
                                 <img class="factory_reset_button_icon" src="Images/exit.svg" alt="Factory Reset">
@@ -432,13 +439,13 @@
                         </div>
                     </div>
                 </div>
-                <div id="catWidget" class="window cat_widget" style="width: 20vmin; height: 15vmin;">
+                <div id="catWidget" class="window cat_widget" style="width: 20vmin; height: 15vmin; display: flex;">
                     <div id="catImageContainer" class="cat_image_container">
                         <img class="cat_image" src="Images/cat.png" alt="Cat">
                     </div>
                     <audio id="catMeowSound" src="Audio/meow.mp3"></audio>
                 </div>
-                <div id="calendarWidget" class="window calendar_widget" style="width: 20vmin; height: 20vmin;">
+                <div id="calendarWidget" class="window calendar_widget" style="width: 20vmin; height: 23vmin; display: flex;">
                     <div class="calendar_top_bar">
                         <div id="calendarBack" class="calendar_button">
                             <img class="calendar_button_icon" src="Images/arrow_left.svg" alt="Back">
@@ -459,6 +466,13 @@
                     </div>
                     <div class="calendar_days" id="calendarDays"></div>
                 </div>
+                <div id="clockWidget" class="window clock_widget" style="width: 20vmin; height: 20vmin; display: flex">
+                    <div class="clock_face">
+                        <div class="clock_hand hour"></div>
+                        <div class="clock_hand minute"></div>
+                        <div class="clock_hand second"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="script.js"></script>
@@ -477,5 +491,7 @@
         <script src="files.js"></script>
         <script src="control_widget.js"></script>
         <script src="cat_widget.js"></script>
+        <script src="calendar_widget.js"></script>
+        <script src="clock_widget.js"></script>
     </body>
 </html>

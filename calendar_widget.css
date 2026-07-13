@@ -10,11 +10,104 @@ body,html {
     overflow: hidden;
 
     font-family: 'Outfit', sans-serif;
+    color: #f9f9fb;
 }
 
 .calendar_widget {
-    top: 19vmin;
+    top: 24vmin;
     left: 2vmin;
 
-    background-color: red;
+    padding: 1vmin;
+}
+
+.calendar_top_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 2vmin;
+}
+
+.calendar_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    height: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.calendar_button_icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0) invert(1);
+}
+
+.calendar_current_month_year {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-size: 1.5vmin;
+    font-weight: 500;
+}
+
+.calendar_days_of_week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    margin-top: 0.5vmin;
+    height: 2vmin;
+    width: 100%;
+}
+
+.calendar_day_of_week {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.1vmin;
+    font-weight: 500;
+}
+
+.calendar_days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: min-content;
+    align-content: start;
+
+    margin-top: 0.5vmin;
+    width: 100%;
+}
+
+.calendar_day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+
+    font-size: 1.1vmin;
+    font-weight: 500;
+}
+
+.calendar_day.empty {
+    background-color: transparent;
+}
+
+.calendar_today {
+    border: solid 0.15vmin rgba(0, 0, 0, 0.3);
 }
