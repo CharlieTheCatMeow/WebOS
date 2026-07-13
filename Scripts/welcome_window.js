@@ -43,21 +43,22 @@ const welcome_content = [
                     <h1 class="welcome_window_title">Apps and Features</h1>
                 </div>
                 <div class="welcome_window_content">
-                    <p>-Notes</p>
-                    <p>-Stopwatch</p>
-                    <p>-To-Do List</p>
-                    <p>-Terminal</p>
-                    <p>-Calculator</p>
-                    <p>-Music Player</p>
-                    <p>-Gallery</p>
-                    <p>-Browser</p>
-                    <p>-Files</p>
-                    <p>-Search</p>
-                    <p>-Control Center</p>
-                    <p>-Widgets (Toggle in settings)</p>
-                    <p>-Dark and Light Mode</p>
-                    <p>-Interative elements</p>
-                    <p>-Loading Screen</p>
+                    <p> -Notes</p>
+                    <p> -Stopwatch</p>
+                    <p> -To-Do List</p>
+                    <p> -Terminal</p>
+                    <p> -Calculator</p>
+                    <p> -Music Player</p>
+                    <p> -Gallery</p>
+                    <p> -Browser</p>
+                    <p> -Files</p>
+                    <p> -Search</p>
+                    <p> -Control Center</p>
+                    <p> -Widgets (Toggle in settings)</p>
+                    <p> -Dark and Light Mode</p>
+                    <p> -Interative elements</p>
+                    <p> -Loading Screen</p>
+                    <h2>(Please check out settings for more controls)</h2>
                 </div>
             </div>
         `
@@ -71,7 +72,7 @@ const welcome_content = [
                 <div class="welcome_window_content">
                     <p>Background: 25th hour by Louis Coyle</p>
                     <p>Music: Daisuke Hasegawa, Coda and Yugo Kanno</p>
-                    <p>Thank you for using MeowOS!</p>
+                    <h2>Thank you for using MeowOS!</h2>
                 </div>
             </div>
         `
