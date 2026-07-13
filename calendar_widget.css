@@ -1,0 +1,20 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+    font-family: 'Outfit', sans-serif;
+}
+
+.calendar_widget {
+    top: 19vmin;
+    left: 2vmin;
+
+    background-color: red;
+}

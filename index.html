@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="browser.css">
         <link rel="stylesheet" href="files.css">
         <link rel="stylesheet" href="control_widget.css">
+        <link rel="stylesheet" href="cat_widget.css">
+        <link rel="stylesheet" href="calendar_widget.css">
 
         <title>MeowOS!</title>
         <link rel="icon" type="image/x-icon" href="Images/Favicon.svg">
@@ -72,6 +74,7 @@
                 <div id="enterDesktopButton" class="enter_desktop_button no_select">Begin!</div>
             </div>
         </div>
+
         <div id="desktop" class="desktop">
             <div class="top_bar" id="topBar">
                 <div class="menu_buttons">
@@ -429,6 +432,33 @@
                         </div>
                     </div>
                 </div>
+                <div id="catWidget" class="window cat_widget" style="width: 20vmin; height: 15vmin;">
+                    <div id="catImageContainer" class="cat_image_container">
+                        <img class="cat_image" src="Images/cat.png" alt="Cat">
+                    </div>
+                    <audio id="catMeowSound" src="Audio/meow.mp3"></audio>
+                </div>
+                <div id="calendarWidget" class="window calendar_widget" style="width: 20vmin; height: 20vmin;">
+                    <div class="calendar_top_bar">
+                        <div id="calendarBack" class="calendar_button">
+                            <img class="calendar_button_icon" src="Images/arrow_left.svg" alt="Back">
+                        </div>
+                        <div class="calendar_current_month_year" id="calendarCurrentMonthYear"></div>
+                        <div id="calendarForward" class="calendar_button">
+                            <img class="calendar_button_icon" src="Images/arrow_right.svg" alt="Forward">
+                        </div>
+                    </div>
+                    <div class="calendar_days_of_week">
+                        <div class="calendar_day_of_week">Sun</div>
+                        <div class="calendar_day_of_week">Mon</div>
+                        <div class="calendar_day_of_week">Tue</div>
+                        <div class="calendar_day_of_week">Wed</div>
+                        <div class="calendar_day_of_week">Thu</div>
+                        <div class="calendar_day_of_week">Fri</div>
+                        <div class="calendar_day_of_week">Sat</div>
+                    </div>
+                    <div class="calendar_days" id="calendarDays"></div>
+                </div>
             </div>
         </div>
         <script src="script.js"></script>
@@ -446,5 +476,6 @@
         <script src="browser.js"></script>
         <script src="files.js"></script>
         <script src="control_widget.js"></script>
+        <script src="cat_widget.js"></script>
     </body>
 </html>

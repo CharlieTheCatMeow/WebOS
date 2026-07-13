@@ -88,6 +88,12 @@ const timeText = document.querySelector("#clockTime");
 //desktop
 const desktop = document.querySelector("#desktop");
 
+//cat
+const cat = document.querySelector("#catWidget");
+
+//calendar
+const calendar = document.querySelector("#calendarWidget");
+
 let selectedIcon = undefined;
 const icons = document.querySelectorAll(".app_icon");
 
@@ -113,7 +119,7 @@ function dragElement(element) {
     }
 
     function startDragging(e) {
-         if (element.classList.contains("no_dragging")) return;
+        if (element.classList.contains("no_dragging")) return;
         if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA" || e.target.closest(".notes_sidebar")) {
             return;
         }
@@ -238,7 +244,7 @@ function openWindow(element) {
         initialLeft = Math.min(Math.max(initialLeft, 0), Math.max(maxLeft, 0));
         initialTop = Math.min(Math.max(initialTop, topBarHeight), Math.max(maxTop, topBarHeight));
 
-        if (!element.classList.contains("search_menu") && !element.classList.contains("control_widget")) {
+        if (!element.classList.contains("search_menu") && !element.classList.contains("control_widget") && !element.classList.contains("cat_widget") && !element.classList.contains("calendar_widget")) {
             element.style.top = initialTop + "px";
             element.style.left = initialLeft + "px";
         } else if (element.classList.contains("control_widget")) {
@@ -421,5 +427,8 @@ initializeWindow(settings, settingsContent, settingsOpen, settingsClose, setting
 initializeWindow(browser, browserContent, browserOpen, browserClose, browserMaximizeButton);
 initializeWindow(files, filesContent, filesOpen, filesClose, filesMaximizeButton);
 initializeWindow(controlWidget, null, null, null, null);
+initializeWindow(calendar, null, null, null, null);
+
+dragElement(cat);
 
 checkLightDarkMode();
