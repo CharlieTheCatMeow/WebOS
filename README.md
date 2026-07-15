@@ -53,3 +53,6 @@ I learned how to use stylesheets and scripts to create a website. I learned Java
 ## Credits
 Credits to Louis Coyle for the Background image (very pretty). <br>
 Credits to Daisuke Hasegawa, Coda and Yugo Kanno for the music
+
+
+(AI usage: Some basic questions, styling colors and debugging)
