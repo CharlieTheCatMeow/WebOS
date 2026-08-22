@@ -12,6 +12,16 @@ body,html {
     font-family: "Courier New", monospace;
 }
 
+.notes {
+    display: none;
+
+    resize: both;
+    width: 55vmin;
+    height:  60vmin;
+    min-width: 30vmin;
+    min-height: 20vmin;
+}
+
 .notes_sidebar {
     display: flex;
     flex-direction: column;
@@ -20,7 +30,7 @@ body,html {
     overflow: hidden;
     border-bottom-right-radius: 2vmin;
 
-    height: 60vmin;
+    height: 100%;
     width: 6vmin;
     flex-shrink: 0;
 
@@ -74,7 +84,7 @@ body,html {
     overflow-y: auto;
     overflow-x: hidden;
 
-    max-height: 60vmin;
+    max-height: 97vmin;
 }
 
 .window_maximized .notes_sidebar_pages {
@@ -182,7 +192,7 @@ body,html {
     overflow-x: hidden;
     overflow-y: auto;
 
-    max-height: 60vmin;
+    max-height: 97vmin;
 
     padding: 1vmin;
 }

@@ -12,9 +12,14 @@ body, html {
 }
 
 .todo_list_window {
+    display: none;
+
+    resize: both;
+    width: 60vmin;
     min-height: 3vmin;
+    min-width: 30vmin;
     height: auto;
-    max-height: 60vmin;
+    max-height: 80vmin;
     overflow: hidden;
     backdrop-filter: blur(1.25rem) saturate(180%);
     background-color: rgba(255, 255, 255, 0.08);
@@ -25,7 +30,6 @@ body, html {
 .todo_content {
     overflow-y: auto;
     overflow-x: hidden;
-    max-height: calc(60vmin - 3vmin - 4.5vmin);
 }
 
 .window_maximized .todo_content {

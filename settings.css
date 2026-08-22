@@ -12,6 +12,16 @@ body,html {
     font-family: 'Outfit', sans-serif;
 }
 
+.settings {
+    display: none;
+
+    resize: both;
+    width: 50vmin;
+    height: 52vmin;
+    min-width: 50vmin;
+    min-height: 50vmin;
+}
+
 .settings_content {
     display: flex;
     flex-direction: column;
@@ -20,8 +30,8 @@ body,html {
     overflow-y: auto;
 
     padding: 2vmin;
-    width: 50vmin;
-    height: 49vmin;
+    width: 100%;
+    height: 100%;
 }
 
 .settings_section {

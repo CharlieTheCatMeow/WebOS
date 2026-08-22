@@ -12,6 +12,16 @@ body,html {
     font-family: 'Outfit', sans-serif;
 }
 
+.terminal_window {
+    display: none;
+
+    resize: both;
+    width: 50vmin;
+    height: 25vmin;
+    min-width: 35vmin;
+    min-height: 25vmin;
+}
+
 .terminal_window_content {
     display: flex;
     flex-direction: column;

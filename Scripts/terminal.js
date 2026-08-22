@@ -1,12 +1,21 @@
 const terminalWindow = document.querySelector("#terminal");
 
 
+function scrollTerminalToBottom() {
+    const isOverflowing = terminalContent.scrollHeight > terminalContent.clientHeight;
+    terminalContent.style.justifyContent = isOverflowing ? "flex-end" : "flex-start";
+    terminalContent.scrollTop = terminalContent.scrollHeight;
+}
+
+new ResizeObserver(scrollTerminalToBottom).observe(terminalWindow);
+
 function terminalOpenClose() {
     if (terminalWindow.style.display === "flex") {
         terminalContent.innerHTML = `
                 <p>MeowOS Terminal [Version 1.0.0]</p>
                 <p>Initializing shell environment...</p>
         `;
+        scrollTerminalToBottom();
         setTimeout(function () {
             terminalContent.innerHTML = terminalContent.innerHTML + `
                 <p>Shell ready.</p>
@@ -36,6 +45,7 @@ function addInputLine() {
            runCommand(newInput.value);
        }
     });
+    scrollTerminalToBottom();
 }
 function runCommand(command) {
     let output = "";
@@ -110,4 +120,5 @@ function runCommand(command) {
     ` + output;
 
     addInputLine();
+    scrollTerminalToBottom();
 }

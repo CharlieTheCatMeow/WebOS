@@ -12,6 +12,16 @@ body,html {
     font-family: "Courier New", monospace;
 }
 
+.welcome_window {
+    display: none;
+
+    resize: both;
+    width: 50vmin;
+    height: 65vmin;
+    min-height: 22vmin;
+    min-width: 50vmin;
+}
+
 .welcome_window_sidebar {
     display: flex;
     flex-direction: column;

@@ -12,11 +12,21 @@ body,html {
     font-family: 'Outfit', sans-serif;
 }
 
+.gallery {
+    display: none;
+
+    resize: both;
+    width: 75vmin;
+    height: 50vmin;
+    min-width: 55vmin;
+    min-height: 50vmin;
+}
+
 .gallery_content {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 
     overflow-x: hidden;
     overflow-y: auto;
@@ -30,7 +40,7 @@ body,html {
     align-items: center;
     overflow: hidden;
 
-    width: 45%;
+    width: 20vmin;
     aspect-ratio: 1 / 1;
     border-radius: 20%;
     margin: 2.5%;

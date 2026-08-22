@@ -12,13 +12,24 @@ body,html {
     font-family: 'Outfit', sans-serif;
 }
 
+.browser {
+    display: none;
+    overflow: hidden;
+
+    resize: both;
+    width: 60vmin;
+    height: 40vmin;
+    min-width: 40vmin;
+    min-height: 40vmin;
+}
+
 .browser_content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 
-    width: 60vmin;
+    width: 100%;
 }
 
 .browser_top_bar {

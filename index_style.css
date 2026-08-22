@@ -318,6 +318,9 @@ body, div, h1, h2, p, span, a, input {
 }
 
 .window_content {
+    flex: 1;
+    min-height: 0;
+
     word-break: break-word;
     overflow: hidden;
     border-bottom-left-radius: 0.5vmin;

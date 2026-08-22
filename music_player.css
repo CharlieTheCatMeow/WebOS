@@ -12,6 +12,16 @@ body,html {
     font-family: 'Outfit', sans-serif;
 }
 
+.music_player {
+    display: none;
+
+    resize: both;
+    width: 27vmin;
+    height: 58vmin;
+    min-width: 27vmin;
+    min-height: 58vmin;
+}
+
 .music_player_content {
     display: flex;
     flex-direction: column;
@@ -26,7 +36,7 @@ body,html {
     justify-content: center;
     align-items: center;
 
-    margin: 0.5vmin 0;
+    margin: 0.5vmin 0.5vmin;
 
     width: 23vmin;
     aspect-ratio: 1 / 1;
@@ -61,7 +71,7 @@ body,html {
     margin: 0.5vmin 0;
     padding: 0.5vmin 1vmin;
 
-    width: 23vmin;
+    width: 90%;
     height: 3vmin;
     line-height: 2vmin;
     border-radius: 1vmin;
@@ -87,7 +97,7 @@ body,html {
 .music_player_progress_bar {
     margin: 0.5vmin 0;
 
-    width: 23vmin;
+    width: 90%;
     height: 1vmin;
     border-radius: 0.5vmin;
 
@@ -132,7 +142,7 @@ body,html {
 
     margin: 0.5vmin 0;
 
-    width: 23vmin;
+    width: 90%;
     height: 5vmin;
     border-radius: 1vmin;
 
@@ -244,8 +254,8 @@ body,html {
     overflow-y: auto;
 
     margin: 0.5vmin 0;
-    width: 23vmin;
-    height: 20vmin;
+    width: 90%;
+    flex: 1;
     border-radius: 1vmin;
 
     background-color: rgba(0, 0, 0, 0.4);

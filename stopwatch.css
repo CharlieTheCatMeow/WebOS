@@ -12,16 +12,26 @@ body,html {
     font-family: "Courier New", monospace;
 }
 
+.stopwatch {
+    display: none;
+
+    resize: both;
+    width: 45vmin;
+    height: 45vmin;
+    min-width: 35vmin;
+    min-height: 25vmin;
+}
+
 .stopwatch_time {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 5vmin;
+    padding-bottom: 2cqh;
 
-    margin-top: 5vmin;
+    margin-top: 2cqh;
     height: 50%;
 
-    font-size: 5vmin;
+    font-size: 3cqw;
     font-variant-numeric: tabular-nums;
 }
 
