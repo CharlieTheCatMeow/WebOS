@@ -28,7 +28,7 @@ function loadSongs() {
                 <div class="song hide_scrollbar" data-index="${index}">${song.title}</div>
             </div>
             <div class="song_play">
-                <div id="songPlayButton${index}" class="song_play_button">
+                <div id="songPlayButton${index}" class="song_play_button clickable">
                     <i class="material-icons song_play_button_icon no_select">play_arrow</i>
                 </div>
             </div>

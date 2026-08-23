@@ -5,43 +5,43 @@ const searchMenuWindow = document.querySelector("#searchMenu");
 const searchMenuPowerButton = document.querySelector("#searchMenuPowerButton");
 
 apps = [{name: "Introduction",
-        content: `<div id="searchMenuWelcomeScreen" class="search_menu_app_icon no_select" data-window="welcomeScreen">
+        content: `<div id="searchMenuWelcomeScreen" class="search_menu_app_icon clickable no_select" data-window="welcomeScreen">
                         <img class="app_icon_svg" src="Images/Favicon.svg" alt="Intro">
                     </div>`},
         {name: "Stopwatch",
-         content: `<div id="searchMenuStopwatch" class="search_menu_app_icon no_select" data-window="stopwatch">
+         content: `<div id="searchMenuStopwatch" class="search_menu_app_icon clickable no_select" data-window="stopwatch">
                         <img class="app_icon_svg" src="Images/stopwatch.svg" alt="Timer">
                     </div>`},
         {name: "Notes",
-         content: `<div id="searchMenuNotes" class="search_menu_app_icon no_select" data-window="notes">
+         content: `<div id="searchMenuNotes" class="search_menu_app_icon clickable no_select" data-window="notes">
                         <img class="app_icon_svg" src="Images/notes.svg" alt="Notes">
                     </div>`},
         {name: "To-Do List",
-         content: `<div id="searchMenuTodoList" class="search_menu_app_icon no_select" data-window="todoList">
+         content: `<div id="searchMenuTodoList" class="search_menu_app_icon clickable no_select" data-window="todoList">
                         <img class="app_icon_svg" src="Images/todo_list.svg" alt="To-Do">
                     </div>`},
         {name: "Calculator",
-         content: `<div id="searchMenuCalculator" class="search_menu_app_icon no_select" data-window="calculator">
+         content: `<div id="searchMenuCalculator" class="search_menu_app_icon clickable no_select" data-window="calculator">
                         <img class="app_icon_svg" src="Images/calculator.svg" alt="Calc">
                     </div>`},
         {name: "Music Player",
-         content: `<div id="searchMenuMusicPlayer" class="search_menu_app_icon no_select" data-window="musicPlayer">    
+         content: `<div id="searchMenuMusicPlayer" class="search_menu_app_icon clickable no_select" data-window="musicPlayer">    
                         <img class="app_icon_svg" src="Images/music_player.svg" alt="Music">
                     </div>`},
         {name: "Gallery",
-         content: `<div id="searchMenuGallery" class="search_menu_app_icon no_select" data-window="gallery">
+         content: `<div id="searchMenuGallery" class="search_menu_app_icon clickable no_select" data-window="gallery">
                         <img class="app_icon_svg" src="Images/gallery.svg" alt="Gallery">
                     </div>`},
         {name: "Files",
-         content: `<div id="searchMenuFiles" class="search_menu_app_icon no_select" data-window="files">
+         content: `<div id="searchMenuFiles" class="search_menu_app_icon clickable no_select" data-window="files">
                         <img class="app_icon_svg" src="Images/folder_bold.svg" alt="Files">
                     </div>`},
         {name: "Settings",
-         content: `<div id="searchMenuSettings" class="search_menu_app_icon no_select" data-window="settings">
+         content: `<div id="searchMenuSettings" class="search_menu_app_icon clickable no_select" data-window="settings">
                         <img class="app_icon_svg" src="Images/settings.svg" alt="Settings">
                     </div>`},
         {name: "Terminal",
-         content: `<div id="searchMenuTerminal" class="search_menu_app_icon no_select" data-window="terminal">
+         content: `<div id="searchMenuTerminal" class="search_menu_app_icon clickable no_select" data-window="terminal">
                         <img class="app_icon_svg" src="Images/terminal.svg" alt="CMD">
                     </div>`}
         ];

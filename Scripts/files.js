@@ -63,14 +63,14 @@ function playPressAnimation(element) {
 
 function renderFileExplorerShell() {
     filesWindowContent.innerHTML = `<div class="files_top_bar">
-                                        <div id="filesReturnToParentDirectoryButton" class="files_return_to_parent_directory_button no_select">
+                                        <div id="filesReturnToParentDirectoryButton" class="files_return_to_parent_directory_button clickable no_select">
                                             <img class="files_header_icon" src="Images/arrow_up.svg" alt="Back">
                                         </div>
                                         <div id="filesCurrentDirectory" class="files_current_directory"></div>
-                                        <div id="filesAddFolderButton" class="files_add_button no_select">
+                                        <div id="filesAddFolderButton" class="files_add_button clickable no_select">
                                             <img class="files_header_icon" src="Images/add_folder.svg" alt="Add Folder">
                                         </div>
-                                        <div id="filesAddFileButton" class="files_add_button no_select">
+                                        <div id="filesAddFileButton" class="files_add_button clickable no_select">
                                             <img class="files_header_icon" src="Images/add_file.svg" alt="Add File">
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@ function renderSidebar() {
         if (child.type !== "folder") return;
 
         let sidebarItem = document.createElement("div");
-        sidebarItem.classList.add("files_sidebar_content_directory");
+        sidebarItem.classList.add("files_sidebar_content_directory", "clickable");
         sidebarItem.dataset.id = child.id;
 
         let sidebarIcon = document.createElement("div");
@@ -163,8 +163,8 @@ function askTextFileName () {
     filesWindowContent.innerHTML = `
                                     <div class="text_file_name_input">
                                         <input class="text_file_name_input_area" type="text" id="textFileNameInput" placeholder="Enter file name...">
-                                        <div id="textFileNameSubmitButton" class="text_file_name_button no_select">Submit</div>
-                                        <div id="textFileNameCancelButton" class="text_file_name_button no_select">Cancel</div>
+                                        <div id="textFileNameSubmitButton" class="text_file_name_button clickable no_select">Submit</div>
+                                        <div id="textFileNameCancelButton" class="text_file_name_button clickable no_select">Cancel</div>
                                     </div>
     `;
     const textFileNameInput = document.querySelector("#textFileNameInput");
@@ -189,8 +189,8 @@ function askFolderName() {
     filesWindowContent.innerHTML = `
                                     <div class="text_file_name_input">
                                         <input class="text_file_name_input_area" type="text" id="folderNameInput" placeholder="Enter folder name...">
-                                        <div id="folderNameSubmitButton" class="text_file_name_button no_select">Submit</div>
-                                        <div id="folderNameCancelButton" class="text_file_name_button no_select">Cancel</div>
+                                        <div id="folderNameSubmitButton" class="text_file_name_button clickable no_select">Submit</div>
+                                        <div id="folderNameCancelButton" class="text_file_name_button clickable no_select">Cancel</div>
                                     </div>
     `;
     const folderNameInput = document.querySelector("#folderNameInput");
@@ -217,10 +217,10 @@ function openTextFile(file) {
                                         <div class="text_file_header">
                                             <p class="text_file_header_name">${file.name}</p>
                                             <div class="text_file_header_controls">
-                                                <div id="textFileHeaderDeleteButton" class="text_file_header_button">
+                                                <div id="textFileHeaderDeleteButton" class="text_file_header_button clickable">
                                                     <img class="text_file_header_icon" src="Images/delete.svg" alt="Delete">
                                                 </div>
-                                                <div id="textFileHeaderCloseButton" class="text_file_header_button">
+                                                <div id="textFileHeaderCloseButton" class="text_file_header_button clickable">
                                                     <img class="text_file_header_icon" src="Images/close.svg" alt="Close">
                                                 </div>
                                             </div>
@@ -278,7 +278,7 @@ function openFolder(folder) {
             newFolderIcon.appendChild(newFolderIconSVG);
             let newFolderName = document.createElement("div");
             newFolderName.classList.add("file_item_name");
-            newFolder.classList.add("file_item");
+            newFolder.classList.add("file_item", "clickable");
             newFolder.appendChild(newFolderIcon);
             newFolder.appendChild(newFolderName);
             newFolderName.innerText = child.name;
@@ -294,6 +294,10 @@ function openFolder(folder) {
             });
 
             let deleteButton = document.createElement("div");
+            // NOTE: intentionally NOT "clickable" here, since this button calls
+            // stopPropagation() below, which prevents the click from ever
+            // reaching the document-level sound listener. Sound is triggered
+            // manually instead (see playSound call below).
             deleteButton.classList.add("file_item_delete_button");
             let deleteButtonIcon = document.createElement("img");
             deleteButtonIcon.classList.add("file_item_delete_button_icon");
@@ -302,6 +306,7 @@ function openFolder(folder) {
             deleteButton.appendChild(deleteButtonIcon);
             deleteButton.addEventListener("click", function (event) {
                 event.stopPropagation();
+                playSound(click_sound);
                 playPressAnimation(deleteButton);
                 const parentNode = findParent(fileSystem, child.id);
                 if (parentNode) {

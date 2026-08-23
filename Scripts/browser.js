@@ -3,13 +3,13 @@ const browserWebContent = document.querySelector("#browserWebContent");
 const browserHomeButton = document.querySelector("#browserHomeButton");
 
 function openBrowserHomePage() {
-    browserWebContent.innerHTML = `<div id="browserWikipediaButton" class="browser_homepage_selector">
+    browserWebContent.innerHTML = `<div id="browserWikipediaButton" class="browser_homepage_selector clickable no_select">
                                         <img class="browser_homepage_icon" src="Images/wikipedia.svg" alt="Wikipedia">
                                     </div>
-                                    <div id="browserDrawButton" class="browser_homepage_selector">
+                                    <div id="browserDrawButton" class="browser_homepage_selector clickable no_select">
                                         <img class="browser_homepage_icon" src="Images/draw.svg" alt="Draw">
                                     </div>
-                                    <div id="browserWeatherButton" class="browser_homepage_selector">
+                                    <div id="browserWeatherButton" class="browser_homepage_selector clickable no_select">
                                         <img class="browser_homepage_icon" src="Images/weather.svg" alt="Weather">
                                     </div>`;
     const browserWikipediaButton = document.querySelector("#browserWikipediaButton");
@@ -39,7 +39,7 @@ function openBrowserWeather() {
 
 function loadBrowserURL(url) {
     if (!url.startsWith("http://") && !url.startsWith("https://")) {
-        url = "http://" + url;
+        url = "https://" + url;
     }
     browserWebContent.innerHTML = `<iframe class="browser_iframe" src="${url}" width="100%" height="100%"></iframe>`;
 
@@ -64,7 +64,7 @@ function loadBrowserURL(url) {
 function showSiteBlockedMessage() {
     browserWebContent.innerHTML = `<div class="browser_blocked_message" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; text-align: center;">
                                         <h1>This site can't be displayed here.</h1>
-                                        <div class="browser_go_home_from_blocked_button" id="browserGoHomeFromBlocked"">Go Home</div>
+                                        <div class="browser_go_home_from_blocked_button clickable no_select" id="browserGoHomeFromBlocked">Go Home</div>
                                     </div>`;
     document.querySelector("#browserGoHomeFromBlocked").addEventListener("click", openBrowserHomePage);
 }

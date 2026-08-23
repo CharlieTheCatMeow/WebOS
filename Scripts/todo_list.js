@@ -24,10 +24,10 @@ function renderTodoContent() {
 
         newContent.innerHTML = `
             <div class="todo_list_complete_and_name">
-                <div class="todo_list_item_complete" id="todoListItemComplete${task.id}"></div>
+                <div class="todo_list_item_complete clickable" id="todoListItemComplete${task.id}"></div>
                 <p class="todo_list_item_name ${task.completed ? 'task_completed' : ''}">${task.name}</p>
             </div>
-            <div class="todo_list_item_delete" id="todoListItemDelete${task.id}"></div>
+            <div class="todo_list_item_delete clickable" id="todoListItemDelete${task.id}"></div>
         `;
         todoContent.appendChild(newContent);
 

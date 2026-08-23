@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="Added browser url bar, fixed notes">
+    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="fixed stopwatch reset button issue">
+      <change afterPath="$PROJECT_DIR$/Scripts/sound_effects.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/files.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/files.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,61 +57,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.000003164558177" />
-      <entry key="MS500" value="1.1312459599089872" />
-      <entry key="S2" value="2.6417661827656653" />
-      <entry key="S5" value="5.174755975483289" />
-      <entry key="S10" value="7.3166970246519405" />
-      <entry key="S30" value="11.049094979510423" />
-      <entry key="S60" value="15.571964968472992" />
-      <entry key="M2" value="23.35948791645324" />
-      <entry key="M5" value="41.841948464650365" />
-      <entry key="M10" value="69.3716250265554" />
-      <entry key="M15" value="98.43318292856998" />
-      <entry key="M30" value="196.8709517057451" />
-      <entry key="H1" value="449.4120411295925" />
-      <entry key="H2" value="1028.3917700449608" />
-      <entry key="H4" value="2199.897942641972" />
-      <entry key="D1" value="8029.558104827934" />
-      <entry key="W1" value="11299.279783957269" />
+      <entry key="MS100" value="1.0006137760617781" />
+      <entry key="MS500" value="1.227825324552731" />
+      <entry key="S2" value="1.699018063838126" />
+      <entry key="S5" value="2.0085143044418503" />
+      <entry key="S10" value="2.319315312340994" />
+      <entry key="S30" value="3.0330078079398297" />
+      <entry key="S60" value="3.752718975896351" />
+      <entry key="M2" value="5.185194627926236" />
+      <entry key="M5" value="13.125412922545015" />
+      <entry key="M10" value="33.02521088301073" />
+      <entry key="M15" value="57.19176585554427" />
+      <entry key="M30" value="143.21479109207985" />
+      <entry key="H1" value="368.86484448942036" />
+      <entry key="H2" value="917.4948482669942" />
+      <entry key="H4" value="2070.4575454980836" />
+      <entry key="D1" value="7980.395857897718" />
+      <entry key="W1" value="11356.365718302091" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="9.530037155038583E-188" />
-      <entry key="MS500" value="3.942931361623575E-38" />
-      <entry key="S2" value="4.5843702070769404E-10" />
-      <entry key="S5" value="2.2577476486962514E-4" />
-      <entry key="S10" value="0.02011511626307962" />
-      <entry key="S30" value="0.43879247598902055" />
-      <entry key="S60" value="1.1409532024265276" />
-      <entry key="M2" value="2.43097220621906" />
-      <entry key="M5" value="5.1812487881747336" />
-      <entry key="M10" value="8.462376654463833" />
-      <entry key="M15" value="11.824014840298208" />
-      <entry key="M30" value="22.552909951000725" />
-      <entry key="H1" value="48.2980514994482" />
-      <entry key="H2" value="134.7248331176557" />
-      <entry key="H4" value="390.24431702436857" />
-      <entry key="D1" value="1915.3388486464594" />
-      <entry key="W1" value="2786.2867027684797" />
+      <entry key="MS100" value="6.099505837319784E-46" />
+      <entry key="MS500" value="9.058555098364918E-10" />
+      <entry key="S2" value="0.00548611279585155" />
+      <entry key="S5" value="0.12465390641911964" />
+      <entry key="S10" value="0.35306393415955134" />
+      <entry key="S30" value="0.7137118446437599" />
+      <entry key="S60" value="0.9239851490273303" />
+      <entry key="M2" value="1.2137686673633301" />
+      <entry key="M5" value="1.9667713093300652" />
+      <entry key="M10" value="3.9118756731787445" />
+      <entry key="M15" value="6.454001377594767" />
+      <entry key="M30" value="15.696604059427465" />
+      <entry key="H1" value="39.02291906555782" />
+      <entry key="H2" value="117.62338108463835" />
+      <entry key="H4" value="360.81957866288025" />
+      <entry key="D1" value="1891.6984907475787" />
+      <entry key="W1" value="2787.6686380752717" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.9338857154109207E-4" />
-      <entry key="MS500" value="0.32641769963893214" />
-      <entry key="S2" value="2.2989819695261176" />
-      <entry key="S5" value="5.007120476698258" />
-      <entry key="S10" value="7.240343392247574" />
-      <entry key="S30" value="11.42185229848013" />
-      <entry key="S60" value="16.637755712186575" />
-      <entry key="M2" value="25.70457649358902" />
-      <entry key="M5" value="46.943927046525076" />
-      <entry key="M10" value="77.76932881610283" />
-      <entry key="M15" value="110.19986455903131" />
-      <entry key="M30" value="219.37571140472403" />
-      <entry key="H1" value="497.6677520700731" />
-      <entry key="H2" value="1163.0731665784544" />
-      <entry key="H4" value="2590.09104631096" />
-      <entry key="D1" value="9944.858260935027" />
-      <entry key="W1" value="14085.558424353296" />
+      <entry key="MS100" value="0.004944368047821385" />
+      <entry key="MS500" value="0.368737512614746" />
+      <entry key="S2" value="1.165502406464" />
+      <entry key="S5" value="1.8169045296723791" />
+      <entry key="S10" value="2.4642558624811612" />
+      <entry key="S30" value="3.6517926011609565" />
+      <entry key="S60" value="4.620978063413492" />
+      <entry key="M2" value="6.363729303130441" />
+      <entry key="M5" value="15.063969764504606" />
+      <entry key="M10" value="36.906470373956864" />
+      <entry key="M15" value="63.61257861363005" />
+      <entry key="M30" value="158.8749701558298" />
+      <entry key="H1" value="407.8505828270877" />
+      <entry key="H2" value="1035.077845108151" />
+      <entry key="H4" value="2431.228256285338" />
+      <entry key="D1" value="9872.055857800568" />
+      <entry key="W1" value="14144.02625039289" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -286,7 +290,9 @@
       <workItem from="1787412351525" duration="812000" />
       <workItem from="1787420587876" duration="4000" />
       <workItem from="1787469895115" duration="969000" />
-      <workItem from="1787476939104" duration="3711000" />
+      <workItem from="1787476939104" duration="3854000" />
+      <workItem from="1787480928856" duration="112000" />
+      <workItem from="1787485600246" duration="2415000" />
     </task>
     <task id="LOCAL-00001" summary="Added browser url bar, fixed notes">
       <option name="closed" value="true" />
@@ -296,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787480568275</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed stopwatch reset button issue">
+      <option name="closed" value="true" />
+      <created>1787480799272</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1787480799272</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,6 +329,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added browser url bar, fixed notes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added browser url bar, fixed notes" />
+    <MESSAGE value="fixed stopwatch reset button issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed stopwatch reset button issue" />
   </component>
 </project>

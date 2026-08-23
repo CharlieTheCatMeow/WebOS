@@ -117,7 +117,7 @@ function addToSidebar(index) {
     const notesSidebar = document.querySelector("#notesSidebarPages");
     let newDiv = document.createElement("div");
 
-    newDiv.classList.add("notes_selector");
+    newDiv.classList.add("notes_selector", "clickable");
     newDiv.innerText = index + 1;
 
     newDiv.addEventListener("click", function () {

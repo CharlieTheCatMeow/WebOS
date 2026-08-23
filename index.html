@@ -27,6 +27,7 @@
         <link rel="icon" type="image/x-icon" href="Images/Favicon.svg">
     </head>
     <body>
+        <audio id="clickSound" src="Audio/click.wav" preload="auto"></audio>
         <div id="loadingScreen" class="loading_screen">
             <svg class="loading_bar_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100px" height="100px" style="overflow: visible;">
                 <path
@@ -72,17 +73,17 @@
                 <div class="start_menu_title no_select">MeowOS!</div>
             </div>
             <div class="start_menu_bottom">
-                <div id="enterDesktopButton" class="enter_desktop_button no_select">Begin!</div>
+                <div id="enterDesktopButton" class="enter_desktop_button clickable no_select">Begin!</div>
             </div>
         </div>
         <div id="desktop" class="desktop">
             <div class="top_bar" id="topBar">
                 <div class="menu_buttons">
-                    <h2 id="topBarSearchMenuButton" class="top_bar_item no_select" style="cursor: pointer;">
+                    <h2 id="topBarSearchMenuButton" class="top_bar_item clickable no_select" style="cursor: pointer;">
                         <img class="top_bar_search_menu_icon" src="Images/Favicon.svg" alt="MeowOS!">
                     </h2>
                 </div>
-                <div class="top_bar_item" style="cursor: pointer; padding: 0.5vmin" id="controlWidgetButton">
+                <div class="top_bar_item clickable" style="cursor: pointer; padding: 0.5vmin" id="controlWidgetButton">
                     <div class="top_bar_control_widget_icons_container no_select">
                         <img class="top_bar_control_widget_icon" src="Images/battery.svg" alt="Battery">
                         <img class="top_bar_control_widget_icon" src="Images/wifi.svg" alt="WiFi">
@@ -91,37 +92,37 @@
                 </div>
             </div>
             <div id="appIcons" class="app_icons">
-                <div class="app_icon no_select" data-window="welcomeScreen">
+                <div class="app_icon clickable no_select" data-window="welcomeScreen">
                     <img class="app_icon_svg" src="Images/Favicon.svg" alt="Intro">
                 </div>
-                <div class="app_icon no_select" data-window="stopwatch">
+                <div class="app_icon clickable no_select" data-window="stopwatch">
                     <img class="app_icon_svg" src="Images/stopwatch.svg" alt="Timer">
                 </div>
-                <div class="app_icon no_select" data-window="notes">
+                <div class="app_icon clickable no_select" data-window="notes">
                     <img class="app_icon_svg" src="Images/notes.svg" alt="Notes">
                 </div>
-                <div class="app_icon no_select" data-window="todoList">
+                <div class="app_icon clickable no_select" data-window="todoList">
                     <img class="app_icon_svg" src="Images/todo_list.svg" alt="To-Do">
                 </div>
-                <div class="app_icon no_select" data-window="calculator">
+                <div class="app_icon clickable no_select" data-window="calculator">
                     <img class="app_icon_svg" src="Images/calculator.svg" alt="Calc">
                 </div>
-                <div class="app_icon no_select" data-window="musicPlayer">
+                <div class="app_icon clickable no_select" data-window="musicPlayer">
                     <img class="app_icon_svg" src="Images/music_player.svg" alt="Music">
                 </div>
-                <div class="app_icon no_select" data-window="gallery">
+                <div class="app_icon clickable no_select" data-window="gallery">
                     <img class="app_icon_svg" src="Images/gallery.svg" alt="Gallery">
                 </div>
-                <div class="app_icon no_select" data-window="browser">
+                <div class="app_icon clickable no_select" data-window="browser">
                     <img class="app_icon_svg" src="Images/browser.svg" alt="Browser">
                 </div>
-                <div class="app_icon no_select" data-window="files">
+                <div class="app_icon clickable no_select" data-window="files">
                     <img class="app_icon_svg" src="Images/folder_bold.svg" alt="Files">
                 </div>
-                <div class="app_icon no_select" data-window="settings">
+                <div class="app_icon clickable no_select" data-window="settings">
                     <img class="app_icon_svg" src="Images/settings.svg" alt="Settings">
                 </div>
-                <div class="app_icon no_select" data-window="terminal">
+                <div class="app_icon clickable no_select" data-window="terminal">
                     <img class="app_icon_svg" src="Images/terminal.svg" alt="CMD">
                 </div>
             </div>
@@ -131,23 +132,23 @@
                         <label for="searchMenuInput"></label><input type="text" id="searchMenuInput" class="search_menu_input" placeholder="Search...">
                     </div>
                     <div id="searchMenuResults" class="search_menu_results hide_scrollbar"></div>
-                    <div id="searchMenuPowerButton" class="search_menu_power_button">
+                    <div id="searchMenuPowerButton" class="search_menu_power_button clickable">
                         <img class="search_menu_power_button_icon" src="Images/power.svg" alt="Power">
                     </div>
                 </div>
                 <div id="welcomeScreen" class="window welcome_window">
                     <div id="welcomeScreenHeader" class="window_header">
                         <div class="header_buttons">
-                            <div id="closeWelcomeScreenWindow" class="close_button no_select"></div>
-                            <div id="welcomeScreenMaximizeButton" class="maximize_button no_select"></div>
+                            <div id="closeWelcomeScreenWindow" class="close_button clickable no_select"></div>
+                            <div id="welcomeScreenMaximizeButton" class="maximize_button clickable no_select"></div>
                         </div>
                         <h2 class="header_title no_select">Introduction</h2>
                     </div>
                     <div id="welcomeScreenContent" class="window_content" style="display: flex; flex-direction: row;">
                         <div class="welcome_window_sidebar">
-                            <div class="welcome_window_page_selector" id="welcomeWindowPageSelector1"></div>
-                            <div class="welcome_window_page_selector" id="welcomeWindowPageSelector2"></div>
-                            <div class="welcome_window_page_selector" id="welcomeWindowPageSelector3"></div>
+                            <div class="welcome_window_page_selector clickable" id="welcomeWindowPageSelector1"></div>
+                            <div class="welcome_window_page_selector clickable" id="welcomeWindowPageSelector2"></div>
+                            <div class="welcome_window_page_selector clickable" id="welcomeWindowPageSelector3"></div>
                         </div>
                         <div class="welcome_window_content" id="welcomeWindowContent"></div>
                     </div>
@@ -155,8 +156,8 @@
                 <div id="stopwatch" class="window stopwatch">
                     <div id="stopwatchHeader" class="window_header">
                         <div class="header_buttons">
-                            <div id="closeStopwatchWindow" class="close_button no_select"></div>
-                            <div id="stopwatchMaximizeButton" class="maximize_button no_select"></div>
+                            <div id="closeStopwatchWindow" class="close_button clickable no_select"></div>
+                            <div id="stopwatchMaximizeButton" class="maximize_button clickable no_select"></div>
                         </div>
                         <h2 class="header_title no_select">Stopwatch</h2>
                     </div>
@@ -164,11 +165,11 @@
                         <div class="stopwatch_time" id="stopwatchTime">00:00:00:00</div>
                         <div class="stopwatch_buttons">
                             <div class="stopwatch_buttons_left_side"></div>
-                            <div class="stopwatch_start_stop_button" id="stopwatchStartStopButton">
+                            <div class="stopwatch_start_stop_button clickable" id="stopwatchStartStopButton">
                                 <i class="material-icons start_stop_icon no_select">play_arrow</i>
                             </div>
                             <div class="stopwatch_buttons_right_side">
-                                <div class="stopwatch_reset_button" id="stopwatchResetButton">
+                                <div class="stopwatch_reset_button clickable" id="stopwatchResetButton">
                                     <i class="material-icons reset_icon no_select">replay</i>
                                 </div>
                             </div>
@@ -178,8 +179,8 @@
                 <div id="notes" class="window notes">
                     <div id="notesHeader" class="window_header">
                         <div class="header_buttons">
-                            <div id="closeNotesWindow" class="close_button no_select"></div>
-                            <div id="notesMaximizeButton" class="maximize_button no_select"></div>
+                            <div id="closeNotesWindow" class="close_button clickable no_select"></div>
+                            <div id="notesMaximizeButton" class="maximize_button clickable no_select"></div>
                         </div>
                         <h2 class="header_title no_select" id="notesHeaderTitle">Notes</h2>
                     </div>
@@ -187,8 +188,8 @@
                         <div class="notes_sidebar" style="padding: 0">
                             <div class="notes_sidebar_pages hide_scrollbar" id="notesSidebarPages"></div>
                             <div>
-                                <div class="notes_sidebar_add_page no_select" id="notesSidebarAddPage">+</div>
-                                <div class="notes_sidebar_reset no_select" id="notesSidebarReset">x</div>
+                                <div class="notes_sidebar_add_page clickable" id="notesSidebarAddPage">+</div>
+                                <div class="notes_sidebar_reset clickable" id="notesSidebarReset">x</div>
                             </div>
                         </div>
                         <div class="notes_content hide_scrollbar" id="notesPageContent"></div>
@@ -197,8 +198,8 @@
                 <div id="todoList" class="window todo_list_window">
                     <div id="todoListHeader" class="window_header">
                         <div class="header_buttons">
-                            <div id="closeTodoWindow" class="close_button no_select"></div>
-                            <div id="todoListMaximizeButton" class="maximize_button no_select"></div>
+                            <div id="closeTodoWindow" class="close_button clickable no_select"></div>
+                            <div id="todoListMaximizeButton" class="maximize_button clickable no_select"></div>
                         </div>
                         <h2 class="header_title no_select">To-Do List</h2>
                     </div>
@@ -207,7 +208,7 @@
                             <label>
                                 <input class="todo_top_bar_add_name" type="text" id="todoTopBarAddName">
                             </label>
-                            <div class="todo_top_bar_add_button" id="todoTopbarAddButton"></div>
+                            <div class="todo_top_bar_add_button clickable" id="todoTopbarAddButton"></div>
                         </div>
                         <div class="todo_content hide_scrollbar" id="todoContent"></div>
                     </div>
@@ -215,8 +216,8 @@
                 <div id="terminal" class="window terminal_window">
                     <div id="terminalHeader" class="window_header">
                         <div class="header_buttons">
-                            <div id="closeTerminalWindow" class="close_button no_select"></div>
-                            <div id="terminalMaximizeButton" class="maximize_button no_select"></div>
+                            <div id="closeTerminalWindow" class="close_button clickable no_select"></div>
+                            <div id="terminalMaximizeButton" class="maximize_button clickable no_select"></div>
                         </div>
                         <h2 class="header_title no_select">Terminal</h2>
                     </div>
@@ -225,7 +226,7 @@
                 <div id="calculator" class="window" style="width: 34vmin; display: none">
                     <div id="calculatorHeader" class="window_header">
                         <div class="header_buttons">
-                            <div id="closeCalculatorWindow" class="close_button no_select"></div>
+                            <div id="closeCalculatorWindow" class="close_button clickable no_select"></div>
                         </div>
                         <h2 class="header_title no_select">Calculator</h2>
                     </div>
@@ -234,34 +235,34 @@
                         <div class="calculator_buttons">
                             <div class="calculator_buttons_left">
                                 <div class="calculator_button_row">
-                                    <div id="calculatorButtonAdd" class="calculator_button no_select">+</div>
-                                    <div id="calculatorButtonSubtract" class="calculator_button no_select">−</div>
-                                    <div id="calculatorButtonMultiply" class="calculator_button no_select">×</div>
+                                    <div id="calculatorButtonAdd" class="calculator_button clickable no_select">+</div>
+                                    <div id="calculatorButtonSubtract" class="calculator_button clickable no_select">−</div>
+                                    <div id="calculatorButtonMultiply" class="calculator_button clickable no_select">×</div>
                                 </div>
                                 <div class="calculator_button_row">
-                                    <div id="calculatorButton7" class="calculator_button no_select">7</div>
-                                    <div id="calculatorButton8" class="calculator_button no_select">8</div>
-                                    <div id="calculatorButton9" class="calculator_button no_select">9</div>
+                                    <div id="calculatorButton7" class="calculator_button clickable no_select">7</div>
+                                    <div id="calculatorButton8" class="calculator_button clickable no_select">8</div>
+                                    <div id="calculatorButton9" class="calculator_button clickable no_select">9</div>
                                 </div>
                                 <div class="calculator_button_row">
-                                    <div id="calculatorButton4" class="calculator_button no_select">4</div>
-                                    <div id="calculatorButton5" class="calculator_button no_select">5</div>
-                                    <div id="calculatorButton6" class="calculator_button no_select">6</div>
+                                    <div id="calculatorButton4" class="calculator_button clickable no_select">4</div>
+                                    <div id="calculatorButton5" class="calculator_button clickable no_select">5</div>
+                                    <div id="calculatorButton6" class="calculator_button clickable no_select">6</div>
                                 </div>
                                 <div class="calculator_button_row">
-                                    <div id="calculatorButton1" class="calculator_button no_select">1</div>
-                                    <div id="calculatorButton2" class="calculator_button no_select">2</div>
-                                    <div id="calculatorButton3" class="calculator_button no_select">3</div>
+                                    <div id="calculatorButton1" class="calculator_button clickable no_select">1</div>
+                                    <div id="calculatorButton2" class="calculator_button clickable no_select">2</div>
+                                    <div id="calculatorButton3" class="calculator_button clickable no_select">3</div>
                                 </div>
                                 <div class="calculator_button_row">
-                                    <div id="calculatorButton0" class="calculator_button no_select">0</div>
-                                    <div id="calculatorButtonDecimal" class="calculator_button no_select">.</div>
-                                    <div id="calculatorButtonDelete" class="calculator_button no_select">C</div>
+                                    <div id="calculatorButton0" class="calculator_button clickable no_select">0</div>
+                                    <div id="calculatorButtonDecimal" class="calculator_button clickable no_select">.</div>
+                                    <div id="calculatorButtonDelete" class="calculator_button clickable no_select">C</div>
                                 </div>
                             </div>
                             <div class="calculator_buttons_right">
-                                <div id="calculatorButtonDivide" class="calculator_button no_select">÷</div>
-                                <div id="calculatorButtonEquals" class="calculator_button_calculate no_select">=</div>
+                                <div id="calculatorButtonDivide" class="calculator_button clickable no_select">÷</div>
+                                <div id="calculatorButtonEquals" class="calculator_button_calculate clickable no_select">=</div>
                             </div>
                         </div>
                     </div>
@@ -269,7 +270,7 @@
                 <div id="musicPlayer" class="window music_player">
                     <div id="musicPlayerHeader" class="window_header">
                         <div class="header_buttons">
-                            <div id="closeMusicPlayerWindow" class="close_button no_select"></div>
+                            <div id="closeMusicPlayerWindow" class="close_button clickable no_select"></div>
                         </div>
                         <h2 class="header_title no_select">Music Player</h2>
                     </div>
@@ -280,13 +281,13 @@
                             <div id="musicPlayerProgress" class="music_player_progress"></div>
                         </div>
                         <div class="music_player_controls">
-                            <div id="musicPlayerPreviousButton" class="music_player_previous_button no_select">
+                            <div id="musicPlayerPreviousButton" class="music_player_previous_button clickable no_select">
                                 <i class="material-icons music_player_previous_button_icon no_select">skip_previous</i>
                             </div>
-                            <div id="musicPlayerPlayPauseButton" class="music_player_play_pause_button no_select">
+                            <div id="musicPlayerPlayPauseButton" class="music_player_play_pause_button clickable no_select">
                                 <i class="material-icons music_player_play_pause_button_icon no_select">pause</i>
                             </div>
-                            <div id="musicPlayerNextButton" class="music_player_next_button no_select">
+                            <div id="musicPlayerNextButton" class="music_player_next_button clickable no_select">
                                 <i class="material-icons music_player_next_button_icon no_select">skip_next</i>
                             </div>
                         </div>
@@ -296,8 +297,8 @@
                 <div id="gallery" class="window gallery">
                     <div id="galleryHeader" class="window_header">
                         <div class="header_buttons">
-                            <div id="closeGalleryWindow" class="close_button no_select"></div>
-                            <div id="galleryMaximizeButton" class="maximize_button no_select"></div>
+                            <div id="closeGalleryWindow" class="close_button clickable no_select"></div>
+                            <div id="galleryMaximizeButton" class="maximize_button clickable no_select"></div>
                         </div>
                         <h2 class="header_title no_select">Gallery</h2>
                     </div>
@@ -306,8 +307,8 @@
                 <div id="settings" class="window settings">
                     <div id="settingsHeader" class="window_header">
                         <div class="header_buttons">
-                            <div id="closeSettingsWindow" class="close_button no_select"></div>
-                            <div id="settingsMaximizeButton" class="maximize_button no_select"></div>
+                            <div id="closeSettingsWindow" class="close_button clickable no_select"></div>
+                            <div id="settingsMaximizeButton" class="maximize_button clickable no_select"></div>
                         </div>
                         <h2 class="header_title no_select">Settings</h2>
                     </div>
@@ -340,21 +341,21 @@
                         <div class="settings_section">
                             <h2 class="settings_section_title">Dark/Light Mode</h2>
                             <div class="dark_light_mode_controls">
-                                <div id="lightModeButton" class="switch_dark_light_mode_button light_mode_button no_select"></div>
-                                <div id="darkModeButton" class="switch_dark_light_mode_button dark_mode_button no_select"></div>
+                                <div id="lightModeButton" class="switch_dark_light_mode_button light_mode_button clickable no_select"></div>
+                                <div id="darkModeButton" class="switch_dark_light_mode_button dark_mode_button clickable no_select"></div>
                             </div>
                         </div>
                         <div class="settings_section">
                             <h2 class="settings_section_title">Widgets</h2>
                             <div class="dark_light_mode_controls">
-                                <div id="catWidgetToggle" class="widget_toggle no_select">1</div>
-                                <div id="calendarWidgetToggle" class="widget_toggle no_select">2</div>
-                                <div id="clockWidgetToggle" class="widget_toggle no_select">3</div>
+                                <div id="catWidgetToggle" class="widget_toggle clickable no_select">1</div>
+                                <div id="calendarWidgetToggle" class="widget_toggle clickable no_select">2</div>
+                                <div id="clockWidgetToggle" class="widget_toggle clickable no_select">3</div>
                             </div>
                         </div>
                         <div class="settings_section">
                             <h2 class="settings_section_title">Factory Reset</h2>
-                            <div id="factoryResetButton" class="factory_reset_button">
+                            <div id="factoryResetButton" class="factory_reset_button clickable no_select">
                                 <img class="factory_reset_button_icon" src="Images/exit.svg" alt="Factory Reset">
                             </div>
                         </div>
@@ -363,15 +364,15 @@
                 <div id="browser" class="window browser">
                     <div id="browserHeader" class="window_header">
                         <div class="header_buttons">
-                            <div id="closeBrowserWindow" class="close_button no_select"></div>
-                            <div id="browserMaximizeButton" class="maximize_button no_select"></div>
+                            <div id="closeBrowserWindow" class="close_button clickable no_select"></div>
+                            <div id="browserMaximizeButton" class="maximize_button clickable no_select"></div>
                         </div>
                         <h2 class="header_title no_select">Browser</h2>
                     </div>
                     <div id="browserContent" class="browser_content">
                         <div class="browser_top_bar">
                             <input type="text" id="browserURLBar" class="browser_url_bar" placeholder="Enter a URL...">
-                            <div id="browserHomeButton" class="browser_home_button">
+                            <div id="browserHomeButton" class="browser_home_button clickable no_select">
                                 <img class="browser_home_button_icon" src="Images/home.svg" alt="Home">
                             </div>
                         </div>
@@ -381,21 +382,21 @@
                 <div id="files" class="window files">
                     <div id="filesHeader" class="window_header">
                         <div class="header_buttons">
-                            <div id="closeFilesWindow" class="close_button no_select"></div>
-                            <div id="filesMaximizeButton" class="maximize_button no_select"></div>
+                            <div id="closeFilesWindow" class="close_button clickable no_select"></div>
+                            <div id="filesMaximizeButton" class="maximize_button clickable no_select"></div>
                         </div>
                         <h2 class="header_title no_select">Files</h2>
                     </div>
                     <div id="filesContent" class="files_content">
                         <div class="files_top_bar">
-                            <div id="filesReturnToParentDirectoryButton" class="files_return_to_parent_directory_button no_select">
+                            <div id="filesReturnToParentDirectoryButton" class="files_return_to_parent_directory_button clickable no_select">
                                 <img class="files_header_icon" src="Images/arrow_up.svg" alt="Return">
                             </div>
                             <div id="filesCurrentDirectory" class="files_current_directory"></div>
-                            <div id="filesAddFolderButton" class="files_add_button no_select">
+                            <div id="filesAddFolderButton" class="files_add_button clickable no_select">
                                 <img class="files_header_icon" src="Images/add_folder.svg" alt="Add Folder">
                             </div>
-                            <div id="filesAddFileButton" class="files_add_button no_select">
+                            <div id="filesAddFileButton" class="files_add_button clickable no_select">
                                 <img class="files_header_icon" src="Images/add_file.svg" alt="Add File">
                             </div>
                         </div>
@@ -410,13 +411,13 @@
                 </div>
                 <div id="controlWidget" class="window control_widget no_dragging" style="width: 20vmin; display: none; overflow: hidden;">
                     <div class="control_widget_first_row_controls">
-                        <div id="wifiButton" class="control_widget_control_button">
+                        <div id="wifiButton" class="control_widget_control_button clickable no_select">
                             <img class="control_widget_control_button_icon" src="Images/wifi.svg" alt="WiFi">
                         </div>
-                        <div id="bluetoothButton" class="control_widget_control_button">
+                        <div id="bluetoothButton" class="control_widget_control_button clickable no_select">
                             <img class="control_widget_control_button_icon" src="Images/bluetooth.svg" alt="Bluetooth">
                         </div>
-                        <div id="airplaneModeButton" class="control_widget_control_button">
+                        <div id="airplaneModeButton" class="control_widget_control_button clickable no_select">
                             <img class="control_widget_control_button_icon" src="Images/airplane_mode.svg" alt="Airplane Mode">
                         </div>
                     </div>
@@ -434,7 +435,7 @@
                         <img class="control_widget_third_row_icon" style="margin-right: 0.5vmin" src="Images/battery.svg" alt="Battery">
                         <div class="control_widget_third_row_right_side">
                             <p id="wifiStatus" class="control_widget_third_row_text">WiFi connected</p>
-                            <div id="controlWidgetSettings" class="control_widget_third_row_settings">
+                            <div id="controlWidgetSettings" class="control_widget_third_row_settings clickable no_select">
                                 <img class="control_widget_third_row_icon" src="Images/settings.svg" alt="Settings">
                             </div>
                         </div>
@@ -448,11 +449,11 @@
                 </div>
                 <div id="calendarWidget" class="window calendar_widget" style="width: 20vmin; height: 23vmin; display: flex;">
                     <div class="calendar_top_bar">
-                        <div id="calendarBack" class="calendar_button">
+                        <div id="calendarBack" class="calendar_button clickable no_select">
                             <img class="calendar_button_icon" src="Images/arrow_left.svg" alt="Back">
                         </div>
                         <div class="calendar_current_month_year no_select" id="calendarCurrentMonthYear"></div>
-                        <div id="calendarForward" class="calendar_button">
+                        <div id="calendarForward" class="calendar_button clickable no_select">
                             <img class="calendar_button_icon" src="Images/arrow_right.svg" alt="Forward">
                         </div>
                     </div>
@@ -495,5 +496,6 @@
         <script src="Scripts/cat_widget.js"></script>
         <script src="Scripts/calendar_widget.js"></script>
         <script src="Scripts/clock_widget.js"></script>
+        <script src="Scripts/sound_effects.js"></script>
     </body>
 </html>
