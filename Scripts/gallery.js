@@ -2,7 +2,7 @@ const galleryContentElement = document.querySelector("#galleryContent");
 
 const galleryImages = [
     {
-        src: "Images/Nature.jpg",
+        src: "Images/Nature.png",
         alt: "Nature",
         caption: "Nature"
     },

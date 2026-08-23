@@ -51,8 +51,8 @@
                 />
                 <defs>
                     <linearGradient id="loading-cat-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="rgba(255, 160, 122, 1)" />
-                        <stop offset="100%" stop-color="rgba(255, 127, 80, 1)" />
+                        <stop offset="0%" stop-color="var(--loading-accent-start)" />
+                        <stop offset="100%" stop-color="var(--loading-accent-end)" />
                     </linearGradient>
                 </defs>
             </svg>
@@ -340,10 +340,13 @@
                             </div>
                         </div>
                         <div class="settings_section">
-                            <h2 class="settings_section_title">Dark/Light Mode</h2>
+                            <h2 class="settings_section_title">Theme</h2>
                             <div class="dark_light_mode_controls">
                                 <div id="lightModeButton" class="switch_dark_light_mode_button light_mode_button clickable no_select"></div>
                                 <div id="darkModeButton" class="switch_dark_light_mode_button dark_mode_button clickable no_select"></div>
+                                <div id="dayModeButton" class="switch_dark_light_mode_button day_mode_button clickable no_select"></div>
+                                <div id="purpleModeButton" class="switch_dark_light_mode_button purple_mode_button clickable no_select"></div>
+                                <div id="sunsetModeButton" class="switch_dark_light_mode_button sunset_mode_button clickable no_select"></div>
                             </div>
                         </div>
                         <div class="settings_section">

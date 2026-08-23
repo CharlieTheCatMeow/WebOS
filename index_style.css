@@ -51,12 +51,184 @@ body, div, h1, h2, p, span, a, input {
 
     width: 100vw;
     height: 100vh;
-    background-image: url("Images/Nature.jpg");
+    background-image: var(--bg-image);
     background-size: cover;
 }
 
-.desktop.dark_mode {
-    background-image: url("Images/Nature_Night.png");
+body {
+    --loading-bg: linear-gradient(135deg, #0d2420, #122a28);
+    --loading-accent-start: #2e9970;
+    --loading-accent-end: #5ab898;
+    --loading-glow: rgba(46, 153, 112, 0.6);
+    --loading-text-color: #5ab898;
+
+    --bg-image: url("Images/Nature.png");
+
+    --topbar-bg: linear-gradient(90deg, rgba(26, 72, 80, 0.88), rgba(38, 108, 90, 0.80));
+
+    --window-bg: rgba(255, 255, 255, 0.08);
+    --window-saturate: 180%;
+
+    --window-header-bg: linear-gradient(135deg, #2e9970, #1a5e48);
+    --window-drag-glow: rgba(46, 153, 112, 0.9);
+
+    --accent-start: #2e9970;
+    --accent-end: #1a6b50;
+    --accent-gradient: linear-gradient(135deg, #2e9970, #1a6b50);
+
+    --scrollbar-thumb: rgba(46, 153, 112, 0.65);
+    --scrollbar-thumb-hover: rgba(46, 153, 112, 0.90);
+
+    --todo-border: rgba(46, 153, 112, 0.35);
+    --todo-task-border: rgba(46, 153, 112, 0.15);
+    --complete-hover-border: #38ef7d;
+    --complete-hover-bg: rgba(56, 239, 125, 0.2);
+    --todo-input-focus-border: #2e9970;
+    --todo-input-focus-shadow: 0 0 0.8vmin rgba(46, 153, 112, 0.4);
+    --todo-input-focus-bg: rgba(10, 40, 35, 0.4);
+    --todo-add-hover-shadow: rgba(26, 94, 72, 0.45);
+
+    --notes-selector-bg: linear-gradient(135deg, #2e9970, #1a5e48);
+
+    --music-progress-bar-bg: rgba(46, 140, 108, 0.75);
+    --music-progress-fill: linear-gradient(135deg, #2e9970, #1a6b50);
+
+    --search-bg: linear-gradient(90deg, rgba(26, 72, 80, 0.88), rgba(38, 108, 90, 0.80));
+
+    --slider-accent: #2e9970;
+    --slider-moz-progress: linear-gradient(90deg, #2e9970, #1a6b50);
+}
+
+body[data-theme="dark"] {
+    --loading-bg: linear-gradient(135deg, #0d0918, #1a0d28);
+    --loading-accent-start: #2b1b3d;
+    --loading-accent-end: #6b4060;
+    --loading-glow: rgba(89, 18, 68, 0.6);
+    --loading-text-color: #a06880;
+    --bg-image: url("Images/Nature_Night.png");
+    --topbar-bg: linear-gradient(90deg, #231932, #0d091e);
+    --window-bg: rgba(0, 0, 0, 0.5);
+    --window-saturate: 100%;
+    --window-header-bg: linear-gradient(135deg, #2b1b3d, #42273b);
+    --window-drag-glow: rgba(89, 18, 68, 0.9);
+    --accent-start: #231932;
+    --accent-end: #0d091e;
+    --accent-gradient: linear-gradient(90deg, #231932, #0d091e);
+    --scrollbar-thumb: rgba(255, 255, 255, 0.15);
+    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.3);
+    --todo-border: rgba(35, 25, 50, 0.15);
+    --todo-task-border: rgba(35, 25, 50, 0.15);
+    --complete-hover-border: #2e7d32;
+    --complete-hover-bg: rgba(46, 125, 50, 0.2);
+    --todo-input-focus-border: #231932;
+    --todo-input-focus-shadow: 0 0 0.8vmin rgba(74, 65, 71, 0.6);
+    --todo-input-focus-bg: rgba(0, 0, 0, 0.6);
+    --todo-add-hover-shadow: rgba(92, 44, 77, 0.4);
+    --notes-selector-bg: linear-gradient(135deg, #591244, #100926);
+    --music-progress-bar-bg: linear-gradient(135deg, #443c4a, #4a4147);
+    --music-progress-fill: linear-gradient(135deg, #2b1b3d, #42273b);
+    --search-bg: linear-gradient(90deg, #231932, #0d091e);
+    --slider-accent: #231932;
+    --slider-moz-progress: linear-gradient(90deg, #231932, #0d091e);
+}
+
+body[data-theme="sunset"] {
+    --loading-bg: linear-gradient(135deg, #1a0c10, #2a1018);
+    --loading-accent-start: #c8522a;
+    --loading-accent-end: #e8804a;
+    --loading-glow: rgba(200, 82, 42, 0.6);
+    --loading-text-color: #e8804a;
+    --bg-image: url("Images/Nature_Sunset.png");
+    --topbar-bg: linear-gradient(90deg, #3d1f52, #5c2a38);
+    --window-bg: rgba(35, 15, 50, 0.52);
+    --window-saturate: 130%;
+    --window-header-bg: linear-gradient(135deg, #c8522a, #7a2448);
+    --window-drag-glow: rgba(200, 82, 42, 0.9);
+    --accent-start: #c8522a;
+    --accent-end: #7a2448;
+    --accent-gradient: linear-gradient(135deg, #c8522a, #7a2448);
+    --scrollbar-thumb: rgba(200, 82, 42, 0.55);
+    --scrollbar-thumb-hover: rgba(200, 82, 42, 0.82);
+    --todo-border: rgba(200, 82, 42, 0.35);
+    --todo-task-border: rgba(200, 82, 42, 0.15);
+    --todo-input-focus-border: #c8522a;
+    --todo-input-focus-shadow: 0 0 0.8vmin rgba(200, 82, 42, 0.4);
+    --todo-input-focus-bg: rgba(40, 14, 48, 0.6);
+    --todo-add-hover-shadow: rgba(122, 36, 72, 0.45);
+    --notes-selector-bg: linear-gradient(135deg, #c8522a, #5c1e3a);
+    --music-progress-bar-bg: rgba(122, 60, 74, 0.75);
+    --music-progress-fill: linear-gradient(135deg, #c8522a, #7a2448);
+    --search-bg: linear-gradient(90deg, rgba(92, 42, 56, 0.88), rgba(200, 82, 42, 0.72));
+    --slider-accent: #c8522a;
+    --slider-moz-progress: linear-gradient(90deg, #c8522a, #7a2448);
+    --complete-hover-border: #38ef7d;
+    --complete-hover-bg: rgba(56, 239, 125, 0.2);
+}
+
+body[data-theme="purple"] {
+    --loading-bg: linear-gradient(135deg, #160826, #200a38);
+    --loading-accent-start: #4a0d6e;
+    --loading-accent-end: #c840a8;
+    --loading-glow: rgba(156, 31, 138, 0.6);
+    --loading-text-color: #c840a8;
+    --bg-image: url("Images/Nature_Purple.png");
+    --topbar-bg: linear-gradient(90deg, #3a0a5e, #1e062e);
+    --window-bg: rgba(28, 6, 48, 0.55);
+    --window-saturate: 115%;
+    --window-header-bg: linear-gradient(135deg, #9c1f8a, #4a0d6e);
+    --window-drag-glow: rgba(156, 31, 138, 0.9);
+    --accent-start: #9c1f8a;
+    --accent-end: #4a0d6e;
+    --accent-gradient: linear-gradient(135deg, #9c1f8a, #4a0d6e);
+    --scrollbar-thumb: rgba(156, 31, 138, 0.55);
+    --scrollbar-thumb-hover: rgba(156, 31, 138, 0.82);
+    --todo-border: rgba(156, 31, 138, 0.35);
+    --todo-task-border: rgba(156, 31, 138, 0.15);
+    --todo-input-focus-border: #9c1f8a;
+    --todo-input-focus-shadow: 0 0 0.8vmin rgba(156, 31, 138, 0.4);
+    --todo-input-focus-bg: rgba(22, 4, 40, 0.65);
+    --todo-add-hover-shadow: rgba(74, 13, 110, 0.45);
+    --notes-selector-bg: linear-gradient(135deg, #9c1f8a, #3a0a5e);
+    --music-progress-bar-bg: rgba(110, 20, 100, 0.72);
+    --music-progress-fill: linear-gradient(135deg, #9c1f8a, #4a0d6e);
+    --search-bg: linear-gradient(90deg, rgba(58, 10, 94, 0.88), rgba(30, 6, 46, 0.80));
+    --slider-accent: #9c1f8a;
+    --slider-moz-progress: linear-gradient(90deg, #9c1f8a, #4a0d6e);
+    --complete-hover-border: #38ef7d;
+    --complete-hover-bg: rgba(56, 239, 125, 0.2);
+}
+
+body[data-theme="day"] {
+    --loading-bg: linear-gradient(135deg, #081828, #0a2238);
+    --loading-accent-start: #0e64b2;
+    --loading-accent-end: #4ac8e8;
+    --loading-glow: rgba(14, 168, 212, 0.6);
+    --loading-text-color: #4ac8e8;
+    --bg-image: url("Images/Nature_Day.png");
+    --topbar-bg: linear-gradient(90deg, rgba(14, 100, 178, 0.88), rgba(22, 152, 210, 0.78));
+    --window-bg: rgba(10, 38, 70, 0.35);
+    --window-saturate: 160%;
+    --window-header-bg: linear-gradient(135deg, #0e64b2, #0ea8d4);
+    --window-drag-glow: rgba(14, 168, 212, 0.9);
+    --accent-start: #0e78b4;
+    --accent-end: #0ea8d4;
+    --accent-gradient: linear-gradient(135deg, #0e78b4, #0ea8d4);
+    --scrollbar-thumb: rgba(14, 120, 180, 0.55);
+    --scrollbar-thumb-hover: rgba(14, 120, 180, 0.82);
+    --todo-border: rgba(14, 120, 180, 0.35);
+    --todo-task-border: rgba(14, 120, 180, 0.15);
+    --todo-input-focus-border: #0e78b4;
+    --todo-input-focus-shadow: 0 0 0.8vmin rgba(14, 120, 180, 0.4);
+    --todo-input-focus-bg: rgba(8, 30, 62, 0.6);
+    --todo-add-hover-shadow: rgba(14, 100, 178, 0.45);
+    --notes-selector-bg: linear-gradient(135deg, #0e78b4, #0ea8d4);
+    --music-progress-bar-bg: rgba(22, 100, 158, 0.72);
+    --music-progress-fill: linear-gradient(135deg, #0e78b4, #0ea8d4);
+    --search-bg: linear-gradient(90deg, rgba(14, 100, 178, 0.88), rgba(22, 152, 210, 0.78));
+    --slider-accent: #0e78b4;
+    --slider-moz-progress: linear-gradient(90deg, #0e78b4, #0ea8d4);
+    --complete-hover-border: #38ef7d;
+    --complete-hover-bg: rgba(56, 239, 125, 0.2);
 }
 
 .top_bar {
@@ -68,16 +240,12 @@ body, div, h1, h2, p, span, a, input {
     padding: 0 0.2vmin;
     border-radius: 0 0 0.5vmin 0.5vmin;
 
-    background: linear-gradient(90deg, rgba(255, 127, 80, 0.85), rgba(255, 160, 122, 0.75));
+    background: var(--topbar-bg);
     backdrop-filter: blur(1.5vmin);
     border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.18);
     color: #f9f9fb;
 
     box-sizing: border-box;
-}
-
-.dark_mode .top_bar {
-    background: linear-gradient(90deg, #231932, #0d091e);
 }
 
 .top_bar_item {
@@ -220,8 +388,8 @@ body, div, h1, h2, p, span, a, input {
     border-radius: 2vmin;
     overflow: hidden;
 
-    backdrop-filter: blur(1.25rem) saturate(180%);
-    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(1.25rem) saturate(var(--window-saturate));
+    background-color: var(--window-bg);
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 0.8vmin 3.2vmin 0 rgba(0, 0, 0, 0.3);
     transition: width .25s ease, height .25s ease, transform .25s ease, box-shadow .25s ease;
@@ -230,13 +398,6 @@ body, div, h1, h2, p, span, a, input {
     --window-pop-scale: 1;
     transform: scale(var(--window-pop-scale));
     animation: zoomIn 0.2s ease forwards;
-}
-
-.dark_mode .window {
-    backdrop-filter: blur(1.25rem) saturate(100%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0.8vmin 3.2vmin 0 rgba(0, 0, 0, 0.3);
 }
 
 .window.window_closed {
@@ -279,7 +440,7 @@ body, div, h1, h2, p, span, a, input {
 
     height: 3vmin;
     padding: 0 5px;
-    background: linear-gradient(135deg, coral, #ff4500);
+    background: var(--window-header-bg);
     border-top-left-radius: 0.5vmin;
     border-top-right-radius: 0.5vmin;
     border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.2);
@@ -290,21 +451,13 @@ body, div, h1, h2, p, span, a, input {
     text-wrap: nowrap;
 }
 
-.dark_mode .window_header {
-    background: linear-gradient(135deg, #2b1b3d, #42273b);
-}
-
 .window_dragging,
 .window_dragging * {
     cursor: grabbing !important;
 }
 
 .window.window_dragging {
-    box-shadow: 0 0 2.5vmin rgba(255, 127, 80, 0.9), 0 0.8vmin 3.2vmin 0 rgba(0, 0, 0, 0.3);
-}
-
-.dark_mode .window.window_dragging {
-    box-shadow: 0 0 2.5vmin rgba(89, 18, 68, 0.9), 0 0.8vmin 3.2vmin 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2.5vmin var(--window-drag-glow), 0 0.8vmin 3.2vmin 0 rgba(0, 0, 0, 0.3);
 }
 
 .header_buttons {

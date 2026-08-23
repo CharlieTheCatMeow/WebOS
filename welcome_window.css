@@ -47,15 +47,11 @@ body,html {
     aspect-ratio: 1 / 1;
     border-radius: 30%;
 
-    background: linear-gradient(135deg, coral, #ff4500);
+    background: var(--notes-selector-bg);
     box-shadow: 0 0.3vmin 0.6vmin rgba(0, 0, 0, 0.2);
     cursor: pointer;
 
     transition: ease 0.1s;
-}
-
-.dark_mode .welcome_window_page_selector {
-    background: linear-gradient(135deg, #591244, #100926);
 }
 
 .welcome_window_page_selector:hover {

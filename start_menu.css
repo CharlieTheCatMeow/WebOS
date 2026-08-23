@@ -24,7 +24,7 @@ body,html {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(135deg, #1e121c, #2d1720);
+    background: var(--loading-bg);
 
     z-index: 100000;
     transition: opacity 0.2s ease, visibility 0.4s ease;
@@ -38,22 +38,7 @@ body,html {
 }
 
 .loading_progress {
-    width: 0;
-    height: 100%;
-    border-radius: 1vmin;
-
-    background: linear-gradient(
-        90deg,
-        #ff4f2a 0%,
-        #ff7f50 25%,
-        #ffaa7a 50%,
-        #ff7f50 75%,
-        #ff4f2a 100%
-    );
-    background-size: 200% 100%;
-    animation: shimmer 2s linear infinite;
-    box-shadow: 0 0 2vmin rgba(255, 127, 80, 0.6);
-
+    filter: drop-shadow(0 0 2vmin var(--loading-glow));
     stroke-dasharray: 280;
     stroke-dashoffset: 280;
     transition: stroke-dashoffset 0.2s ease;
@@ -73,7 +58,7 @@ body,html {
     width: 90vw;
     max-width: 60vmin;
 
-    color: #ffaa7a;
+    color: var(--loading-text-color);
     font-size: 5vmin;
     font-weight: 1000;
     text-align: center;

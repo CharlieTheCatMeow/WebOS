@@ -101,16 +101,12 @@ body,html {
     height: 1vmin;
     border-radius: 0.5vmin;
 
-    background-color: rgba(255, 160, 122, 0.75);
+    background-color: var(--music-progress-bar-bg);
     backdrop-filter: blur(15px);
     will-change: transform;
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
     transition: ease 0.1s;
-}
-
-.dark_mode .music_player_progress_bar {
-    background: linear-gradient(135deg, #443c4a, #4a4147);
 }
 
 .music_player_progress_bar:hover {
@@ -122,16 +118,12 @@ body,html {
     width: 0;
 
     border-radius: 0.5vmin;
-    background: linear-gradient(135deg, coral, #ff4500);
+    background: var(--music-progress-fill);
     backdrop-filter: blur(15px) saturate(2000%);
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
 
     transition: width 0.2s linear;
-}
-
-.dark_mode .music_player_progress {
-    background: linear-gradient(135deg, #2b1b3d, #42273b);
 }
 
 .music_player_controls {

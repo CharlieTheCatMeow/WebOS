@@ -314,21 +314,23 @@ function handleWindowTap(element) {
     deselectIcon(selectedIcon);
 }
 
+function switchTheme(name) {
+    document.body.dataset.theme = name;
+    localStorage.setItem("Theme", name);
+}
+
 function switchToDarkMode() {
-    desktop.classList.add("dark_mode");
-    localStorage.setItem("Mode", "dark");
+    switchTheme("dark");
 }
 
 function switchToLightMode() {
-    desktop.classList.remove("dark_mode");
-    localStorage.setItem("Mode", "light");
+    switchTheme("light");
 }
 
 function checkLightDarkMode() {
-    if (localStorage.getItem("Mode") === "dark") {
-        switchToDarkMode();
-    } else if (localStorage.getItem("Mode") === "light") {
-        switchToLightMode();
+    const savedTheme = localStorage.getItem("Theme") || localStorage.getItem("Mode");
+    if (savedTheme) {
+        switchTheme(savedTheme);
     }
 }
 

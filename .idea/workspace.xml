@@ -4,12 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="Add typing sound">
+    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="Added sound effect toggles in settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Nature.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/sound_effects.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/sound_effects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/todo_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/todo_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control_widget.css" beforeDir="false" afterPath="$PROJECT_DIR$/control_widget.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/index_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music_player.css" beforeDir="false" afterPath="$PROJECT_DIR$/music_player.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes.css" beforeDir="false" afterPath="$PROJECT_DIR$/notes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search_menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/search_menu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/settings.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start_menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/start_menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/todo_list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/welcome_window.css" beforeDir="false" afterPath="$PROJECT_DIR$/welcome_window.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,61 +68,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000000024336" />
-      <entry key="MS500" value="1.0047561867669776" />
-      <entry key="S2" value="1.3335629499107242" />
-      <entry key="S5" value="3.0990761987106414" />
-      <entry key="S10" value="6.505060511711271" />
-      <entry key="S30" value="14.63673684346179" />
-      <entry key="S60" value="20.294709088933697" />
-      <entry key="M2" value="28.171061986009008" />
-      <entry key="M5" value="47.80129638745943" />
-      <entry key="M10" value="69.9663653535946" />
-      <entry key="M15" value="88.92261849097768" />
-      <entry key="M30" value="154.91764834099772" />
-      <entry key="H1" value="344.4847296558736" />
-      <entry key="H2" value="850.4268700555635" />
-      <entry key="H4" value="1973.0308714202124" />
-      <entry key="D1" value="7955.08167355096" />
-      <entry key="W1" value="11444.24696734009" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000005918649209" />
+      <entry key="S10" value="1.001418636148091" />
+      <entry key="S30" value="1.2872046808933921" />
+      <entry key="S60" value="2.2644993330305794" />
+      <entry key="M2" value="4.620696298934008" />
+      <entry key="M5" value="13.36229278937509" />
+      <entry key="M10" value="26.311903119619814" />
+      <entry key="M15" value="40.95516996451396" />
+      <entry key="M30" value="101.73732655400495" />
+      <entry key="H1" value="261.55146182084275" />
+      <entry key="H2" value="691.8218876263611" />
+      <entry key="H4" value="1735.63878993688" />
+      <entry key="D1" value="7876.353169269887" />
+      <entry key="W1" value="11660.66309015561" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="2.5269283005913306E-92" />
-      <entry key="MS500" value="4.7920195804865575E-19" />
-      <entry key="S2" value="2.6402935033632056E-5" />
-      <entry key="S5" value="0.016260463890499177" />
-      <entry key="S10" value="0.16053973770460056" />
-      <entry key="S30" value="0.8598886666134404" />
-      <entry key="S60" value="1.5447181234496037" />
-      <entry key="M2" value="2.760796105305355" />
-      <entry key="M5" value="5.631166626159391" />
-      <entry key="M10" value="8.243160995617753" />
-      <entry key="M15" value="10.204795764758753" />
-      <entry key="M30" value="17.02284567229508" />
-      <entry key="H1" value="36.533359626461674" />
-      <entry key="H2" value="106.42818533401555" />
-      <entry key="H4" value="335.81471574738964" />
-      <entry key="D1" value="1870.0619221666047" />
-      <entry key="W1" value="2792.5355588484194" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="2.1364480445483826E-150" />
+      <entry key="S2" value="3.8231653721404734E-38" />
+      <entry key="S5" value="1.0788702898803088E-15" />
+      <entry key="S10" value="3.284616096106681E-8" />
+      <entry key="S30" value="0.00320254228183415" />
+      <entry key="S60" value="0.056591008842696494" />
+      <entry key="M2" value="0.237888650165122" />
+      <entry key="M5" value="0.5645729341574808" />
+      <entry key="M10" value="0.922464469961" />
+      <entry key="M15" value="1.726734187485909" />
+      <entry key="M30" value="6.556914722494863" />
+      <entry key="H1" value="21.369208420618392" />
+      <entry key="H2" value="74.38277265570694" />
+      <entry key="H4" value="270.0873495139719" />
+      <entry key="D1" value="1803.8671540440093" />
+      <entry key="W1" value="2793.8222380108114" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.04481110150049461" />
-      <entry key="MS500" value="0.537526827176905" />
-      <entry key="S2" value="1.0376576854071775" />
-      <entry key="S5" value="2.8588525444657957" />
-      <entry key="S10" value="6.4080783810229045" />
-      <entry key="S30" value="15.221602423850836" />
-      <entry key="S60" value="21.613013657890445" />
-      <entry key="M2" value="30.7665843392187" />
-      <entry key="M5" value="53.32922167453901" />
-      <entry key="M10" value="78.13984794569127" />
-      <entry key="M15" value="99.07083866290887" />
-      <entry key="M30" value="171.89584016993788" />
-      <entry key="H1" value="380.97801061301504" />
-      <entry key="H2" value="956.8141717141868" />
-      <entry key="H4" value="2308.7974457601154" />
-      <entry key="D1" value="9825.105064948319" />
-      <entry key="W1" value="14236.774337201676" />
+      <entry key="MS100" value="0.003194929916241331" />
+      <entry key="MS500" value="0.31687813050860614" />
+      <entry key="S2" value="0.7502794766407923" />
+      <entry key="S5" value="0.8914346138695352" />
+      <entry key="S10" value="0.9455220303116144" />
+      <entry key="S30" value="1.267658640137575" />
+      <entry key="S60" value="2.3031118084188233" />
+      <entry key="M2" value="4.841882805238161" />
+      <entry key="M5" value="13.908362021645369" />
+      <entry key="M10" value="27.215563662297402" />
+      <entry key="M15" value="42.660552054164135" />
+      <entry key="M30" value="108.2633505589272" />
+      <entry key="H1" value="282.88274669728617" />
+      <entry key="H2" value="766.1635536167238" />
+      <entry key="H4" value="2005.6790714599501" />
+      <entry key="D1" value="9680.181462370385" />
+      <entry key="W1" value="14454.476886443168" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -292,7 +303,7 @@
       <workItem from="1787469895115" duration="969000" />
       <workItem from="1787476939104" duration="3854000" />
       <workItem from="1787480928856" duration="112000" />
-      <workItem from="1787485600246" duration="4085000" />
+      <workItem from="1787485600246" duration="9869000" />
     </task>
     <task id="LOCAL-00001" summary="Added browser url bar, fixed notes">
       <option name="closed" value="true" />
@@ -326,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787489027758</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added sound effect toggles in settings">
+      <option name="closed" value="true" />
+      <created>1787489918246</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1787489918246</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,6 +367,7 @@
     <MESSAGE value="fixed stopwatch reset button issue" />
     <MESSAGE value="added click sound" />
     <MESSAGE value="Add typing sound" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add typing sound" />
+    <MESSAGE value="Added sound effect toggles in settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sound effect toggles in settings" />
   </component>
 </project>

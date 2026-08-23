@@ -54,7 +54,7 @@ body,html {
     border-radius: 30%;
     margin: 1vmin 2vmin;
 
-    background: linear-gradient(135deg, coral, #ff4500);
+    background: var(--notes-selector-bg);
     box-shadow: 0 0.3vmin 0.6vmin rgba(0, 0, 0, 0.2);
 
     color: #f9f9fb;
@@ -62,10 +62,6 @@ body,html {
     font-size: 2vmin;
 
     transition: ease 0.1s;
-}
-
-.dark_mode .notes_selector {
-    background: linear-gradient(135deg, #591244, #100926);
 }
 
 .notes_page_selected {

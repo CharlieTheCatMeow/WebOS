@@ -1,5 +1,8 @@
 const darkModeButton = document.querySelector("#darkModeButton");
 const lightModeButton = document.querySelector("#lightModeButton");
+const dayModeButton = document.querySelector("#dayModeButton");
+const purpleModeButton = document.querySelector("#purpleModeButton");
+const sunsetModeButton = document.querySelector("#sunsetModeButton");
 
 const catWidgetToggleButton = document.querySelector("#catWidgetToggle");
 const calendarWidgetToggleButton = document.querySelector("#calendarWidgetToggle");
@@ -39,7 +42,7 @@ function checkWidgetVisibility() {
 }
 
 darkModeButton.addEventListener("click", function() {
-    switchToDarkMode();
+    switchTheme("dark");
     darkModeButton.classList.add("settings_button_clicking_animation");
     setTimeout(function() {
         darkModeButton.classList.remove("settings_button_clicking_animation");
@@ -47,10 +50,34 @@ darkModeButton.addEventListener("click", function() {
 });
 
 lightModeButton.addEventListener("click", function() {
-    switchToLightMode();
+    switchTheme("light");
     lightModeButton.classList.add("settings_button_clicking_animation");
     setTimeout(function() {
         lightModeButton.classList.remove("settings_button_clicking_animation");
+    }, 150);
+});
+
+dayModeButton.addEventListener("click", function() {
+    switchTheme("day");
+    dayModeButton.classList.add("settings_button_clicking_animation");
+    setTimeout(function() {
+        dayModeButton.classList.remove("settings_button_clicking_animation");
+    }, 150);
+});
+
+purpleModeButton.addEventListener("click", function() {
+    switchTheme("purple");
+    purpleModeButton.classList.add("settings_button_clicking_animation");
+    setTimeout(function() {
+        purpleModeButton.classList.remove("settings_button_clicking_animation");
+    }, 150);
+});
+
+sunsetModeButton.addEventListener("click", function() {
+    switchTheme("sunset");
+    sunsetModeButton.classList.add("settings_button_clicking_animation");
+    setTimeout(function() {
+        sunsetModeButton.classList.remove("settings_button_clicking_animation");
     }, 150);
 });
 

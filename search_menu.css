@@ -25,14 +25,10 @@ body,html {
     width: 20vmin;
     height: 30vmin;
 
-    background: linear-gradient(90deg, rgba(255, 127, 80, 0.85), rgba(255, 160, 122, 0.75));
+    background: var(--search-bg);
     backdrop-filter: blur(1.5vmin);
     border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
-}
-
-.dark_mode .search_menu {
-    background: linear-gradient(90deg, #231932, #0d091e);
 }
 
 .search_menu_search_bar {

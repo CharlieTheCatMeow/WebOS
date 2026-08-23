@@ -43,14 +43,10 @@ body,html {
     padding: 1vmin;
     height: auto;
 
-    background: linear-gradient(90deg, rgba(255, 127, 80, 0.85), rgba(255, 160, 122, 0.75));
+    background: var(--topbar-bg);
     backdrop-filter: blur(15px);
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
-}
-
-.dark_mode .control_widget {
-    background: linear-gradient(90deg, #231932, #0d091e);
 }
 
 .control_widget_first_row_controls {
@@ -174,11 +170,7 @@ body,html {
     outline: none;
     cursor: pointer;
 
-    accent-color: coral;
-}
-
-.dark_mode .control_widget_slider {
-    accent-color: #231932;
+    accent-color: var(--slider-accent);
 }
 
 .control_widget_slider::-webkit-slider-runnable-track {
@@ -223,11 +215,7 @@ body,html {
 .control_widget_slider::-moz-range-progress {
     height: 0.5vmin;
     border-radius: 1vmin;
-    background: linear-gradient(90deg, coral, #ff4500);
-}
-
-.dark_mode .control_widget_slider::-moz-range-progress {
-    background: linear-gradient(90deg, #231932, #0d091e);
+    background: var(--slider-moz-progress);
 }
 
 .control_widget_slider::-moz-range-thumb {
