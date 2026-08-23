@@ -45,6 +45,7 @@ stopwatchResetButton.addEventListener("click", function () {
     startTime = 0;
     elapsedTime = 0;
     stopwatchTime.textContent = "00:00:00:00";
+    stopwatchStartStopButton.innerHTML = `<i class="material-icons start_stop_icon no_select">play_arrow</i>`;
     stopwatchResetButton.classList.add("select_button");
     setTimeout(function () {
         stopwatchResetButton.classList.remove("select_button");
