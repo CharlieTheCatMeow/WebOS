@@ -21,8 +21,8 @@ body, html {
     height: auto;
     max-height: 80vmin;
     overflow: hidden;
-    backdrop-filter: blur(1.25rem) saturate(180%);
-    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(1.25rem) saturate(var(--window-saturate));
+    background-color: var(--window-bg);
     border: 0.0625rem solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 0.8vmin 3.2vmin 0 rgba(0, 0, 0, 0.3);
 }

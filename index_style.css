@@ -66,8 +66,8 @@ body {
 
     --topbar-bg: linear-gradient(90deg, rgba(26, 72, 80, 0.88), rgba(38, 108, 90, 0.80));
 
-    --window-bg: rgba(255, 255, 255, 0.08);
-    --window-saturate: 180%;
+    --window-bg: rgba(5, 20, 16, 0.58);
+    --window-saturate: 110%;
 
     --window-header-bg: linear-gradient(135deg, #2e9970, #1a5e48);
     --window-drag-glow: rgba(46, 153, 112, 0.9);
@@ -140,8 +140,8 @@ body[data-theme="sunset"] {
     --loading-text-color: #e8804a;
     --bg-image: url("Images/Nature_Sunset.png");
     --topbar-bg: linear-gradient(90deg, #3d1f52, #5c2a38);
-    --window-bg: rgba(35, 15, 50, 0.52);
-    --window-saturate: 130%;
+    --window-bg: rgba(18, 6, 14, 0.62);
+    --window-saturate: 110%;
     --window-header-bg: linear-gradient(135deg, #c8522a, #7a2448);
     --window-drag-glow: rgba(200, 82, 42, 0.9);
     --accent-start: #c8522a;
@@ -173,8 +173,8 @@ body[data-theme="purple"] {
     --loading-text-color: #c840a8;
     --bg-image: url("Images/Nature_Purple.png");
     --topbar-bg: linear-gradient(90deg, #3a0a5e, #1e062e);
-    --window-bg: rgba(28, 6, 48, 0.55);
-    --window-saturate: 115%;
+    --window-bg: rgba(15, 4, 28, 0.55);
+    --window-saturate: 120%;
     --window-header-bg: linear-gradient(135deg, #9c1f8a, #4a0d6e);
     --window-drag-glow: rgba(156, 31, 138, 0.9);
     --accent-start: #9c1f8a;
@@ -206,8 +206,8 @@ body[data-theme="day"] {
     --loading-text-color: #4ac8e8;
     --bg-image: url("Images/Nature_Day.png");
     --topbar-bg: linear-gradient(90deg, rgba(14, 100, 178, 0.88), rgba(22, 152, 210, 0.78));
-    --window-bg: rgba(10, 38, 70, 0.35);
-    --window-saturate: 160%;
+    --window-bg: rgba(6, 18, 40, 0.68);
+    --window-saturate: 115%;
     --window-header-bg: linear-gradient(135deg, #0e64b2, #0ea8d4);
     --window-drag-glow: rgba(14, 168, 212, 0.9);
     --accent-start: #0e78b4;
