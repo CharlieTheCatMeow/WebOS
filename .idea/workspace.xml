@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="Fixed notes page 1 not auto deleting placeholder">
+    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="Different window background tint levels for themes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/index_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/todo_list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music_player.css" beforeDir="false" afterPath="$PROJECT_DIR$/music_player.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,61 +54,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.000000146717231" />
-      <entry key="MS500" value="1.0795396226575782" />
-      <entry key="S2" value="2.14309241191964" />
-      <entry key="S5" value="3.0679354252757833" />
-      <entry key="S10" value="3.6669751332924743" />
-      <entry key="S30" value="4.4107269529776865" />
-      <entry key="S60" value="5.088947336740187" />
-      <entry key="M2" value="7.177653636075839" />
-      <entry key="M5" value="13.270279903032625" />
-      <entry key="M10" value="25.059295123582377" />
-      <entry key="M15" value="38.456064419379906" />
-      <entry key="M30" value="89.98740216810258" />
-      <entry key="H1" value="232.88216568729183" />
-      <entry key="H2" value="636.5191024660511" />
-      <entry key="H4" value="1651.4549572347823" />
-      <entry key="D1" value="7823.069482630829" />
-      <entry key="W1" value="11689.508733361447" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000000000104" />
+      <entry key="S2" value="1.0003197164191808" />
+      <entry key="S5" value="1.0417320888793866" />
+      <entry key="S10" value="1.2418363682944076" />
+      <entry key="S30" value="2.0968114213317897" />
+      <entry key="S60" value="3.9266609853011616" />
+      <entry key="M2" value="7.91910467732492" />
+      <entry key="M5" value="16.838557961385277" />
+      <entry key="M10" value="29.442439499305742" />
+      <entry key="M15" value="42.637883531283244" />
+      <entry key="M30" value="92.01384094258833" />
+      <entry key="H1" value="230.23447790770916" />
+      <entry key="H2" value="626.1800200214681" />
+      <entry key="H4" value="1632.5130476029176" />
+      <entry key="D1" value="7811.7207849234" />
+      <entry key="W1" value="11701.235538349849" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="9.208129225367524E-43" />
-      <entry key="MS500" value="3.915924240230417E-9" />
-      <entry key="S2" value="0.007910584432425724" />
-      <entry key="S5" value="0.14430568081818645" />
-      <entry key="S10" value="0.379875875541191" />
-      <entry key="S30" value="0.7242367714686446" />
-      <entry key="S60" value="0.8510212110661675" />
-      <entry key="M2" value="0.9231472071228881" />
-      <entry key="M5" value="1.0596928369396035" />
-      <entry key="M10" value="1.5180854224743212" />
-      <entry key="M15" value="2.1533823447948994" />
-      <entry key="M30" value="5.628572919577265" />
-      <entry key="H1" value="18.062951796148322" />
-      <entry key="H2" value="66.17323692916754" />
-      <entry key="H4" value="252.2730294205305" />
-      <entry key="D1" value="1783.0501382152938" />
-      <entry key="W1" value="2791.5243009084043" />
+      <entry key="MS100" value="1.7266853279880354E-139" />
+      <entry key="MS500" value="1.767838711719018E-28" />
+      <entry key="S2" value="1.1530832405256414E-7" />
+      <entry key="S5" value="0.0016778157472421736" />
+      <entry key="S10" value="0.04096406610434283" />
+      <entry key="S30" value="0.3590155037126436" />
+      <entry key="S60" value="0.7104691623855771" />
+      <entry key="M2" value="1.1737712768750714" />
+      <entry key="M5" value="1.9121502616375259" />
+      <entry key="M10" value="2.6407330962208184" />
+      <entry key="M15" value="3.334654418289573" />
+      <entry key="M30" value="6.614192378694377" />
+      <entry key="H1" value="18.462505336277438" />
+      <entry key="H2" value="65.23531612658633" />
+      <entry key="H4" value="248.64113176276496" />
+      <entry key="D1" value="1778.3646471665409" />
+      <entry key="W1" value="2792.0267950897833" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.2221837711264985E-4" />
-      <entry key="MS500" value="0.24615114806447094" />
-      <entry key="S2" value="1.5996566856804537" />
-      <entry key="S5" value="2.837339761513843" />
-      <entry key="S10" value="3.7785593132690076" />
-      <entry key="S30" value="5.007444650799578" />
-      <entry key="S60" value="5.86857508776452" />
-      <entry key="M2" value="8.061999064242082" />
-      <entry key="M5" value="14.312454568487693" />
-      <entry key="M10" value="26.5653531516898" />
-      <entry key="M15" value="40.59702762022594" />
-      <entry key="M30" value="95.59620500363712" />
-      <entry key="H1" value="250.91575037056523" />
-      <entry key="H2" value="702.6563695004869" />
-      <entry key="H4" value="1903.6840581938338" />
-      <entry key="D1" value="9606.081194150573" />
-      <entry key="W1" value="14481.024597328513" />
+      <entry key="MS100" value="0.23981602983131609" />
+      <entry key="MS500" value="0.7515807390327889" />
+      <entry key="S2" value="0.9313890054414563" />
+      <entry key="S5" value="1.0137187686627425" />
+      <entry key="S10" value="1.262545662479589" />
+      <entry key="S30" value="2.439225702646349" />
+      <entry key="S60" value="4.622097914321376" />
+      <entry key="M2" value="9.078092220914238" />
+      <entry key="M5" value="18.737423342117925" />
+      <entry key="M10" value="32.07187753741555" />
+      <entry key="M15" value="45.96085806193834" />
+      <entry key="M30" value="98.60992889226429" />
+      <entry key="H1" value="248.66932696973606" />
+      <entry key="H2" value="691.3805353349287" />
+      <entry key="H4" value="1881.1110202262128" />
+      <entry key="D1" value="9590.047114321012" />
+      <entry key="W1" value="14493.25389600221" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -291,7 +290,8 @@
       <workItem from="1787476939104" duration="3854000" />
       <workItem from="1787480928856" duration="112000" />
       <workItem from="1787485600246" duration="11208000" />
-      <workItem from="1787497151665" duration="457000" />
+      <workItem from="1787497151665" duration="727000" />
+      <workItem from="1787498278970" duration="215000" />
     </task>
     <task id="LOCAL-00001" summary="Added browser url bar, fixed notes">
       <option name="closed" value="true" />
@@ -365,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787497001704</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Different window background tint levels for themes">
+      <option name="closed" value="true" />
+      <created>1787497874112</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1787497874112</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,6 +400,7 @@
     <MESSAGE value="Added no_select to notes add and remove buttons" />
     <MESSAGE value="Add images and stuff (forgot)" />
     <MESSAGE value="Fixed notes page 1 not auto deleting placeholder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed notes page 1 not auto deleting placeholder" />
+    <MESSAGE value="Different window background tint levels for themes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Different window background tint levels for themes" />
   </component>
 </project>
