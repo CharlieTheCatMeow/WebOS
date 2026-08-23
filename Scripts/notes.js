@@ -15,7 +15,7 @@ let content = JSON.parse(localStorage.getItem("notesData")) || [
                     <p class="notes_date" contenteditable="true">today</p>
                 </div>
                 <div class="notes_page_content">
-                    <p contenteditable="true">Content for page 1...</p>
+                    <p contenteditable="true">Content for page...</p>
                 </div>
             </div>
         `
