@@ -118,6 +118,73 @@ body,html {
     }
 }
 
+.sound_effects_controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0.5vmin;
+    padding: 0.5vmin;
+    width: 90%;
+    height: 7vmin;
+    border-radius: 1.5vmin;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 1vmin 3vmin rgba(0, 0, 0, 0.4);
+}
+
+.sound_toggle_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.sound_effect_label {
+    color: #f9f9fb;
+    font-size: 2vmin;
+    font-weight: 600;
+}
+
+.sound_effect_toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    margin: 0.5vmin;
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+
+    backdrop-filter: blur(1.25rem) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0.8vmin 3.2vmin 0 rgba(0, 0, 0, 0.3);
+
+    color: #f9f9fb;
+    font-size: 2vmin;
+    font-weight: 500;
+
+    transition: ease 0.1s;
+    will-change: transform;
+}
+
+.sound_effect_toggle:hover {
+    transform: scale(1.1);
+}
+
+.settings_toggle_enabled {
+    border-color: #2e7d32 !important;
+    background-color: rgba(46, 125, 50, 0.2) !important;
+}
+
 .factory_reset_button {
     display: flex;
     justify-content: center;

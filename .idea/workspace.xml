@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="added click sound">
+    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="Add typing sound">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/sound_effects.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/sound_effects.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/settings.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,61 +57,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0136971807887962" />
-      <entry key="MS500" value="1.4790191440464389" />
-      <entry key="S2" value="2.8761315627139696" />
-      <entry key="S5" value="5.0721013927788094" />
-      <entry key="S10" value="7.3242283203598655" />
-      <entry key="S30" value="11.220589516838448" />
-      <entry key="S60" value="14.079019674003662" />
-      <entry key="M2" value="16.93878849645968" />
-      <entry key="M5" value="22.070741801886243" />
-      <entry key="M10" value="35.24786327776221" />
-      <entry key="M15" value="54.25078946138612" />
-      <entry key="M30" value="130.58598500282835" />
-      <entry key="H1" value="343.64146251452127" />
-      <entry key="H2" value="878.94926349336" />
-      <entry key="H4" value="2023.0559209930443" />
-      <entry key="D1" value="7957.205769803262" />
-      <entry key="W1" value="11369.15724400487" />
+      <entry key="MS100" value="1.0000000000024336" />
+      <entry key="MS500" value="1.0047561867669776" />
+      <entry key="S2" value="1.3335629499107242" />
+      <entry key="S5" value="3.0990761987106414" />
+      <entry key="S10" value="6.505060511711271" />
+      <entry key="S30" value="14.63673684346179" />
+      <entry key="S60" value="20.294709088933697" />
+      <entry key="M2" value="28.171061986009008" />
+      <entry key="M5" value="47.80129638745943" />
+      <entry key="M10" value="69.9663653535946" />
+      <entry key="M15" value="88.92261849097768" />
+      <entry key="M30" value="154.91764834099772" />
+      <entry key="H1" value="344.4847296558736" />
+      <entry key="H2" value="850.4268700555635" />
+      <entry key="H4" value="1973.0308714202124" />
+      <entry key="D1" value="7955.08167355096" />
+      <entry key="W1" value="11444.24696734009" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="1.6640079691191263E-109" />
-      <entry key="S5" value="3.079372029916811E-44" />
-      <entry key="S10" value="1.7548156141835031E-22" />
-      <entry key="S30" value="5.6534768165790025E-8" />
-      <entry key="S60" value="2.600526876740312E-4" />
-      <entry key="M2" value="0.02036264078993456" />
-      <entry key="M5" value="0.3833832506961068" />
-      <entry key="M10" value="1.7271286133657326" />
-      <entry key="M15" value="3.7421582065634076" />
-      <entry key="M30" value="11.95232100952064" />
-      <entry key="H1" value="34.052031445978386" />
-      <entry key="H2" value="109.87662102592994" />
-      <entry key="H4" value="348.7353024408095" />
-      <entry key="D1" value="1880.9888465355818" />
-      <entry key="W1" value="2785.4085654709997" />
+      <entry key="MS100" value="2.5269283005913306E-92" />
+      <entry key="MS500" value="4.7920195804865575E-19" />
+      <entry key="S2" value="2.6402935033632056E-5" />
+      <entry key="S5" value="0.016260463890499177" />
+      <entry key="S10" value="0.16053973770460056" />
+      <entry key="S30" value="0.8598886666134404" />
+      <entry key="S60" value="1.5447181234496037" />
+      <entry key="M2" value="2.760796105305355" />
+      <entry key="M5" value="5.631166626159391" />
+      <entry key="M10" value="8.243160995617753" />
+      <entry key="M15" value="10.204795764758753" />
+      <entry key="M30" value="17.02284567229508" />
+      <entry key="H1" value="36.533359626461674" />
+      <entry key="H2" value="106.42818533401555" />
+      <entry key="H4" value="335.81471574738964" />
+      <entry key="D1" value="1870.0619221666047" />
+      <entry key="W1" value="2792.5355588484194" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9011870789639989" />
-      <entry key="MS500" value="1.4167698454007223" />
-      <entry key="S2" value="2.6757197934233132" />
-      <entry key="S5" value="4.80067338892612" />
-      <entry key="S10" value="7.080603198934098" />
-      <entry key="S30" value="11.071159259001144" />
-      <entry key="S60" value="13.978889557625473" />
-      <entry key="M2" value="16.896271789128" />
-      <entry key="M5" value="22.419173717369066" />
-      <entry key="M10" value="36.945775739696984" />
-      <entry key="M15" value="57.96300166303886" />
-      <entry key="M30" value="142.5050945913372" />
-      <entry key="H1" value="377.65827970796016" />
-      <entry key="H2" value="988.7867669668609" />
-      <entry key="H4" value="2371.7432936184105" />
-      <entry key="D1" value="9838.156226687517" />
-      <entry key="W1" value="14154.557693382128" />
+      <entry key="MS100" value="0.04481110150049461" />
+      <entry key="MS500" value="0.537526827176905" />
+      <entry key="S2" value="1.0376576854071775" />
+      <entry key="S5" value="2.8588525444657957" />
+      <entry key="S10" value="6.4080783810229045" />
+      <entry key="S30" value="15.221602423850836" />
+      <entry key="S60" value="21.613013657890445" />
+      <entry key="M2" value="30.7665843392187" />
+      <entry key="M5" value="53.32922167453901" />
+      <entry key="M10" value="78.13984794569127" />
+      <entry key="M15" value="99.07083866290887" />
+      <entry key="M30" value="171.89584016993788" />
+      <entry key="H1" value="380.97801061301504" />
+      <entry key="H2" value="956.8141717141868" />
+      <entry key="H4" value="2308.7974457601154" />
+      <entry key="D1" value="9825.105064948319" />
+      <entry key="W1" value="14236.774337201676" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -288,7 +292,7 @@
       <workItem from="1787469895115" duration="969000" />
       <workItem from="1787476939104" duration="3854000" />
       <workItem from="1787480928856" duration="112000" />
-      <workItem from="1787485600246" duration="3252000" />
+      <workItem from="1787485600246" duration="4085000" />
     </task>
     <task id="LOCAL-00001" summary="Added browser url bar, fixed notes">
       <option name="closed" value="true" />
@@ -314,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787488200035</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add typing sound">
+      <option name="closed" value="true" />
+      <created>1787489027758</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1787489027758</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,6 +347,7 @@
     <MESSAGE value="Added browser url bar, fixed notes" />
     <MESSAGE value="fixed stopwatch reset button issue" />
     <MESSAGE value="added click sound" />
-    <option name="LAST_COMMIT_MESSAGE" value="added click sound" />
+    <MESSAGE value="Add typing sound" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add typing sound" />
   </component>
 </project>

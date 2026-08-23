@@ -5,6 +5,9 @@ const catWidgetToggleButton = document.querySelector("#catWidgetToggle");
 const calendarWidgetToggleButton = document.querySelector("#calendarWidgetToggle");
 const clockWidgetToggleButton = document.querySelector("#clockWidgetToggle");
 
+const clickSoundToggleButton = document.querySelector("#clickSoundToggle");
+const typeSoundToggleButton = document.querySelector("#typeSoundToggle");
+
 const factoryResetButton = document.querySelector("#factoryResetButton");
 
 function settingsToggleWidget(widget) {
@@ -78,6 +81,22 @@ clockWidgetToggleButton.addEventListener("click", function() {
     clockWidgetToggleButton.classList.add("settings_button_clicking_animation");
     setTimeout(function() {
         clockWidgetToggleButton.classList.remove("settings_button_clicking_animation");
+    }, 150);
+});
+
+clickSoundToggleButton.addEventListener("click", function() {
+    toggleClickSound()
+    clickSoundToggleButton.classList.add("settings_button_clicking_animation");
+    setTimeout(function() {
+        clickSoundToggleButton.classList.remove("settings_button_clicking_animation");
+    }, 150);
+});
+
+typeSoundToggleButton.addEventListener("click", function() {
+    toggleTypeSound()
+    typeSoundToggleButton.classList.add("settings_button_clicking_animation");
+    setTimeout(function() {
+        typeSoundToggleButton.classList.remove("settings_button_clicking_animation");
     }, 150);
 });
 
