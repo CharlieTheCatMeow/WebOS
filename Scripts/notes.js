@@ -2,6 +2,8 @@ const notesHeaderTitle = document.querySelector("#notesHeaderTitle");
 const newPageButton = document.querySelector("#notesSidebarAddPage");
 const notesResetButton = document.querySelector("#notesSidebarReset");
 
+let current_page = 0;
+
 let content = JSON.parse(localStorage.getItem("notesData")) || [
     {
         title: "Notes",
@@ -31,6 +33,52 @@ function setNotesContent(index) {
     let pageTitle = notesContent.querySelector(".notes_title");
     let pageDate = notesContent.querySelector(".notes_date");
 
+    const PLACEHOLDER_TITLE = "Notes";
+    const PLACEHOLDER_DATE = "today";
+    const PLACEHOLDER_CONTENT = "Content for page...";
+
+    function clearPlaceholder(element, placeholder) {
+        const isPlaceholder = Array.isArray(placeholder) ? placeholder.includes(element.innerText) : element.innerText === placeholder;
+        if (isPlaceholder) {
+            element.innerText = "";
+        }
+    }
+
+    function restorePlaceholder(element, placeholder) {
+        const isEmpty = element.innerText.trim() === "";
+        if (isEmpty) {
+            element.innerText = Array.isArray(placeholder) ? placeholder[0] : placeholder;
+        }
+    }
+
+    pageTitle.addEventListener("focus", function () {
+        clearPlaceholder(pageTitle, PLACEHOLDER_TITLE);
+    });
+    pageDate.addEventListener("focus", function () {
+        clearPlaceholder(pageDate, PLACEHOLDER_DATE);
+    });
+    pageWrite.addEventListener("focus", function () {
+        clearPlaceholder(pageWrite, PLACEHOLDER_CONTENT);
+    });
+
+    pageTitle.addEventListener("blur", function () {
+        restorePlaceholder(pageTitle, PLACEHOLDER_TITLE);
+        content[index].title = pageTitle.innerText;
+        content[index].content = notesContent.innerHTML;
+        localStorage.setItem("notesData", JSON.stringify(content));
+    });
+    pageDate.addEventListener("blur", function () {
+        restorePlaceholder(pageDate, PLACEHOLDER_DATE);
+        content[index].date = pageDate.innerText;
+        content[index].content = notesContent.innerHTML;
+        localStorage.setItem("notesData", JSON.stringify(content));
+    });
+    pageWrite.addEventListener("blur", function () {
+        restorePlaceholder(pageWrite, PLACEHOLDER_CONTENT);
+        content[index].content = notesContent.innerHTML;
+        localStorage.setItem("notesData", JSON.stringify(content));
+    });
+
     pageWrite.addEventListener("input", function () {
         content[index].content = notesContent.innerHTML;
         localStorage.setItem("notesData", JSON.stringify(content));
@@ -44,6 +92,7 @@ function setNotesContent(index) {
         }
 
         content[index].title = pageTitle.innerText;
+        content[index].content = notesContent.innerHTML;
         localStorage.setItem("notesData", JSON.stringify(content));
     });
     pageDate.addEventListener("input", function () {
@@ -55,10 +104,13 @@ function setNotesContent(index) {
         }
 
         content[index].date = pageDate.innerText;
+        content[index].content = notesContent.innerHTML;
         localStorage.setItem("notesData", JSON.stringify(content));
     });
 
     notesHeaderTitle.innerText = `Notes: Page ${index + 1}`;
+
+    current_page = index
 }
 
 function addToSidebar(index) {
@@ -106,26 +158,12 @@ function createPage() {
     setNotesContent(noteIndex);
 }
 
-function resetNotes() {
-    localStorage.clear();
-
-    content = [
-        {
-            title: "Notes",
-            date: "today",
-            content: `
-                <div class="notes_page">
-                    <div class="notes_page_header">
-                        <h1 class="notes_title" contenteditable="true">Notes</h1>
-                        <p class="notes_date" contenteditable="true">today</p>
-                    </div>
-                    <div class="notes_page_content">
-                        <p contenteditable="true">Content for page 1...</p>
-                    </div>
-                </div>
-            `
-        }
-    ];
+function deleteNotes() {
+    if (content.length === 1) {
+        return;
+    }
+    content.splice(current_page, 1);
+    localStorage.setItem("notesData", JSON.stringify(content));
 
     const notesSidebarPages = document.querySelector("#notesSidebarPages");
     notesSidebarPages.innerHTML = "";
@@ -133,7 +171,14 @@ function resetNotes() {
     for (let i = 0; i < content.length; i++) {
         addToSidebar(i);
     }
-    setNotesContent(0);
+
+    const newIndex = Math.min(current_page, content.length - 1);
+    setNotesContent(newIndex);
+
+    const selectors = notesSidebarPages.querySelectorAll(".notes_selector");
+    if (selectors[newIndex]) {
+        selectors[newIndex].classList.add("notes_page_selected");
+    }
 }
 
 for (let i = 0; i < content.length; i++) {
@@ -155,7 +200,7 @@ newPageButton.addEventListener("click", function () {
 });
 
 notesResetButton.addEventListener("click", function () {
-    resetNotes();
+    deleteNotes();
     notesResetButton.classList.add("select_notes_button");
     setTimeout(function () {
         notesResetButton.classList.remove("select_notes_button");
