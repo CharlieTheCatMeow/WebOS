@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="Different window background tint levels for themes">
+    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="Fix music player scaling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/music_player.css" beforeDir="false" afterPath="$PROJECT_DIR$/music_player.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/terminal.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/terminal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,60 +55,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000000000104" />
-      <entry key="S2" value="1.0003197164191808" />
-      <entry key="S5" value="1.0417320888793866" />
-      <entry key="S10" value="1.2418363682944076" />
-      <entry key="S30" value="2.0968114213317897" />
-      <entry key="S60" value="3.9266609853011616" />
-      <entry key="M2" value="7.91910467732492" />
-      <entry key="M5" value="16.838557961385277" />
-      <entry key="M10" value="29.442439499305742" />
-      <entry key="M15" value="42.637883531283244" />
-      <entry key="M30" value="92.01384094258833" />
-      <entry key="H1" value="230.23447790770916" />
-      <entry key="H2" value="626.1800200214681" />
-      <entry key="H4" value="1632.5130476029176" />
-      <entry key="D1" value="7811.7207849234" />
-      <entry key="W1" value="11701.235538349849" />
+      <entry key="MS500" value="1.0002078908774192" />
+      <entry key="S2" value="1.2945980645126183" />
+      <entry key="S5" value="2.6700287269810667" />
+      <entry key="S10" value="4.568541308885436" />
+      <entry key="S30" value="9.07714385837661" />
+      <entry key="S60" value="14.523769636570547" />
+      <entry key="M2" value="25.997438643737805" />
+      <entry key="M5" value="51.521352460929414" />
+      <entry key="M10" value="76.09515963184622" />
+      <entry key="M15" value="94.27686887970953" />
+      <entry key="M30" value="147.6593561610252" />
+      <entry key="H1" value="284.47655541082526" />
+      <entry key="H2" value="674.0747265085477" />
+      <entry key="H4" value="1672.0591168642568" />
+      <entry key="D1" value="7859.564186621367" />
+      <entry key="W1" value="11773.568750656617" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.7266853279880354E-139" />
-      <entry key="MS500" value="1.767838711719018E-28" />
-      <entry key="S2" value="1.1530832405256414E-7" />
-      <entry key="S5" value="0.0016778157472421736" />
-      <entry key="S10" value="0.04096406610434283" />
-      <entry key="S30" value="0.3590155037126436" />
-      <entry key="S60" value="0.7104691623855771" />
-      <entry key="M2" value="1.1737712768750714" />
-      <entry key="M5" value="1.9121502616375259" />
-      <entry key="M10" value="2.6407330962208184" />
-      <entry key="M15" value="3.334654418289573" />
-      <entry key="M30" value="6.614192378694377" />
-      <entry key="H1" value="18.462505336277438" />
-      <entry key="H2" value="65.23531612658633" />
-      <entry key="H4" value="248.64113176276496" />
-      <entry key="D1" value="1778.3646471665409" />
-      <entry key="W1" value="2792.0267950897833" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="4.744664751630512E-107" />
+      <entry key="S2" value="2.624529042140738E-27" />
+      <entry key="S5" value="2.331570477261849E-11" />
+      <entry key="S10" value="4.8672451014806715E-6" />
+      <entry key="S30" value="0.02029021586635324" />
+      <entry key="S60" value="0.1905030181071945" />
+      <entry key="M2" value="0.6688304078561441" />
+      <entry key="M5" value="1.8396774070516166" />
+      <entry key="M10" value="3.057634652398406" />
+      <entry key="M15" value="3.9768210897401035" />
+      <entry key="M30" value="7.308995922907081" />
+      <entry key="H1" value="18.702707214729863" />
+      <entry key="H2" value="64.15607847186466" />
+      <entry key="H4" value="244.76040526706774" />
+      <entry key="D1" value="1773.3056244472511" />
+      <entry key="W1" value="2792.4411385813464" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.23981602983131609" />
-      <entry key="MS500" value="0.7515807390327889" />
-      <entry key="S2" value="0.9313890054414563" />
-      <entry key="S5" value="1.0137187686627425" />
-      <entry key="S10" value="1.262545662479589" />
-      <entry key="S30" value="2.439225702646349" />
-      <entry key="S60" value="4.622097914321376" />
-      <entry key="M2" value="9.078092220914238" />
-      <entry key="M5" value="18.737423342117925" />
-      <entry key="M10" value="32.07187753741555" />
-      <entry key="M15" value="45.96085806193834" />
-      <entry key="M30" value="98.60992889226429" />
-      <entry key="H1" value="248.66932696973606" />
-      <entry key="H2" value="691.3805353349287" />
-      <entry key="H4" value="1881.1110202262128" />
-      <entry key="D1" value="9590.047114321012" />
-      <entry key="W1" value="14493.25389600221" />
+      <entry key="MS100" value="2.796256421165253E-7" />
+      <entry key="MS500" value="0.049103628837419186" />
+      <entry key="S2" value="0.7628024930001811" />
+      <entry key="S5" value="2.4022664194333525" />
+      <entry key="S10" value="4.41404268688408" />
+      <entry key="S30" value="9.023474264281703" />
+      <entry key="S60" value="14.658930543978112" />
+      <entry key="M2" value="26.61561412606165" />
+      <entry key="M5" value="53.32028245668852" />
+      <entry key="M10" value="79.12302489433695" />
+      <entry key="M15" value="98.22869093048425" />
+      <entry key="M30" value="154.94408007760987" />
+      <entry key="H1" value="303.1492485477865" />
+      <entry key="H2" value="738.1951311193078" />
+      <entry key="H4" value="1916.7761185800616" />
+      <entry key="D1" value="9632.831432996158" />
+      <entry key="W1" value="14566.001426207657" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -291,7 +291,9 @@
       <workItem from="1787480928856" duration="112000" />
       <workItem from="1787485600246" duration="11208000" />
       <workItem from="1787497151665" duration="727000" />
-      <workItem from="1787498278970" duration="215000" />
+      <workItem from="1787498278970" duration="233000" />
+      <workItem from="1787506627213" duration="638000" />
+      <workItem from="1787578904134" duration="684000" />
     </task>
     <task id="LOCAL-00001" summary="Added browser url bar, fixed notes">
       <option name="closed" value="true" />
@@ -373,7 +375,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787497874112</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fix music player scaling">
+      <option name="closed" value="true" />
+      <created>1787498506831</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1787498506831</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,6 +411,7 @@
     <MESSAGE value="Add images and stuff (forgot)" />
     <MESSAGE value="Fixed notes page 1 not auto deleting placeholder" />
     <MESSAGE value="Different window background tint levels for themes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Different window background tint levels for themes" />
+    <MESSAGE value="Fix music player scaling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix music player scaling" />
   </component>
 </project>

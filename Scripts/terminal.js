@@ -64,8 +64,7 @@ function runCommand(command) {
             <p>"settings": opens settings</p>
             <p>"search": opens search</p>
             <p>"control": opens control center</p>
-            <p>"dark": activates dark mode</p>
-            <p>"light": activates light mode</p>
+            <p>"theme": list of available themes</p>
         `;
     } else if(command === "welcome") {
         openWindow(welcomeScreen);
@@ -103,12 +102,31 @@ function runCommand(command) {
     } else if(command === "control") {
         openWindow(controlWidget);
         output = `<p>  Control Center opened!</p>`
-    } else if(command === "dark") {
-        switchToDarkMode();
-        output = `<p>  Dark mode activated!</p>`
-    } else if(command === "light") {
-        switchToLightMode();
-        output = `<p>  Light mode activated!</p>`
+    } else if(command.replace(/\s+/g, ' ').trim() === "theme") {
+        output = `<p>  Available themes: </p>
+                    <p>  "default"</p>
+                    <p>  "dark"</p>
+                    <p>  "day"</p>
+                    <p>  "purple"</p>
+                    <p>  "sunset"</p>
+                    <p>  To select a theme, type theme [theme_name]</p>`
+    } else if(command === "theme default") {
+        switchTheme("default");
+        output = `<p>  Theme changed to default.</p>`
+    } else if(command === "theme dark") {
+        switchTheme("dark");
+        output = `<p>  Theme changed to dark.</p>`
+    } else if(command === "theme day") {
+        switchTheme("day");
+        output = `<p>  Theme changed to day.</p>`
+    } else if(command === "theme purple") {
+        switchTheme("purple");
+        output = `<p>  Theme changed to purple.</p>`
+    } else if(command === "theme sunset") {
+        switchTheme("sunset");
+        output = `<p>  Theme changed to sunset.</p>`
+    } else if(command.includes("theme ") && command !== "theme ") {
+        output = `<p>  Theme not found. </p>`
     } else {
         output = `<p>  Command not found. <br>For a list of available commands type "help"</p>`
     }
