@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="Fix music player scaling">
+    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="Add themes to terminal as commands">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/settings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/terminal.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/terminal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/index_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/settings.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +24,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="105" />
+    <option name="cachedIndexableFilesCount" value="106" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -55,60 +60,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0002078908774192" />
-      <entry key="S2" value="1.2945980645126183" />
-      <entry key="S5" value="2.6700287269810667" />
-      <entry key="S10" value="4.568541308885436" />
-      <entry key="S30" value="9.07714385837661" />
-      <entry key="S60" value="14.523769636570547" />
-      <entry key="M2" value="25.997438643737805" />
-      <entry key="M5" value="51.521352460929414" />
-      <entry key="M10" value="76.09515963184622" />
-      <entry key="M15" value="94.27686887970953" />
-      <entry key="M30" value="147.6593561610252" />
-      <entry key="H1" value="284.47655541082526" />
-      <entry key="H2" value="674.0747265085477" />
-      <entry key="H4" value="1672.0591168642568" />
-      <entry key="D1" value="7859.564186621367" />
-      <entry key="W1" value="11773.568750656617" />
+      <entry key="MS500" value="1.0000000000000637" />
+      <entry key="S2" value="1.0008446310818013" />
+      <entry key="S5" value="1.0918596170939567" />
+      <entry key="S10" value="1.563921577864914" />
+      <entry key="S30" value="4.613027715762993" />
+      <entry key="S60" value="8.769863749330591" />
+      <entry key="M2" value="16.658244213138694" />
+      <entry key="M5" value="41.21658861157527" />
+      <entry key="M10" value="71.31897217180311" />
+      <entry key="M15" value="93.35749568901274" />
+      <entry key="M30" value="151.26224963830273" />
+      <entry key="H1" value="288.6238045890131" />
+      <entry key="H2" value="674.69756228734" />
+      <entry key="H4" value="1667.2523218915205" />
+      <entry key="D1" value="7860.7022423891185" />
+      <entry key="W1" value="11791.886161725459" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="4.744664751630512E-107" />
-      <entry key="S2" value="2.624529042140738E-27" />
-      <entry key="S5" value="2.331570477261849E-11" />
-      <entry key="S10" value="4.8672451014806715E-6" />
-      <entry key="S30" value="0.02029021586635324" />
-      <entry key="S60" value="0.1905030181071945" />
-      <entry key="M2" value="0.6688304078561441" />
-      <entry key="M5" value="1.8396774070516166" />
-      <entry key="M10" value="3.057634652398406" />
-      <entry key="M15" value="3.9768210897401035" />
-      <entry key="M30" value="7.308995922907081" />
-      <entry key="H1" value="18.702707214729863" />
-      <entry key="H2" value="64.15607847186466" />
-      <entry key="H4" value="244.76040526706774" />
-      <entry key="D1" value="1773.3056244472511" />
-      <entry key="W1" value="2792.4411385813464" />
+      <entry key="MS500" value="6.77057324E-316" />
+      <entry key="S2" value="1.613081683917871E-79" />
+      <entry key="S5" value="3.041519032215322E-32" />
+      <entry key="S10" value="1.7579406637121582E-16" />
+      <entry key="S30" value="6.706979814727205E-6" />
+      <entry key="S60" value="0.0034635545051849353" />
+      <entry key="M2" value="0.09018329370112549" />
+      <entry key="M5" value="0.8254023633140818" />
+      <entry key="M10" value="2.048083261596771" />
+      <entry key="M15" value="3.044463214853602" />
+      <entry key="M30" value="6.395066405455995" />
+      <entry key="H1" value="17.494363439118686" />
+      <entry key="H2" value="62.048979706632544" />
+      <entry key="H4" value="240.7074770969622" />
+      <entry key="D1" value="1768.3775566700788" />
+      <entry key="W1" value="2791.331205230777" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.796256421165253E-7" />
-      <entry key="MS500" value="0.049103628837419186" />
-      <entry key="S2" value="0.7628024930001811" />
-      <entry key="S5" value="2.4022664194333525" />
-      <entry key="S10" value="4.41404268688408" />
-      <entry key="S30" value="9.023474264281703" />
-      <entry key="S60" value="14.658930543978112" />
-      <entry key="M2" value="26.61561412606165" />
-      <entry key="M5" value="53.32028245668852" />
-      <entry key="M10" value="79.12302489433695" />
-      <entry key="M15" value="98.22869093048425" />
-      <entry key="M30" value="154.94408007760987" />
-      <entry key="H1" value="303.1492485477865" />
-      <entry key="H2" value="738.1951311193078" />
-      <entry key="H4" value="1916.7761185800616" />
-      <entry key="D1" value="9632.831432996158" />
-      <entry key="W1" value="14566.001426207657" />
+      <entry key="MS100" value="0.025033433674675688" />
+      <entry key="MS500" value="0.4783040790459856" />
+      <entry key="S2" value="0.832405707029478" />
+      <entry key="S5" value="1.0180194596118775" />
+      <entry key="S10" value="1.5194332772559853" />
+      <entry key="S30" value="4.58352026590309" />
+      <entry key="S60" value="8.749177674209466" />
+      <entry key="M2" value="16.725520342638834" />
+      <entry key="M5" value="42.01548383649551" />
+      <entry key="M10" value="73.34260792262936" />
+      <entry key="M15" value="96.3797193256026" />
+      <entry key="M30" value="157.63447745058417" />
+      <entry key="H1" value="306.0892790980226" />
+      <entry key="H2" value="736.7116294171759" />
+      <entry key="H4" value="1907.916908115266" />
+      <entry key="D1" value="9629.041493183446" />
+      <entry key="W1" value="14583.208902364444" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -293,7 +298,8 @@
       <workItem from="1787497151665" duration="727000" />
       <workItem from="1787498278970" duration="233000" />
       <workItem from="1787506627213" duration="638000" />
-      <workItem from="1787578904134" duration="684000" />
+      <workItem from="1787578904134" duration="711000" />
+      <workItem from="1787588868010" duration="490000" />
     </task>
     <task id="LOCAL-00001" summary="Added browser url bar, fixed notes">
       <option name="closed" value="true" />
@@ -383,7 +389,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787498506831</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add themes to terminal as commands">
+      <option name="closed" value="true" />
+      <created>1787579602663</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1787579602663</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,6 +426,7 @@
     <MESSAGE value="Fixed notes page 1 not auto deleting placeholder" />
     <MESSAGE value="Different window background tint levels for themes" />
     <MESSAGE value="Fix music player scaling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix music player scaling" />
+    <MESSAGE value="Add themes to terminal as commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add themes to terminal as commands" />
   </component>
 </project>

@@ -319,14 +319,6 @@ function switchTheme(name) {
     localStorage.setItem("Theme", name);
 }
 
-function switchToDarkMode() {
-    switchTheme("dark");
-}
-
-function switchToLightMode() {
-    switchTheme("light");
-}
-
 function checkLightDarkMode() {
     const savedTheme = localStorage.getItem("Theme") || localStorage.getItem("Mode");
     if (savedTheme) {

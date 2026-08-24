@@ -109,6 +109,7 @@ function runCommand(command) {
                     <p>  "day"</p>
                     <p>  "purple"</p>
                     <p>  "sunset"</p>
+                    <p>  "pink"</p>
                     <p>  To select a theme, type theme [theme_name]</p>`
     } else if(command === "theme default") {
         switchTheme("default");
@@ -125,6 +126,9 @@ function runCommand(command) {
     } else if(command === "theme sunset") {
         switchTheme("sunset");
         output = `<p>  Theme changed to sunset.</p>`
+    } else if(command === "theme pink") {
+        switchTheme("pink");
+        output = `<p>  Theme changed to pink.</p>`
     } else if(command.includes("theme ") && command !== "theme ") {
         output = `<p>  Theme not found. </p>`
     } else {

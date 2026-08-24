@@ -231,6 +231,39 @@ body[data-theme="day"] {
     --complete-hover-bg: rgba(56, 239, 125, 0.2);
 }
 
+[data-theme="pink"] {
+    --bg-image: url("Images/Nature_Pink.png");
+    --topbar-bg: linear-gradient(90deg, #3c3660, #5e3a5a);
+    --window-bg: rgba(18, 10, 32, 0.55);
+    --window-saturate: 120%;
+    --window-header-bg: linear-gradient(135deg, #d4608a, #a83870);
+    --window-drag-glow: rgba(212, 96, 138, 0.9);
+    --accent-start: #d4608a;
+    --accent-end: #a83870;
+    --accent-gradient: linear-gradient(135deg, #d4608a, #a83870);
+    --scrollbar-thumb: rgba(212, 96, 138, 0.55);
+    --scrollbar-thumb-hover: rgba(212, 96, 138, 0.82);
+    --todo-border: rgba(212, 96, 138, 0.35);
+    --todo-task-border: rgba(212, 96, 138, 0.15);
+    --todo-input-focus-border: #d4608a;
+    --todo-input-focus-shadow: 0 0 0.8vmin rgba(212, 96, 138, 0.4);
+    --todo-input-focus-bg: rgba(20, 8, 30, 0.65);
+    --todo-add-hover-shadow: rgba(168, 56, 112, 0.45);
+    --notes-selector-bg: linear-gradient(135deg, #d4608a, #7a2858);
+    --music-progress-bar-bg: rgba(180, 80, 120, 0.72);
+    --music-progress-fill: linear-gradient(135deg, #d4608a, #a83870);
+    --search-bg: linear-gradient(90deg, rgba(60, 54, 96, 0.88), rgba(94, 58, 90, 0.80));
+    --slider-accent: #d4608a;
+    --slider-moz-progress: linear-gradient(90deg, #d4608a, #a83870);
+    --complete-hover-border: #38ef7d;
+    --complete-hover-bg: rgba(56, 239, 125, 0.2);
+    --loading-bg: linear-gradient(135deg, #120820, #1e0e2e);
+    --loading-accent-start: #f0a0b8;
+    --loading-accent-end: #c8507a;
+    --loading-glow: rgba(212, 96, 138, 0.6);
+    --loading-text-color: #f0a0b8;
+}
+
 .top_bar {
     display: flex;
     justify-content: space-between;

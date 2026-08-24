@@ -3,6 +3,7 @@ const lightModeButton = document.querySelector("#lightModeButton");
 const dayModeButton = document.querySelector("#dayModeButton");
 const purpleModeButton = document.querySelector("#purpleModeButton");
 const sunsetModeButton = document.querySelector("#sunsetModeButton");
+const pinkModeButton = document.querySelector("#pinkModeButton");
 
 const catWidgetToggleButton = document.querySelector("#catWidgetToggle");
 const calendarWidgetToggleButton = document.querySelector("#calendarWidgetToggle");
@@ -78,6 +79,14 @@ sunsetModeButton.addEventListener("click", function() {
     sunsetModeButton.classList.add("settings_button_clicking_animation");
     setTimeout(function() {
         sunsetModeButton.classList.remove("settings_button_clicking_animation");
+    }, 150);
+});
+
+pinkModeButton.addEventListener("click", function() {
+    switchTheme("pink");
+    pinkModeButton.classList.add("settings_button_clicking_animation");
+    setTimeout(function() {
+        pinkModeButton.classList.remove("settings_button_clicking_animation");
     }, 150);
 });
 
