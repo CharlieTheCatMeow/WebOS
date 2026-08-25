@@ -52,51 +52,54 @@ function runCommand(command) {
     if (command === "help") {
         output = `
             <p>Available commands: </p>
-            <p>"welcome": opens intro window</p>
-            <p>"notes": opens notes</p>
-            <p>"stopwatch": opens stopwatch</p>
-            <p>"todo": opens to-do list</p>
-            <p>"calculator": opens calculator</p>
-            <p>"music": opens music player</p>
-            <p>"gallery": opens gallery</p>
-            <p>"browser": opens browser</p>
-            <p>"files": opens files</p>
-            <p>"settings": opens settings</p>
-            <p>"search": opens search</p>
-            <p>"control": opens control center</p>
-            <p>"theme": list of available themes</p>
+            <p>  "apps": lists all available apps</p>
+            <p>  "search": opens search</p>
+            <p>  "control": opens control center</p>
+            <p>  "theme": list of available themes</p>
         `;
-    } else if(command === "welcome") {
+    } else if (command.replace(/\s+/g, ' ').trim() === "apps") {
+        output = `<p>  Available apps: </p>
+                    <p>  "welcome"</p>
+                    <p>  "notes"</p>
+                    <p>  "stopwatch"</p>
+                    <p>  "todo"</p>
+                    <p>  "calculator"</p>
+                    <p>  "music"</p>
+                    <p>  "gallery"</p>
+                    <p>  "browser"</p>
+                    <p>  "files"</p>
+                    <p>To open an app, type app [name].</p>`
+    } else if(command === "app welcome") {
         openWindow(welcomeScreen);
         output = `<p>  Intro opened!</p>`
-    } else if(command === "notes") {
+    } else if(command === "app notes") {
         openWindow(notes);
         output = `<p>  Notes opened!</p>`
-    } else if(command === "stopwatch") {
+    } else if(command === "app stopwatch") {
         openWindow(stopwatch);
         output = `<p>  Stopwatch opened!</p>`
-    } else if(command === "todo") {
+    } else if(command === "app todo") {
         openWindow(todoList);
         output = `<p>  to-do List opened!</p>`
-    } else if(command === "calculator") {
+    } else if(command === "app calculator") {
         openWindow(calculator);
         output = `<p>  Calculator opened!</p>`
-    } else if(command === "music") {
+    } else if(command === "app music") {
         openWindow(musicPlayer);
         output = `<p>  Music Player opened!</p>`
-    } else if(command === "gallery") {
+    } else if(command === "app gallery") {
         openWindow(gallery);
         output = `<p>  Gallery opened!</p>`
-    } else if(command === "browser") {
+    } else if(command === "app browser") {
         openWindow(browser);
         output = `<p>  Browser opened!</p>`
-    } else if(command === "files") {
+    } else if(command === "app files") {
         openWindow(files);
         output = `<p>  Files opened!</p>`
-    } else if(command === "search") {
+    } else if(command === "app search") {
         openWindow(searchMenu);
         output = `<p>  Search opened!</p>`
-    } else if(command === "settings") {
+    } else if(command === "app settings") {
         openWindow(settings);
         output = `<p>  Settings opened!</p>`
     } else if(command === "control") {
@@ -131,6 +134,8 @@ function runCommand(command) {
         output = `<p>  Theme changed to pink.</p>`
     } else if(command.includes("theme ") && command !== "theme ") {
         output = `<p>  Theme not found. </p>`
+    } else if(command.includes("app ") && command !== "app ") {
+        output = `<p>  Application not found. </p>`
     } else {
         output = `<p>  Command not found. <br>For a list of available commands type "help"</p>`
     }
