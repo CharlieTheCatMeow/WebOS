@@ -12,7 +12,11 @@ const clockWidgetToggleButton = document.querySelector("#clockWidgetToggle");
 const clickSoundToggleButton = document.querySelector("#clickSoundToggle");
 const typeSoundToggleButton = document.querySelector("#typeSoundToggle");
 
+const hideIconBarToggleButton = document.querySelector("#hideIconBarWhenMaximizedToggle");
+
 const factoryResetButton = document.querySelector("#factoryResetButton");
+
+let hideIconBarWhenMaximized = false;
 
 function settingsToggleWidget(widget) {
     const isHidden = widget.style.display === "none" || widget.style.display === "";
@@ -133,6 +137,22 @@ typeSoundToggleButton.addEventListener("click", function() {
     typeSoundToggleButton.classList.add("settings_button_clicking_animation");
     setTimeout(function() {
         typeSoundToggleButton.classList.remove("settings_button_clicking_animation");
+    }, 150);
+});
+
+hideIconBarToggleButton.addEventListener("click", function() {
+    hideIconBarWhenMaximized = !hideIconBarWhenMaximized;
+    appIconsBar.style.display = "flex";
+    localStorage.setItem("hideIconBarWhenMaximized", hideIconBarWhenMaximized.toString());
+    updateIconsVisibility()
+    if (hideIconBarWhenMaximized) {
+        hideIconBarToggleButton.classList.add("settings_toggle_enabled")
+    } else {
+        hideIconBarToggleButton.classList.remove("settings_toggle_enabled")
+    }
+    hideIconBarToggleButton.classList.add("settings_button_clicking_animation");
+    setTimeout(function() {
+        hideIconBarToggleButton.classList.remove("settings_button_clicking_animation");
     }, 150);
 });
 

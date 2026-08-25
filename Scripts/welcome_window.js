@@ -55,8 +55,8 @@ const welcome_content = [
                     <p> -Search</p>
                     <p> -Control Center</p>
                     <p> -Widgets (Toggle in settings)</p>
-                    <p> -Dark and Light Mode</p>
-                    <p> -Interative elements</p>
+                    <p> -Different Themes</p>
+                    <p> -Interactive elements</p>
                     <p> -Loading Screen</p>
                     <h2>(Please check out settings for more controls)</h2>
                 </div>

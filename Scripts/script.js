@@ -99,6 +99,7 @@ const clockWidget = document.querySelector("#clockWidget");
 
 let selectedIcon = undefined;
 const icons = document.querySelectorAll(".app_icon");
+const appIconsBar = document.querySelector("#appIcons")
 
 let biggestIndex = 1;
 
@@ -218,13 +219,20 @@ function updateTopBarVisibility() {
     topBar.style.display = anyMaximizedAndOpen ? "none" : "flex";
 }
 
+function updateIconsVisibility() {
+    if (hideIconBarWhenMaximized) {
+        const anyMaximizedAndOpen = Array.from(document.querySelectorAll(".window.window_maximized")).some(win => win.style.display !== "none");
+        appIconsBar.style.display = anyMaximizedAndOpen ? "none" : "flex";
+    }
+}
+
 //open and close windows
 function closeWindow(element) {
     element.classList.add("window_closed");
     setTimeout(function () {
         element.style.display = "none";
         updateTopBarVisibility();
-
+        updateIconsVisibility();
         if (element.id === "terminal" && typeof terminalOpenClose === "function") {
             terminalOpenClose();
         }
@@ -271,6 +279,7 @@ function openWindow(element) {
         terminalOpenClose();
     }
     updateTopBarVisibility();
+    updateIconsVisibility();
 }
 
 function setInitialPosition(element) {
@@ -378,6 +387,7 @@ function initializeWindow(element, elementContent, elementOpen, elementClose, el
                 }
             }
             updateTopBarVisibility();
+            updateIconsVisibility()
         });
     }
     addWindowTapHandling(element);
