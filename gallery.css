@@ -18,7 +18,7 @@ body,html {
     resize: both;
     width: 75vmin;
     height: 50vmin;
-    min-width: 55vmin;
+    min-width: 30vmin;
     min-height: 50vmin;
 }
 

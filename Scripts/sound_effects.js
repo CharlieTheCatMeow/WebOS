@@ -1,8 +1,20 @@
 const click_sound = document.getElementById("clickSound");
 const type_sound = document.getElementById("typeSound");
 
-let clickSoundEnabled = localStorage.getItem("clickSoundEnabled") === "true";
-let typeSoundEnabled = localStorage.getItem("typeSoundEnabled") === "true";
+let clickSoundEnabled = localStorage.getItem("clickSoundEnabled") === null ? true : localStorage.getItem("clickSoundEnabled") === "true";
+let typeSoundEnabled = localStorage.getItem("typeSoundEnabled") === null ? true : localStorage.getItem("typeSoundEnabled") === "true";
+
+if (clickSoundEnabled) {
+    clickSoundToggleButton.classList.add("settings_toggle_enabled")
+} else {
+    clickSoundToggleButton.classList.remove("settings_toggle_enabled")
+}
+
+if (typeSoundEnabled) {
+    typeSoundToggleButton.classList.add("settings_toggle_enabled")
+} else {
+    typeSoundToggleButton.classList.remove("settings_toggle_enabled")
+}
 
 function toggleClickSound() {
     clickSoundEnabled = !clickSoundEnabled;

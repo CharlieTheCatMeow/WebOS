@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="Retry push">
+    <list default="true" id="1c841381-690d-4159-8c64-3c6c33b2fea7" name="Changes" comment="Better terminal app commands">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/welcome_window.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/welcome_window.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/sound_effects.js" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/sound_effects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/gallery.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,61 +55,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.60357827169949E-203" />
-      <entry key="MS500" value="4.615738340278219E-41" />
-      <entry key="S2" value="1.407087791475274E-10" />
-      <entry key="S5" value="2.2163516342557372E-4" />
-      <entry key="S10" value="0.03074726271912192" />
-      <entry key="S30" value="0.9118204858236983" />
-      <entry key="S60" value="2.311206532389519" />
-      <entry key="M2" value="4.0277737023654465" />
-      <entry key="M5" value="7.938337926674932" />
-      <entry key="M10" value="23.329175439917435" />
-      <entry key="M15" value="44.76510183030294" />
-      <entry key="M30" value="111.24653629164314" />
-      <entry key="H1" value="250.46631417782646" />
-      <entry key="H2" value="616.820956428061" />
-      <entry key="H4" value="1575.6510652648772" />
-      <entry key="D1" value="7804.409718697686" />
-      <entry key="W1" value="11845.66610617728" />
-    </decayedCancelled>
-    <decayedSelected>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0000000000001645" />
-      <entry key="S60" value="1.0000007518861582" />
-      <entry key="M2" value="1.0022295062250506" />
-      <entry key="M5" value="1.3530885581617638" />
-      <entry key="M10" value="3.1594160362041506" />
-      <entry key="M15" value="5.168450429382526" />
-      <entry key="M30" value="10.287744210659664" />
-      <entry key="H1" value="21.26991525280779" />
-      <entry key="H2" value="61.39115980045428" />
-      <entry key="H4" value="228.35814296152498" />
-      <entry key="D1" value="1749.9019632653321" />
-      <entry key="W1" value="2797.1916511983827" />
+      <entry key="S2" value="1.000000000000049" />
+      <entry key="S5" value="1.0000054525865631" />
+      <entry key="S10" value="1.003369550113652" />
+      <entry key="S30" value="1.2987996677053149" />
+      <entry key="S60" value="2.086630877129493" />
+      <entry key="M2" value="4.91995809735716" />
+      <entry key="M5" value="17.012616733800378" />
+      <entry key="M10" value="35.815487964149334" />
+      <entry key="M15" value="56.39912024077978" />
+      <entry key="M30" value="121.18804193431131" />
+      <entry key="H1" value="258.5492826739643" />
+      <entry key="H2" value="618.0614880972895" />
+      <entry key="H4" value="1565.6957922038164" />
+      <entry key="D1" value="7803.912107553487" />
+      <entry key="W1" value="11880.00679718659" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.3725000035364313E-107" />
+      <entry key="S5" value="1.7988913840156433E-43" />
+      <entry key="S10" value="4.241333969420052E-22" />
+      <entry key="S30" value="7.513359282803824E-8" />
+      <entry key="S60" value="2.7410528234947477E-4" />
+      <entry key="M2" value="0.01659303096769452" />
+      <entry key="M5" value="0.26236725849117704" />
+      <entry key="M10" value="1.3912286927979074" />
+      <entry key="M15" value="2.9914941682213385" />
+      <entry key="M30" value="7.826796826579759" />
+      <entry key="H1" value="18.552297965679802" />
+      <entry key="H2" value="57.33526363533838" />
+      <entry key="H4" value="220.68585132251" />
+      <entry key="D1" value="1739.9631462946077" />
+      <entry key="W1" value="2794.916529007528" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0014904875087505451" />
-      <entry key="MS500" value="0.27206061041770097" />
-      <entry key="S2" value="0.722214855117292" />
-      <entry key="S5" value="0.878159127590332" />
-      <entry key="S10" value="0.9673945168305271" />
-      <entry key="S30" value="1.8876669779945197" />
-      <entry key="S60" value="3.2973981940244688" />
-      <entry key="M2" value="5.022233449456368" />
-      <entry key="M5" value="9.284838466711282" />
-      <entry key="M10" value="26.476526983414665" />
-      <entry key="M15" value="49.918305231521956" />
-      <entry key="M30" value="121.51495141040029" />
-      <entry key="H1" value="271.7110387065025" />
-      <entry key="H2" value="678.1802675903918" />
-      <entry key="H4" value="1803.9687051126043" />
-      <entry key="D1" value="9554.273705444737" />
-      <entry key="W1" value="14642.849263968215" />
+      <entry key="MS100" value="6.487723701643124E-4" />
+      <entry key="MS500" value="0.23036604654967596" />
+      <entry key="S2" value="0.6927947968334589" />
+      <entry key="S5" value="0.8634644550468767" />
+      <entry key="S10" value="0.9325335112288087" />
+      <entry key="S30" value="1.273279160184875" />
+      <entry key="S60" value="2.0724998823750695" />
+      <entry key="M2" value="4.926305684817781" />
+      <entry key="M5" value="17.265044728136225" />
+      <entry key="M10" value="37.19489584340372" />
+      <entry key="M15" value="59.37674176754325" />
+      <entry key="M30" value="128.99717690494776" />
+      <entry key="H1" value="277.07800466705027" />
+      <entry key="H2" value="675.3661714690409" />
+      <entry key="H4" value="1786.3420745593003" />
+      <entry key="D1" value="9543.837420663796" />
+      <entry key="W1" value="14674.914829326894" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -299,7 +297,9 @@
       <workItem from="1787578904134" duration="711000" />
       <workItem from="1787588868010" duration="666000" />
       <workItem from="1787589592507" duration="795000" />
-      <workItem from="1787654552469" duration="1785000" />
+      <workItem from="1787654552469" duration="2048000" />
+      <workItem from="1787664966683" duration="26000" />
+      <workItem from="1787677089859" duration="760000" />
     </task>
     <task id="LOCAL-00001" summary="Added browser url bar, fixed notes">
       <option name="closed" value="true" />
@@ -421,7 +421,23 @@
       <option name="project" value="LOCAL" />
       <updated>1787589776636</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Settings option to hide taskbar when maximized">
+      <option name="closed" value="true" />
+      <created>1787656681890</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1787656681890</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Better terminal app commands">
+      <option name="closed" value="true" />
+      <created>1787656923186</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1787656923186</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,6 +470,8 @@
     <MESSAGE value="Add pink theme" />
     <MESSAGE value="Forgot new bg image" />
     <MESSAGE value="Retry push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Retry push" />
+    <MESSAGE value="Settings option to hide taskbar when maximized" />
+    <MESSAGE value="Better terminal app commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="Better terminal app commands" />
   </component>
 </project>
