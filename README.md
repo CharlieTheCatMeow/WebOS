@@ -2,7 +2,7 @@
 
 A web based operating system! You can do stuff with it, using the apps listed below!
 
-Click this link to try this out: <br>
+Click this link to try it out: <br>
 https://charliethecatmeow.github.io/WebOS/
 
 
@@ -19,12 +19,15 @@ https://charliethecatmeow.github.io/WebOS/
 - Terminal
 
 ## Features
+- Themes
 - Clock
 - Loading Screen
 - Start Menu
 - Search Menu (top left, click the Logo)
 - Control Center (top right, click the clock thingy)
 - Widgets (Toggles in settings)
+- Typing and clicking sounds (toggle in settings)
+- Hide icon bar when maximized (toggle in settings)
 - Interactive elements
 
 Yes all very exciting I know.
@@ -44,7 +47,7 @@ It gives you the freedom to build almost anything.
 
 ## Issues I had
 Everything related to the windows. Whether it be maximizing them, moving them or opening them, <br> 
-there were always 200 bugs accompaning it. >:(
+there were always 200 bugs accompanying it. >:(
 
 ## What I learned:
 I started this project as a total beginner. I slowly learnt the basics following the provided guide. A couple hours later and here it is. <br>
