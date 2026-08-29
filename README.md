@@ -36,9 +36,8 @@ Yes all very exciting I know.
 
 ## Screenshots:
 
-![Loading Screen](Assets/Screenshot_loading_screen.png)
-![Loading Screen](Assets/screenshot_light_mode.png)
-![Loading Screen](Assets/screenshot_dark_mode.png)
+![Loading Screen](Assets/LoadingScreen.png)
+![Loading Screen](Assets/Desktop.png)
 
 ## Why I chose this project
 I chose this out of all the missions mainly because of its freedom to do things. <br>
