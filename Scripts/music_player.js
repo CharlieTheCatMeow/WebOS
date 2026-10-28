@@ -1,6 +1,7 @@
 const musicPlayerImage = document.querySelector("#musicPlayerImage");
 const musicPlayerTitle = document.querySelector("#musicPlayerSongTitle");
 const musicPlayerProgress = document.querySelector("#musicPlayerProgress");
+const musicPlayerProgressBar = document.querySelector(".music_player_progress_bar");
 const musicPlayerBackButton = document.querySelector("#musicPlayerPreviousButton");
 const musicPlayerPlayPauseButton = document.querySelector("#musicPlayerPlayPauseButton");
 const musicPlayerNextButton = document.querySelector("#musicPlayerNextButton");
@@ -52,15 +53,17 @@ function playSong(index) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
     }
-
     currentSongIndex = index;
     currentAudio = new Audio(song.audioSrc);
     applyGlobalVolume(currentAudio);
     currentAudio.play();
+
+    musicPlayerPlayPauseButton.innerHTML = `<i class="material-icons music_player_play_pause_button_icon no_select">pause</i>`;
+
+    currentAudio.addEventListener("ended", nextSong);
+
     musicPlayerImage.src = song.imgSrc;
-    if (musicPlayerImage.classList.contains("music_player_no_image")) {
-        musicPlayerImage.classList.remove("music_player_no_image");
-    }
+    musicPlayerImage.classList.remove("music_player_no_image");
     musicPlayerTitle.innerText = song.title;
 }
 
@@ -88,7 +91,7 @@ function previousSong() {
 }
 
 function updateProgressBar() {
-    if (!currentAudio) return;
+    if (!currentAudio || !currentAudio.duration) return;
     const progress = (currentAudio.currentTime / currentAudio.duration) * 100;
     musicPlayerProgress.style.width = `${progress}%`;
 }
@@ -117,5 +120,13 @@ musicPlayerNextButton.addEventListener("click", function () {
         musicPlayerNextButton.classList.remove("music_player_button_press");
     }, 150);
 });
+
+musicPlayerProgressBar.addEventListener("click", function(e) {
+    if (!currentAudio || !currentAudio.duration) return;
+    const rect = musicPlayerProgressBar.getBoundingClientRect();
+    const clickRatio = Math.min(Math.max((e.clientX - rect.left) / rect.width, 0), 1);
+    currentAudio.currentTime = clickRatio * currentAudio.duration;
+    updateProgressBar();
+})
 
 loadSongs();

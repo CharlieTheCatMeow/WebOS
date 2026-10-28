@@ -32,6 +32,10 @@ apps = [{name: "Introduction",
          content: `<div id="searchMenuGallery" class="search_menu_app_icon clickable no_select" data-window="gallery">
                         <img class="app_icon_svg" src="Images/gallery.svg" alt="Gallery">
                     </div>`},
+        {name: "Browser",
+        content: `<div id="searchMenuBrowser" class="search_menu_app_icon clickable no_select" data-window="browser">
+                    <img class="app_icon_svg" src="Images/browser.svg" alt="Browser">
+                </div>`},
         {name: "Files",
          content: `<div id="searchMenuFiles" class="search_menu_app_icon clickable no_select" data-window="files">
                         <img class="app_icon_svg" src="Images/folder_bold.svg" alt="Files">
@@ -85,6 +89,7 @@ searchMenuResults.addEventListener("click", function (event) {
     const windowElement = document.querySelector("#" + windowName);
     if (!windowElement) return;
 
+    closeWindow(searchMenuWindow);
     openWindow(windowElement);
 });
 

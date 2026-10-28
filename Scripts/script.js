@@ -374,9 +374,8 @@ function initializeWindow(element, elementContent, elementOpen, elementClose, el
                 element.style.top = restoredTop + "px";
                 element.style.left = restoredLeft + "px";
             } else {
-                const rect = element.getBoundingClientRect();
-                element.preMaximizeTop = rect.top;
-                element.preMaximizeLeft = rect.left;
+                element.preMaximizeTop = parseFloat(element.style.top) || (window.innerHeight - element.offsetHeight) / 2;
+                element.preMaximizeLeft = parseFloat(element.style.left) || (window.innerWidth - element.offsetWidth) / 2;
 
                 element.classList.add("window_maximized");
                 element.classList.add("no_dragging");
@@ -408,6 +407,16 @@ initializeWindow(browser, browserContent, browserOpen, browserClose, browserMaxi
 initializeWindow(files, filesContent, filesOpen, filesClose, filesMaximizeButton);
 initializeWindow(controlWidget, null, null, null, null);
 
+// Search and Control Menu stuff
+document.addEventListener("mousedown", function (e) {
+    if (searchMenu.style.display === "flex" && !searchMenu.contains(e.target) && !e.target.closest("#topBarSearchMenuButton")) {
+        closeWindow(searchMenu);
+    }
+    if (controlWidget.style.display === "flex" && !controlWidget.contains(e.target) && !e.target.closest("#controlWidgetButton")) {
+        closeWindow(controlWidget);
+    }
+});
+
 //Widgets
 dragElement(cat);
 dragElement(calendar);
@@ -419,6 +428,4 @@ dragElement(clockWidget);
     }
 });
 
-setTimeout(function () {
-    checkLightDarkMode();
-}, 100);
+checkLightDarkMode();

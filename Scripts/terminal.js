@@ -1,5 +1,6 @@
 const terminalWindow = document.querySelector("#terminal");
 
+let terminalInitialized = false;
 
 function scrollTerminalToBottom() {
     const isOverflowing = terminalContent.scrollHeight > terminalContent.clientHeight;
@@ -11,21 +12,24 @@ new ResizeObserver(scrollTerminalToBottom).observe(terminalWindow);
 
 function terminalOpenClose() {
     if (terminalWindow.style.display === "flex") {
-        terminalContent.innerHTML = `
+        if (!terminalInitialized) {
+            terminalContent.innerHTML = `
                 <p>MeowOS Terminal [Version 1.0.0]</p>
                 <p>Initializing shell environment...</p>
-        `;
-        scrollTerminalToBottom();
-        setTimeout(function () {
-            terminalContent.innerHTML = terminalContent.innerHTML + `
+            `;
+            scrollTerminalToBottom();
+            terminalInitialized = true;
+            setTimeout(function () {
+                terminalContent.innerHTML = terminalContent.innerHTML + `
                 <p>Shell ready.</p>
                 <p>Type 'help' to list available commands.</p>
             `;
-
-            addInputLine();
-        }, 400);
+                addInputLine();
+            }, 400);
+        }
     } else {
         terminalContent.innerHTML = `<div id="terminalText"></div>`
+        terminalInitialized = false;
     }
 }
 
@@ -41,15 +45,24 @@ function addInputLine() {
     const newInput = document.querySelector("#terminalInput");
     newInput.focus();
     newInput.addEventListener("keydown", function (event) {
-       if (event.key === "Enter" && newInput.value) {
-           runCommand(newInput.value);
+       if (event.key === "Enter") {
+           runCommand(newInput.value.trim());
        }
     });
     scrollTerminalToBottom();
 }
 function runCommand(command) {
     let output = "";
-    if (command === "help") {
+    if (command === "clear") {
+        terminalContent.innerHTML = "";
+        addInputLine();
+        return;
+    } else if (command === "") {
+        output = "";
+    } else if (command === "search" || command === "app search") {
+        openWindow(searchMenu);
+        output = `<p>  Search opened!</p>`
+    } else if (command === "help") {
         output = `
             <p>Available commands: </p>
             <p>  "apps": lists all available apps</p>
@@ -142,9 +155,17 @@ function runCommand(command) {
 
     document.querySelector("#terminalInputLine").remove();
 
-    terminalContent.innerHTML +=`
-        <p><span class="terminal_prompt">Enter command here >> </span> ${command}</p>
-    ` + output;
+    const commandLine = document.createElement("p");
+    const promptSpan = document.createElement("span");
+    promptSpan.className = "terminal_prompt";
+    promptSpan.textContent = "Enter command here >> ";
+    commandLine.appendChild(promptSpan);
+    commandLine.appendChild(document.createTextNode(" " + command));
+
+    terminalWindow.appendChild(commandLine);
+    if (output) {
+        terminalContent.insertAdjacentHTML("beforeend", output);
+    }
 
     addInputLine();
     scrollTerminalToBottom();

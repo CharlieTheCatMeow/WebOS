@@ -171,6 +171,12 @@ function askTextFileName () {
     const textFileNameSubmitButton = document.querySelector("#textFileNameSubmitButton");
     const textFileNameCancelButton = document.querySelector("#textFileNameCancelButton");
 
+    textFileNameInput.focus();
+    textFileNameInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") textFileNameSubmitButton.click();
+        if (e.key === "Escape") textFileNameCancelButton.click();
+    });
+
     textFileNameSubmitButton.addEventListener("click", function () {
         playPressAnimation(textFileNameSubmitButton);
         renderFileExplorerShell();
@@ -197,6 +203,12 @@ function askFolderName() {
     const folderNameSubmitButton = document.querySelector("#folderNameSubmitButton");
     const folderNameCancelButton = document.querySelector("#folderNameCancelButton");
 
+    folderNameInput.focus();
+    folderNameInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") folderNameSubmitButton.click();
+        if (e.key === "Escape") folderNameCancelButton.click();
+    });
+
     folderNameSubmitButton.addEventListener("click", function () {
         playPressAnimation(folderNameSubmitButton);
         renderFileExplorerShell();
@@ -215,7 +227,7 @@ function openTextFile(file) {
     if (!file || file.type !== "file") return;
     filesWindowContent.innerHTML = `<div class="text_file_window">
                                         <div class="text_file_header">
-                                            <p class="text_file_header_name">${file.name}</p>
+                                            <p class="text_file_header_name"></p>
                                             <div class="text_file_header_controls">
                                                 <div id="textFileHeaderDeleteButton" class="text_file_header_button clickable">
                                                     <img class="text_file_header_icon" src="Images/delete.svg" alt="Delete">
@@ -226,11 +238,13 @@ function openTextFile(file) {
                                             </div>
                                         </div>
                                         <div class="text_file_content">
-                                            <p class="text_file_content_area" contenteditable="true">${file.content || ""}</p>
+                                            <p class="text_file_content_area" contenteditable="true"></p>
                                         </div>
                                     </div>
     `;
-    const textFileContentArea = document.querySelector(".text_file_content_area");
+    filesWindowContent.querySelector(".text_file_header_name").innerText = file.name;
+    const textFileContentArea = filesWindowContent.querySelector(".text_file_content_area");
+    textFileContentArea.textContent = file.content || "";
     textFileContentArea.addEventListener("input", function () {
         file.content = textFileContentArea.innerText;
         saveFileSystem();

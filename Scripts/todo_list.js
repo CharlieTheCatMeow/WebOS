@@ -22,10 +22,11 @@ function renderTodoContent() {
         newContent.innerHTML = `
             <div class="todo_list_complete_and_name">
                 <div class="todo_list_item_complete clickable" id="todoListItemComplete${task.id}"></div>
-                <p class="todo_list_item_name ${task.completed ? 'task_completed' : ''}">${task.name}</p>
+                <p class="todo_list_item_name ${task.completed ? 'task_completed' : ''}"></p>
             </div>
             <div class="todo_list_item_delete clickable" id="todoListItemDelete${task.id}"></div>
         `;
+        newContent.querySelector(".todo_list_item_name").textContent = task.name;
         todoContent.appendChild(newContent);
 
         const todoListCompleteButton = document.querySelector(`#todoListItemComplete${task.id}`);

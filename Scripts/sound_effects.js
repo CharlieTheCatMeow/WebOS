@@ -56,5 +56,6 @@ document.addEventListener("click", (event) => {
 
 function playSound(audioElement) {
     const audio_clone = audioElement.cloneNode();
+    audio_clone.volume = audioElement.volume;
     audio_clone.play();
 }

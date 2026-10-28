@@ -26,15 +26,15 @@ function openBrowserHomePage() {
 }
 
 function openBrowserWikipedia() {
-    browserWebContent.innerHTML = `<iframe class="browser_iframe" src="https://en.wikipedia.org/wiki/Meow" width="100%" height="100%"></iframe>`;
+    loadBrowserURL("https://en.wikipedia.org/wiki/Meow");
 }
 
 function openBrowserDraw() {
-    browserWebContent.innerHTML = `<iframe class="browser_iframe" src="https://www.autodraw.com/" width="100%" height="100%"></iframe>`;
+    loadBrowserURL("https://www.autodraw.com/");
 }
 
 function openBrowserWeather() {
-    browserWebContent.innerHTML = `<iframe class="browser_iframe" src="https://www.accuweather.com/" width="100%" height="100%"></iframe>`;
+    loadBrowserURL("https://www.accuweather.com/");
 }
 
 function loadBrowserURL(url) {

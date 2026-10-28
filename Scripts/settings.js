@@ -16,34 +16,25 @@ const hideIconBarToggleButton = document.querySelector("#hideIconBarWhenMaximize
 
 const factoryResetButton = document.querySelector("#factoryResetButton");
 
-let hideIconBarWhenMaximized = false;
-
-function settingsToggleWidget(widget) {
-    const isHidden = widget.style.display === "none" || widget.style.display === "";
-    if (isHidden) {
-        widget.style.display = "flex";
-    } else {
-        widget.style.display = "none";
-    }
-    widget.style.left = "3vmin";
+let hideIconBarWhenMaximized = localStorage.getItem("hideIconBarWhenMaximized") === "true";
+if (hideIconBarWhenMaximized) {
+    hideIconBarToggleButton.classList.add("settings_toggle_enabled");
 }
-
+function settingsToggleWidget(widget, toggleButton) {
+    const isHidden = widget.style.display === "none" || widget.style.display === "";
+    widget.style.display = isHidden ? "flex" : "none";
+    toggleButton.classList.toggle("settings_toggle_enabled", isHidden);
+}
 function checkWidgetVisibility() {
-    if (localStorage.getItem("catWidgetVisible") === "false") {
-        cat.style.display = "none";
-    } else {
-        cat.style.display = "flex";
-    }
-    if (localStorage.getItem("calendarWidgetVisible") === "false") {
-        calendar.style.display = "none";
-    } else {
-        calendar.style.display = "flex";
-    }
-    if (localStorage.getItem("clockWidgetVisible") === "false") {
-        clockWidget.style.display = "none";
-    } else {
-        clockWidget.style.display = "flex";
-    }
+    const catVisible = localStorage.getItem("catWidgetVisible") !== "false";
+    cat.style.display = catVisible ? "flex" : "none";
+    catWidgetToggleButton.classList.toggle("settings_toggle_enabled", catVisible);
+    const calVisible = localStorage.getItem("calendarWidgetVisible") !== "false";
+    calendar.style.display = calVisible ? "flex" : "none";
+    calendarWidgetToggleButton.classList.toggle("settings_toggle_enabled", calVisible);
+    const clockVisible = localStorage.getItem("clockWidgetVisible") !== "false";
+    clockWidget.style.display = clockVisible ? "flex" : "none";
+    clockWidgetToggleButton.classList.toggle("settings_toggle_enabled", clockVisible);
 }
 
 darkModeButton.addEventListener("click", function() {
@@ -95,33 +86,24 @@ pinkModeButton.addEventListener("click", function() {
 });
 
 catWidgetToggleButton.addEventListener("click", function() {
-    settingsToggleWidget(cat);
+    settingsToggleWidget(cat, catWidgetToggleButton);
     localStorage.setItem("catWidgetVisible", cat.style.display === "flex" ? "true" : "false");
-    cat.style.top = "8vmin";
     catWidgetToggleButton.classList.add("settings_button_clicking_animation");
-    setTimeout(function() {
-        catWidgetToggleButton.classList.remove("settings_button_clicking_animation");
-    }, 150);
+    setTimeout(() => catWidgetToggleButton.classList.remove("settings_button_clicking_animation"), 150);
 });
 
 calendarWidgetToggleButton.addEventListener("click", function() {
-    settingsToggleWidget(calendar);
+    settingsToggleWidget(calendar, calendarWidgetToggleButton);
     localStorage.setItem("calendarWidgetVisible", calendar.style.display === "flex" ? "true" : "false");
-    calendar.style.top = "25vmin";
     calendarWidgetToggleButton.classList.add("settings_button_clicking_animation");
-    setTimeout(function() {
-        calendarWidgetToggleButton.classList.remove("settings_button_clicking_animation");
-    }, 150);
+    setTimeout(() => calendarWidgetToggleButton.classList.remove("settings_button_clicking_animation"), 150);
 });
 
 clockWidgetToggleButton.addEventListener("click", function() {
-    settingsToggleWidget(clockWidget);
+    settingsToggleWidget(clockWidget, clockWidgetToggleButton);
     localStorage.setItem("clockWidgetVisible", clockWidget.style.display === "flex" ? "true" : "false");
-    clockWidget.style.top = "51vmin";
     clockWidgetToggleButton.classList.add("settings_button_clicking_animation");
-    setTimeout(function() {
-        clockWidgetToggleButton.classList.remove("settings_button_clicking_animation");
-    }, 150);
+    setTimeout(() => clockWidgetToggleButton.classList.remove("settings_button_clicking_animation"), 150);
 });
 
 clickSoundToggleButton.addEventListener("click", function() {

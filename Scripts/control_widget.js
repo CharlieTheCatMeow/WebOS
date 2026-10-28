@@ -100,7 +100,7 @@ volumeSlider.addEventListener('input', function () {
     const startingVolume = savedVolume !== null ? parseFloat(savedVolume) : 0.5;
 
     volumeSlider.value = startingVolume * 100;
-    volumeSliderIcon.src = startingVolume === 0 ? "Images/volume_muted.svg" : "Images/volume.svg";
+    volumeSliderIcon.src = startingVolume === 0 ? "Images/mute.svg" : "Images/volume.svg";
     const allMedia = document.querySelectorAll('audio, video, .site-media');
     allMedia.forEach(function (media) {
         media.volume = startingVolume;
