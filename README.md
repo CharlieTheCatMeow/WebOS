@@ -33,6 +33,7 @@ https://charliethecatmeow.github.io/WebOS/
 Yes all very exciting I know.
 
 ## This website is intended to be used in a 16:9 aspect ratio. Other aspect ratios may not be supported.
+I also only tested this in Firefox at 1440p, so if something doesn't work try using Firefox first.
 
 ## Screenshots:
 

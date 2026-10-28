@@ -143,3 +143,27 @@ if (calculatorButtonDelete) {
     });
 }
 
+document.addEventListener("keyup", function (e) {
+    if (calculator.style.display === "none") return;
+    if (e.target.matches("input, textarea, [contenteditable='true']")) return;
+
+    if (e.key >= "0" && e.key <= "9") {
+        document.querySelector(`#calculatorButton${e.key}`)?.click();
+    } else if (e.key === ".") {
+        calculatorButtonDecimal?.click();
+    } else if (e.key === "+") {
+        calculatorButtonAdd?.click();
+    } else if (e.key === "-") {
+        calculatorButtonSubtract?.click();
+    } else if (e.key === "*") {
+        calculatorButtonMultiply?.click();
+    } else if (e.key === "/") {
+        e.preventDefault();
+        calculatorButtonDivide?.click();
+    } else if (e.key === "Enter" || e.key === "=") {
+        calculatorButtonEquals?.click();
+    } else if (e.key === "Escape" || e.key === "Backspace" || e.key.toLowerCase() === "c") {
+        calculatorButtonDelete?.click();
+    }
+})
+
